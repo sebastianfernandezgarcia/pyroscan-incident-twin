@@ -45,6 +45,8 @@ Open the app in a WebMCP-compatible browser and ask:
 
 Watch the same journey unfold on screen: El Paso focuses, a warning appears, contours move, option cards rerank, and a draft opens for human approval.
 
+The map uses a locally embedded, simplified outline of the real La Palma coastline derived from OpenStreetMap relation 11775386. Terrain shading, roads and the wildfire scenario remain deliberately illustrative/synthetic. Fire, smoke, ember, wind-vector and attention-contour motion make scenario changes immediately legible without depending on a remote tile service.
+
 ## Run locally
 
 Requirements: Node.js 20+ and npm.
@@ -100,6 +102,8 @@ The app still works as a complete visual exercise when `document.modelContext` i
 - React 19 + TypeScript + Vite
 - Zustand vanilla store shared by React and WebMCP
 - Custom SVG incident map with no tile/API dependency
+- Real La Palma coastline geometry with visible OpenStreetMap attribution
+- Motion system for fire, smoke, embers, scan sweep and modeled spread
 - Deterministic local scenario engine
 - Imperative `document.modelContext.registerTool` integration
 - Vitest + Testing Library
@@ -122,6 +126,8 @@ See [CHALLENGE_WORK.md](CHALLENGE_WORK.md) for the exact scope.
 ## License
 
 [MIT](LICENSE) © 2026 Sebastián Fernández García.
+
+La Palma coastline geometry is derived from [OpenStreetMap](https://www.openstreetmap.org/copyright) data © OpenStreetMap contributors, available under the ODbL.
 
 ---
 

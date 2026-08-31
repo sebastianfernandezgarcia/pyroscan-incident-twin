@@ -56,8 +56,8 @@ function ringsFor(horizonMinutes: HorizonMinutes, windPreset: WindPreset): Sprea
     const scale = minute / 30
     return {
       minute,
-      centerX: Math.round(418 + wind.dx * 22 * scale),
-      centerY: Math.round(402 + wind.dy * 22 * scale),
+      centerX: Math.round(394 + wind.dx * 19 * scale),
+      centerY: Math.round(390 + wind.dy * 19 * scale),
       radiusX: Math.round(42 + scale * (48 + Math.abs(wind.dx) * 12)),
       radiusY: Math.round(30 + scale * (34 + Math.abs(wind.dy) * 10)),
       rotation: wind.rotation,

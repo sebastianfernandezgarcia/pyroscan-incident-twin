@@ -23,6 +23,8 @@
 ## Visual QA
 
 - [x] Desktop three-pane layout verified.
+- [x] Real La Palma coastline geometry replaces the placeholder silhouette.
+- [x] Fire, smoke, embers, scan and spread motion respect reduced-motion preferences.
 - [x] Agent scenario updates the matching human controls.
 - [x] Local annotation appears in the downstream plan.
 - [x] Verify the stacked mobile layout at 390 px with no horizontal overflow.

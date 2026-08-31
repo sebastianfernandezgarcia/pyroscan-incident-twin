@@ -22,7 +22,7 @@ La Palma is the visual setting because its steep terrain, interfaces and limited
 
 ## What it does
 
-PyroScan Incident Twin opens a deterministic wildfire exercise board with evidence fixtures, four sectors, a custom map, modeled attention contours, local annotations, response options and an activity record.
+PyroScan Incident Twin opens a deterministic wildfire exercise board with evidence fixtures, four sectors, the real outline of La Palma, animated fire/smoke/spread cues, modeled attention contours, local annotations, response options and an activity record.
 
 Through six WebMCP site tools, ChatGPT can:
 
@@ -37,7 +37,7 @@ Every agent action changes the same interface the human sees. Human annotations 
 
 ## How we built it
 
-The app is a static React 19, TypeScript and Vite application with no backend or API key. A Zustand vanilla store is the shared source of truth for React controls and WebMCP execute callbacks. The incident map is custom SVG, so the critical demo has no tile or network dependency. The scenario engine is deterministic and uses a small set of synthetic fixtures.
+The app is a static React 19, TypeScript and Vite application with no backend or API key. A Zustand vanilla store is the shared source of truth for React controls and WebMCP execute callbacks. The incident map is custom SVG with a locally embedded, simplified OpenStreetMap coastline of La Palma, so the critical demo has no tile or network dependency. A motion system renders fire, smoke, embers, wind vectors, scan passes and animated attention contours. The scenario engine is deterministic and uses a small set of synthetic fixtures.
 
 The six tools are registered imperatively with `document.modelContext.registerTool` in the top-level page. Inputs use strict JSON Schemas with `additionalProperties: false`, plus independent runtime validation. Read-only and untrusted-content hints describe behavior. One AbortController owns the registration lifecycle. Tests verify registration, shared-state mutations, stale-state rejection, human-only approval and compatibility with current browser callback behavior.
 
@@ -62,6 +62,7 @@ This creates a loop that was previously awkward: the person adds local knowledge
 - Runtime-tested Site Tools discovered and invoked in the ChatGPT/Codex built-in browser.
 - Monotonic state lineage, reversible drafts, undo and human-only approval.
 - A polished responsive workbench and open-source test suite.
+- A geographically recognizable La Palma surface with cinematic but restrained operational motion.
 
 ## What we learned
 

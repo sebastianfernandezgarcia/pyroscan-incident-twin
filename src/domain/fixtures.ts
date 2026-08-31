@@ -9,7 +9,7 @@ export const ZONES: Zone[] = [
     sector: 'NW-01',
     terrain: 'Pine ridge / steep ravines',
     exposure: 'watch',
-    mapPoint: [360, 238],
+    mapPoint: [365, 225],
   },
   {
     id: 'tijarafe',
@@ -17,7 +17,7 @@ export const ZONES: Zone[] = [
     sector: 'W-02',
     terrain: 'Terraced interface / mixed fuel',
     exposure: 'elevated',
-    mapPoint: [282, 360],
+    mapPoint: [278, 274],
   },
   {
     id: 'el-paso',
@@ -25,7 +25,7 @@ export const ZONES: Zone[] = [
     sector: 'C-03',
     terrain: 'Road corridor / urban edge',
     exposure: 'elevated',
-    mapPoint: [472, 408],
+    mapPoint: [365, 356],
   },
   {
     id: 'cumbre-vieja',
@@ -33,7 +33,7 @@ export const ZONES: Zone[] = [
     sector: 'S-04',
     terrain: 'Volcanic ridge / sparse access',
     exposure: 'guarded',
-    mapPoint: [526, 565],
+    mapPoint: [438, 500],
   },
 ]
 

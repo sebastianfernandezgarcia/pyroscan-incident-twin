@@ -4,7 +4,7 @@ Format: 16:9, 1080p, public YouTube video, spoken English, captions enabled.
 
 ## 0:00–0:18 — The premise
 
-**Screen:** Full PyroScan board. Slowly point to the evidence, map and decision panes.
+**Screen:** Full PyroScan board. Hold on the real La Palma silhouette, live fire/smoke and moving attention contours, then point to the evidence and decision panes.
 
 **Voiceover:**
 
@@ -80,6 +80,7 @@ Format: 16:9, 1080p, public YouTube video, spoken English, captions enabled.
 
 - Keep the Site Tools panel visible long enough for judges to read names.
 - Capture the contour motion and the activity timeline updates.
+- Let the fire, smoke and ember animation read for at least two seconds in the opening shot.
 - Ensure the browser header reads **6 tools live**.
 - Do not exceed 2:55 after editing.
 - Export with audible speech and captions.
