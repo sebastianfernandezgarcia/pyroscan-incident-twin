@@ -48,7 +48,7 @@ Watch the same journey unfold on screen: El Paso focuses, a warning appears, con
 Requirements: Node.js 20+ and npm.
 
 ```bash
-git clone <your-public-repository-url>
+git clone https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin.git
 cd pyroscan-incident-twin
 npm install
 npm run dev
