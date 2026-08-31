@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Box, Check, ChevronDown, Compass, Layers3, Play, Wind } from 'lucide-react'
 import { useStore } from 'zustand'
 import type { HorizonMinutes, WindPreset, ZoneId } from '../domain/types'
@@ -17,6 +17,12 @@ const ZONE_SHORT: Record<ZoneId, string> = {
   'cumbre-vieja': 'CUMBRE VIEJA',
 }
 
+const WIND_MAP: Record<WindPreset, { label: string; rotation: number }> = {
+  observed: { label: 'ENE 18', rotation: 0 },
+  'northeast-shift': { label: 'NE 26', rotation: -36 },
+  'gusting-west': { label: 'W 34', rotation: 154 },
+}
+
 export function IncidentMap() {
   const scenario = useStore(incidentStore, (state) => state.activeScenario)
   const zones = useStore(incidentStore, (state) => state.zones)
@@ -26,6 +32,12 @@ export function IncidentMap() {
   const runSimulation = useStore(incidentStore, (state) => state.runSimulation)
   const [wind, setWind] = useState<WindPreset>(scenario?.windPreset ?? 'observed')
   const [horizon, setHorizon] = useState<HorizonMinutes>(scenario?.horizonMinutes ?? 60)
+
+  useEffect(() => {
+    if (!scenario) return
+    setWind(scenario.windPreset)
+    setHorizon(scenario.horizonMinutes)
+  }, [scenario])
 
   return (
     <section className="map-card">
@@ -136,8 +148,8 @@ export function IncidentMap() {
 
           <g className="wind-arrow" transform="translate(625 122)">
             <circle r="41" />
-            <path d="M-21 6 L21 -8 M13 -15 L21 -8 L14 0" />
-            <text x="0" y="56">ENE 18</text>
+            <path d="M-21 6 L21 -8 M13 -15 L21 -8 L14 0" transform={`rotate(${WIND_MAP[scenario?.windPreset ?? 'observed'].rotation})`} />
+            <text x="0" y="56">{WIND_MAP[scenario?.windPreset ?? 'observed'].label}</text>
           </g>
 
           {annotations.map((annotation, index) => {

@@ -50,6 +50,24 @@ describe('incident store', () => {
     expect(store.getState().annotations.at(-1)?.source).toBe('human')
   })
 
+  it('carries a blocked-road annotation into the next staged plan', () => {
+    const store = createIncidentStore()
+    store.getState().addAnnotation({
+      type: 'blocked-road',
+      zoneId: 'el-paso',
+      note: 'Synthetic checkpoint closure.',
+    }, 'human')
+    const current = store.getState()
+    const plan = current.stagePlan({
+      boardVersion: current.boardVersion,
+      scenarioId: current.activeScenario!.id,
+      optionId: 'dual-protection',
+      rationale: 'Keep the human route constraint in the draft.',
+    }, 'agent')
+
+    expect(plan.actions.find((action) => action.id === 'access')?.detail).toContain('El Paso corridor')
+  })
+
   it('reserves final approval for the human-facing action', () => {
     const store = createIncidentStore()
     const current = store.getState()

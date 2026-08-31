@@ -153,13 +153,19 @@ function validateNote(note: string) {
 function buildPlan(
   request: PlanRequest,
   scenario: SpreadScenario,
+  annotations: Annotation[],
   stagedAtVersion: number,
   stagedBy: 'agent' | 'human-demo',
 ): ResponsePlan {
   const option = RESPONSE_OPTIONS.find((candidate) => candidate.id === request.optionId)
   if (!option) throw new IncidentActionError('NOT_FOUND', `Unknown response option: ${request.optionId}.`)
   const firstZone = scenario.affectedZones[0] ?? 'el-paso'
-  const zoneLabel = ZONES.find((zone) => zone.id === firstZone)?.label ?? firstZone
+  const blockedZone = annotations.find((annotation) => annotation.type === 'blocked-road')?.zoneId
+  const accessZone = blockedZone ?? firstZone
+  const zoneLabel = ZONES.find((zone) => zone.id === accessZone)?.label ?? accessZone
+  const accessDetail = blockedZone
+    ? `Resolve the recorded route constraint in ${zoneLabel}.`
+    : `Check the route into ${zoneLabel}.`
 
   return {
     id: `plan-${scenario.id}-${request.optionId}`,
@@ -173,7 +179,7 @@ function buildPlan(
     stagedBy,
     actions: [
       { id: 'brief', time: 'T+00', title: 'Brief the exercise team', detail: `Confirm ${scenario.windLabel}.`, owner: 'Coordination' },
-      { id: 'access', time: 'T+08', title: 'Validate access', detail: `Check the route into ${zoneLabel}.`, owner: 'Mobility lead' },
+      { id: 'access', time: 'T+08', title: 'Validate access', detail: accessDetail, owner: 'Mobility lead' },
       { id: 'position', time: `T+${option.setupMinutes}`, title: option.label, detail: `Stage ${option.resourceUnits} exercise units; no real dispatch.`, owner: 'Field lead' },
       { id: 'review', time: `T+${scenario.horizonMinutes}`, title: 'Human decision gate', detail: 'Review evidence, annotations and changed assumptions.', owner: 'Exercise director' },
     ],
@@ -245,7 +251,7 @@ export function createIncidentStore() {
       const scenario = state.scenarios.find((item) => item.id === request.scenarioId)
       if (!scenario) throw new IncidentActionError('NOT_FOUND', `Unknown scenario: ${request.scenarioId}.`)
       const stagedAtVersion = state.boardVersion + 1
-      const plan = buildPlan(request, scenario, stagedAtVersion, actor)
+      const plan = buildPlan(request, scenario, state.annotations, stagedAtVersion, actor)
       set((current) => ({
         boardVersion: stagedAtVersion,
         history: [...current.history.slice(-9), snapshot(current)],
