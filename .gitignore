@@ -6,6 +6,7 @@ dist
 coverage
 playwright-report
 test-results
+/artifacts/
 
 # Local competition research; the public repository stays product-focused.
 /docs/webmcp-challenge-research-and-strategy.md

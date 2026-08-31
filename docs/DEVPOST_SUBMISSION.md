@@ -1,14 +1,14 @@
 # Devpost submission copy
 
-All public submission text is in English as required.
+**Paste-ready:** all public text is in English. PyroScan should be entered as an **Existing project, meaningfully extended during the challenge** so the prior research context and new WebMCP build are transparent.
 
 ## Project name
 
 **PyroScan // Incident Twin**
 
-## Tagline
+## Elevator pitch — 179 / 200 characters
 
-**A shared wildfire rehearsal table for people and AI agents.**
+**Wildfire readiness, rehearsed together: people add local knowledge while AI agents inspect evidence, run bounded what-ifs, compare responses and stage a safe plan on one live map.**
 
 ## One-line summary
 
@@ -16,7 +16,7 @@ PyroScan lets a human exercise director and ChatGPT inspect evidence, run synthe
 
 ## Inspiration
 
-Wildfire response exercises combine sensor evidence, local knowledge, changing assumptions and high-consequence decisions. Traditional dashboards are built for human clicks, while chat assistants reason in a separate window and quickly lose the state visible on the map. We wanted to explore a safer collaboration model: an agent can help inspect and compare, but the human keeps context, authority and the final decision.
+Wildfire readiness needs a rehearsal space before the crisis. Exercises combine sensor evidence, local knowledge, changing assumptions and high-consequence decisions. Traditional dashboards are built for human clicks, while chat assistants reason in a separate window and quickly lose the state visible on the map. We wanted a safer collaboration model: an agent can help inspect and compare, but the human keeps context, authority and the final decision.
 
 La Palma is the visual setting because its steep terrain, interfaces and limited access make the value of a shared spatial artifact immediately understandable. The submitted scenario is entirely synthetic.
 
@@ -76,8 +76,45 @@ The competition build intentionally stays synthetic and browser-only. A future r
 
 `WebMCP` `React` `TypeScript` `Vite` `Zustand` `SVG` `Vitest` `ChatGPT` `Codex`
 
-## Links to add before submission
+## Links
 
 - Live app: `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
 - Public repository: `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin`
 - YouTube demo (<3 minutes): `TODO`
+
+## Additional information — exact answers
+
+| Field | Answer |
+| --- | --- |
+| Submitter type | **Individual** |
+| Country | **Spain** |
+| Organization | Leave blank |
+| App status | **Existing** |
+| Significant WebMCP extension | **PyroScan previously existed as a broader private research concept. During the challenge period I created this separate, public browser-only product: a deterministic synthetic exercise engine, a shared human/agent incident board, six imperative WebMCP tools, exact state-lineage safeguards, a real La Palma coastline visualization, automated tests and complete open-source documentation. CHALLENGE_WORK.md and the public commit history distinguish all new competition work.** |
+| Live URL | `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/` |
+| Public repo | `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin` |
+| Agent/client tested | **ChatGPT/Codex built-in browser with GPT-5.6 Sol; automated registration and integration tests.** |
+| AI tools leveraged | **OpenAI Codex desktop app, GPT-5.6 Sol, ChatGPT Site Tools / WebMCP.** |
+| Learning level | **Significant** |
+| Gained career AI value | **Yes** |
+
+## Testing instructions
+
+Open the live URL in the latest ChatGPT desktop app's built-in browser using GPT-5.6 Sol or GPT-5.6 Terra. Select **Site tools** in the address bar; PyroScan should expose six tools. No login or API key is required.
+
+Ask:
+
+> Inspect El Paso. Add a blocked-road exercise note for the LP-3 checkpoint. Simulate a 60-minute northeast wind shift, compare the ridge and dual-interface options, then stage the safest reversible plan.
+
+Expected visible result: El Paso focuses; an amber route note appears; the attention contours and wind indicator move; comparison cards rerank; and a reversible draft opens with the route constraint included. Final approval remains available only in the human interface.
+
+If Site Tools are unavailable, confirm the current client/model supports WebMCP. The visual exercise still works manually, but the judged agent journey requires Site Tools.
+
+## Gallery captions
+
+1. [`docs/assets/gallery/01-shared-rehearsal-3x2.jpg`](assets/gallery/01-shared-rehearsal-3x2.jpg) — **One shared incident surface** — A real La Palma coastline, synthetic exercise evidence, modeled attention areas and decision controls remain visible to both the human and the agent.
+2. [`docs/assets/gallery/02-local-knowledge-3x2.jpg`](assets/gallery/02-local-knowledge-3x2.jpg) — **Local knowledge changes the result** — A route constraint added through WebMCP becomes visible on the board and affects later analysis.
+3. [`docs/assets/gallery/03-webmcp-comparison-3x2.jpg`](assets/gallery/03-webmcp-comparison-3x2.jpg) — **Intent-level Site Tools** — Six WebMCP tools expose the domain verbs of the product instead of brittle sequences of clicks.
+4. [`docs/assets/gallery/04-human-review-3x2.jpg`](assets/gallery/04-human-review-3x2.jpg) — **Human authority by design** — The agent can inspect, simulate, compare, annotate and stage; only the exercise director can approve.
+
+Thumbnail: [`docs/assets/devpost-thumbnail-3x2.jpg`](assets/devpost-thumbnail-3x2.jpg)

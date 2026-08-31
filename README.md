@@ -37,6 +37,30 @@ There is deliberately **no `approve_plan` tool**. The exercise director complete
 
 See [WebMCP implementation notes](docs/WEBMCP_IMPLEMENTATION.md) for schemas, lifecycle and safety details.
 
+The top-level page registers each domain operation directly (abridged here):
+
+```ts
+await document.modelContext.registerTool({
+  name: 'simulate_spread',
+  description: 'Run one deterministic synthetic spread scenario...',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      horizonMinutes: { type: 'integer', enum: [30, 60, 90] },
+      windPreset: { type: 'string', enum: ['observed', 'northeast-shift', 'gusting-west'] },
+    },
+    required: ['horizonMinutes', 'windPreset'],
+    additionalProperties: false,
+  },
+  execute: async (input) => {
+    // Strictly validate the bounded input, then call the shared store action.
+    // The full handler also returns the visible board change and safety context.
+  },
+})
+```
+
+The complete implementation reuses the real store action and independently validates every input at runtime.
+
 ## Try the collaboration loop
 
 Open the app in a WebMCP-compatible browser and ask:
@@ -124,6 +148,7 @@ See [CHALLENGE_WORK.md](CHALLENGE_WORK.md) for the exact scope.
 - [Demo script under three minutes](docs/DEMO_SCRIPT.md)
 - [Devpost submission copy](docs/DEVPOST_SUBMISSION.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
+- [Submission compliance audit](docs/SUBMISSION_AUDIT.md)
 
 ## License
 

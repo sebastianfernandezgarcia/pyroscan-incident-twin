@@ -29,11 +29,17 @@
 - [x] Local annotation appears in the downstream plan.
 - [x] Verify the stacked mobile layout at 390 px with no horizontal overflow.
 - [x] Capture one clean 16:9 hero image for Devpost (`docs/assets/devpost-hero-16x9.jpg`).
+- [x] Add an in-product three-step collaboration guide and copyable judge prompt.
+- [x] Export a 3:2 Devpost thumbnail and four-image gallery sequence.
 
 ## Video
 
-- [ ] Record the script in `docs/DEMO_SCRIPT.md`.
-- [ ] Keep final runtime below three minutes.
+- [x] Build and audit the 2:48 HyperFrames visual master.
+- [x] Inspect frame midpoints and every transition boundary.
+- [x] Prepare ten timed voice takes, pronunciation notes, SRT captions and the deterministic mix helper.
+- [ ] Record the ten lines in `docs/VOICEOVER_RECORDING_GUIDE.md`.
+- [ ] Approve and render the silent visual master.
+- [ ] Mix the human narration and verify the final runtime remains below three minutes.
 - [ ] Include audible English narration.
 - [ ] Show the Site Tools list and visible state changes.
 - [ ] Upload publicly to YouTube.
