@@ -70,6 +70,8 @@ npm run build
 
 The production build is static and can be deployed to Netlify, Cloudflare Pages, Vercel or any static host. Use `npm run build` and publish `dist/`.
 
+For this repository's GitHub Pages project path, use `npm run build:pages`; it emits asset URLs under `/pyroscan-incident-twin/`.
+
 ## Test with WebMCP
 
 ### ChatGPT desktop browser
