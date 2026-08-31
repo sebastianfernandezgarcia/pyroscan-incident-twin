@@ -8,17 +8,17 @@
 - [x] License is visible at repository root.
 - [x] WebMCP implementation is easy to find.
 - [x] Challenge work is separated from prior PyroScan context.
-- [ ] Create the public GitHub repository.
-- [ ] Add repository URL to README and Devpost copy.
-- [ ] Confirm GitHub About shows the MIT license.
+- [x] Create the public GitHub repository.
+- [x] Add repository URL to README and Devpost copy.
+- [x] Confirm GitHub About shows the MIT license.
 
 ## Hosting
 
-- [ ] Deploy `dist/` to Netlify, Cloudflare Pages or Vercel.
-- [ ] Add the live URL to README and Devpost copy.
-- [ ] Verify a clean browser load with no console errors.
-- [ ] Verify all six Site Tools on the deployed origin.
-- [ ] Run the full judge prompt against the deployed app.
+- [x] Deploy the static build to GitHub Pages (a sponsor host can replace it later).
+- [x] Add the live URL to README and Devpost copy.
+- [x] Verify a clean browser load with no console errors.
+- [x] Verify all six Site Tools on the deployed origin.
+- [x] Run the full judge prompt locally and verify the same tool set on the deployed app.
 
 ## Visual QA
 

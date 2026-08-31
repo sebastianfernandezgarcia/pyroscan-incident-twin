@@ -77,6 +77,6 @@ The competition build intentionally stays synthetic and browser-only. A future r
 
 ## Links to add before submission
 
-- Live app: `TODO`
+- Live app: `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
 - Public repository: `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin`
 - YouTube demo (<3 minutes): `TODO`

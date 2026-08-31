@@ -4,6 +4,8 @@
 
 PyroScan Incident Twin is an agent-native, browser-only exercise environment built for the [OpenAI WebMCP Challenge](https://webmcp.devpost.com/). A human and an AI agent inspect the same evidence, explore deterministic what-if scenarios, compare response options, and prepare a reversible briefing on one shared map.
 
+**[Open the live WebMCP app →](https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/)**
+
 ![PyroScan Incident Twin after a complete WebMCP planning journey](docs/assets/pyroscan-incident-twin.jpg)
 
 ## Why WebMCP matters here
