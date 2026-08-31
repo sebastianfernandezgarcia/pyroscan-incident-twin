@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AlertTriangle, ArrowLeft, Command, RotateCcw, Undo2 } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, Check, Clipboard, RotateCcw, Sparkles, Undo2, X } from 'lucide-react'
 import { useStore } from 'zustand'
 import { ActivityStrip } from '../components/ActivityStrip'
 import { DecisionPanel } from '../components/DecisionPanel'
@@ -15,6 +15,15 @@ export function App() {
   const undoLastChange = useStore(incidentStore, (state) => state.undoLastChange)
   const resetExercise = useStore(incidentStore, (state) => state.resetExercise)
   const [showBrief, setShowBrief] = useState(false)
+  const [promptCopied, setPromptCopied] = useState(false)
+
+  const judgePrompt = 'Inspect El Paso. Add a blocked-road exercise note for the LP-3 checkpoint. Simulate a 60-minute northeast wind shift, compare the ridge and dual-interface options, then stage the safest reversible plan.'
+
+  const copyJudgePrompt = async () => {
+    await navigator.clipboard?.writeText(judgePrompt)
+    setPromptCopied(true)
+    window.setTimeout(() => setPromptCopied(false), 1800)
+  }
 
   return (
     <div className="app-shell">
@@ -41,8 +50,13 @@ export function App() {
         </div>
 
         <div className="topbar-actions">
-          <button className="quiet-button" onClick={() => setShowBrief((value) => !value)}>
-            <Command size={15} /> Demo brief
+          <button
+            className="quiet-button"
+            onClick={() => setShowBrief((value) => !value)}
+            aria-expanded={showBrief}
+            aria-controls="collaboration-guide"
+          >
+            <Sparkles size={15} /> How it works
           </button>
           <button className="icon-button" onClick={undoLastChange} disabled={!canUndo} aria-label="Undo last board change">
             <Undo2 size={16} />
@@ -67,12 +81,31 @@ export function App() {
       </div>
 
       {showBrief ? (
-        <aside className="demo-brief" aria-label="Demo prompt">
-          <div>
-            <p className="eyebrow">TRY THIS WITH CHATGPT</p>
-            <strong>“Inspect El Paso. Simulate a 60-minute northeast wind shift, compare the ridge and dual-interface options, then stage the safest reversible plan.”</strong>
+        <aside className="collaboration-guide" id="collaboration-guide" aria-label="Human and agent collaboration guide">
+          <div className="collaboration-guide__intro">
+            <p className="eyebrow">BEFORE A LIVE INCIDENT</p>
+            <strong>Rehearse decisions on one shared map.</strong>
+            <span>People contribute context. The agent explores bounded alternatives. The human stays in command.</span>
           </div>
-          <button onClick={() => setShowBrief(false)}>Close</button>
+
+          <ol className="collaboration-guide__steps">
+            <li><span>01</span><div><strong>Human grounds</strong><small>Add routes, assets and local knowledge.</small></div></li>
+            <li><span>02</span><div><strong>Agent rehearses</strong><small>Inspect, simulate and compare through WebMCP.</small></div></li>
+            <li><span>03</span><div><strong>Human decides</strong><small>Review the reversible draft and approve.</small></div></li>
+          </ol>
+
+          <div className="collaboration-guide__prompt">
+            <p className="eyebrow">JUDGE PROMPT</p>
+            <span>“{judgePrompt}”</span>
+            <button onClick={copyJudgePrompt} aria-live="polite">
+              {promptCopied ? <Check size={14} /> : <Clipboard size={14} />}
+              {promptCopied ? 'Copied' : 'Copy prompt'}
+            </button>
+          </div>
+
+          <button className="collaboration-guide__close" onClick={() => setShowBrief(false)} aria-label="Close how it works">
+            <X size={15} />
+          </button>
         </aside>
       ) : null}
 

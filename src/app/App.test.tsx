@@ -21,4 +21,16 @@ describe('incident twin app', () => {
     expect(screen.getByText('Human-approved exercise plan')).toBeInTheDocument()
     expect(screen.getByText(/final approval is deliberately not exposed/i)).toBeInTheDocument()
   })
+
+  it('explains the complementary human and agent workflow in the interface', () => {
+    render(<App />)
+
+    fireEvent.click(screen.getByRole('button', { name: /how it works/i }))
+
+    expect(screen.getByText(/rehearse decisions on one shared map/i)).toBeInTheDocument()
+    expect(screen.getByText('Human grounds')).toBeInTheDocument()
+    expect(screen.getByText('Agent rehearses')).toBeInTheDocument()
+    expect(screen.getByText('Human decides')).toBeInTheDocument()
+    expect(screen.getByText(/blocked-road exercise note/i)).toBeInTheDocument()
+  })
 })
