@@ -1,0 +1,68 @@
+<template>
+  <style>
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); font-weight: 500; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); font-weight: 700; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; color: #eff3ef; }
+    .f05-local-knowledge-bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 18%, rgba(109,230,173,.09), transparent 34%), #111412; }
+    .f05-local-knowledge-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(198,215,202,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(198,215,202,.045) 1px, transparent 1px); background-size: 72px 72px; }
+    .f05-local-knowledge-content { position: absolute; inset: 0; overflow: hidden; }
+    .f05-local-knowledge-eyebrow { font-size: 15px; letter-spacing: .18em; color: #d7f85d; font-weight: 600; text-transform: uppercase; }
+    .f05-local-knowledge-mono { font-size: 13px; letter-spacing: .14em; color: #8e9991; font-weight: 500; text-transform: uppercase; }
+    .f05-local-knowledge-chrome { position: absolute; left: 74px; right: 74px; top: 54px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(198,215,202,.18); }
+    .f05-local-knowledge-screen { border: 1px solid rgba(215,248,93,.28); border-radius: 18px; background: #0b0e0c; box-shadow: 0 34px 80px rgba(0,0,0,.48); overflow: hidden; }
+    .f05-local-knowledge-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    
+      .f05-local-knowledge-prompt { position:absolute; left:150px; right:150px; top:142px; height:84px; display:grid; grid-template-columns:100px 1fr 10px; align-items:center; padding:0 28px; border:1px solid rgba(215,248,93,.28); background:#0b0e0c; }
+      .f05-local-knowledge-prompt span { color:#d7f85d; font-size:13px; letter-spacing:.16em; } .f05-local-knowledge-prompt b { font-size:19px; font-weight:500; } .f05-local-knowledge-prompt i { width:8px; height:25px; background:#d7f85d; }
+      .f05-local-knowledge-receipt { position:absolute; left:76px; top:302px; width:300px; padding:22px; border-left:3px solid #d7f85d; background:rgba(215,248,93,.055); }
+      .f05-local-knowledge-receipt span,.f05-local-knowledge-receipt b { display:block; } .f05-local-knowledge-receipt span { color:#d7f85d; font-size:15px; } .f05-local-knowledge-receipt b { margin-top:9px; font-size:21px; }
+      .f05-local-knowledge-app { position:absolute; left:420px; top:272px; width:1424px; height:608px; }
+      .f05-local-knowledge-app img { position:absolute; inset:0; }
+      .f05-local-knowledge-highlight { position:absolute; padding:9px 13px; border:2px solid #ffb75c; background:rgba(9,11,10,.86); color:#ffb75c; font-size:13px; letter-spacing:.12em; }
+      .f05-local-knowledge-highlight-zone { left:808px; top:565px; } .f05-local-knowledge-highlight-note { left:455px; top:696px; }
+      .f05-local-knowledge-future { position:absolute; left:78px; top:520px; display:grid; gap:10px; }
+      .f05-local-knowledge-future span { width:258px; padding:15px 18px; border:1px solid rgba(198,215,202,.18); color:#8e9991; font-size:13px; letter-spacing:.13em; }
+      .f05-local-knowledge-footer { position:absolute; left:620px; top:900px; display:flex; align-items:center; gap:18px; color:#eff3ef; font-size:14px; letter-spacing:.14em; }
+      .f05-local-knowledge-footer i { width:80px; height:2px; background:#d7f85d; }
+    
+  </style>
+  <div data-hf-id="hf-n7t7" id="root" data-composition-id="05-local-knowledge" data-width="1920" data-height="1080" data-duration="22">
+    <div data-hf-id="hf-cqst" id="f05-local-knowledge-background" class="clip f05-local-knowledge-bg" data-start="0" data-duration="22" data-track-index="0"></div>
+    <div data-hf-id="hf-yhjr" id="f05-local-knowledge-content-layer" class="clip f05-local-knowledge-content" data-start="0" data-duration="22" data-track-index="1">
+      
+      <div data-hf-id="hf-fwbl" class="f05-local-knowledge-chrome"><span data-hf-id="hf-qtgh" class="f05-local-knowledge-eyebrow">REAL TOOL JOURNEY · 01</span><span data-hf-id="hf-lvxg" class="f05-local-knowledge-mono">INTENT → VISIBLE STATE</span></div>
+      <div data-hf-id="hf-z9vt" class="f05-local-knowledge-prompt"><span data-hf-id="hf-hxie">ASK</span><b data-hf-id="hf-27r5" id="f05-local-knowledge-prompt-text"></b><i data-hf-id="hf-wt6k"></i></div>
+      <div data-hf-id="hf-r5ft" class="f05-local-knowledge-receipt"><span data-hf-id="hf-gjxy" id="f05-local-knowledge-tool-name">inspect_zone</span><b data-hf-id="hf-5bku" id="f05-local-knowledge-tool-result">EL PASO FOCUSED</b></div>
+      <div data-hf-id="hf-kdc7" class="f05-local-knowledge-app f05-local-knowledge-screen"><img data-hf-id="hf-4m2u" class="f05-local-knowledge-state-a" src="assets/02-inspect-zone.png" alt="El Paso focused through WebMCP"><img data-hf-id="hf-1rdz" class="f05-local-knowledge-state-b" src="assets/03-human-context.png" alt="LP-3 route constraint added through WebMCP"></div>
+      <div data-hf-id="hf-xvq7" class="f05-local-knowledge-highlight f05-local-knowledge-highlight-zone">EL PASO</div>
+      <div data-hf-id="hf-zgc7" class="f05-local-knowledge-highlight f05-local-knowledge-highlight-note">LP-3 CONSTRAINT · VISIBLE</div>
+      <div data-hf-id="hf-5dfm" class="f05-local-knowledge-future"><span data-hf-id="hf-og3n">SIMULATE</span><span data-hf-id="hf-9fg0">COMPARE</span><span data-hf-id="hf-k6vt">STAGE</span></div>
+      <div data-hf-id="hf-7nc1" class="f05-local-knowledge-footer">VISIBLE TO HUMAN <i data-hf-id="hf-zeb8"></i> AVAILABLE TO AGENT</div>
+    
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const tl = gsap.timeline({paused: true});
+      
+      const a=document.querySelector('.f05-local-knowledge-state-a'); const b=document.querySelector('.f05-local-knowledge-state-b');
+      gsap.set([b,'.f05-local-knowledge-receipt','.f05-local-knowledge-highlight','.f05-local-knowledge-future span','.f05-local-knowledge-footer'],{opacity:0});
+      const prompt='Inspect El Paso. Add an LP-3 blocked-road exercise note.'; const proxy={n:0}; const p=document.getElementById('f05-local-knowledge-prompt-text');
+      tl.to(proxy,{n:prompt.length,duration:3.2,ease:'none',onUpdate:()=>p.textContent=prompt.slice(0,Math.floor(proxy.n))},.1);
+      tl.fromTo('.f05-local-knowledge-app',{y:44,opacity:0},{y:0,opacity:1,duration:1,ease:'power3.out'},3.4);
+      tl.fromTo('.f05-local-knowledge-receipt',{x:-30,opacity:0},{x:0,opacity:1,duration:.8,ease:'power3.out'},4.2);
+      tl.fromTo('.f05-local-knowledge-highlight-zone',{scale:.8,opacity:0},{scale:1,opacity:1,duration:.65,ease:'power3.out'},5.4);
+      tl.to(a,{opacity:0,duration:.45,ease:'power2.inOut'},9.5); tl.to(b,{opacity:1,duration:.45,ease:'power2.inOut'},9.5);
+      tl.set('#f05-local-knowledge-tool-name',{textContent:'add_board_annotation'},9.55); tl.set('#f05-local-knowledge-tool-result',{textContent:'LP-3 NOTE ADDED'},9.55);
+      tl.set('.f05-local-knowledge-highlight-zone',{autoAlpha:0},9.55);
+      tl.fromTo('.f05-local-knowledge-highlight-note',{scale:.86,opacity:0},{scale:1,opacity:1,duration:.75,ease:'power3.out'},10.1);
+      tl.fromTo('.f05-local-knowledge-future span',{x:-24,opacity:0},{x:0,opacity:1,duration:.55,stagger:1.0,ease:'power3.out'},15.4);
+      tl.fromTo('.f05-local-knowledge-footer',{y:20,opacity:0},{y:0,opacity:1,duration:.8,ease:'power3.out'},19.4);
+    
+      window.__timelines["05-local-knowledge"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,98 @@
+1
+00:00:00,000 --> 00:00:05,200
+Before a wildfire becomes a live emergency,
+teams need somewhere to rehearse
+
+2
+00:00:05,200 --> 00:00:10,000
+the decisions that come first.
+
+3
+00:00:10,000 --> 00:00:16,800
+Local knowledge lives in people.
+Spatial evidence lives on maps.
+
+4
+00:00:16,800 --> 00:00:24,000
+And an AI assistant usually reasons somewhere else.
+Every handoff loses context.
+
+5
+00:00:24,000 --> 00:00:32,000
+PyroScan Incident Twin turns the browser
+into one shared rehearsal table,
+
+6
+00:00:32,000 --> 00:00:40,000
+designed around La Palma's real geography
+and constrained access.
+
+7
+00:00:40,000 --> 00:00:49,500
+WebMCP lets the page expose its real verbs directly to ChatGPT:
+read, inspect, annotate, simulate, compare, and stage.
+
+8
+00:00:49,500 --> 00:00:58,000
+No separate server.
+No brittle click script.
+
+9
+00:00:58,000 --> 00:01:08,500
+I ask at the level of intent. ChatGPT focuses El Paso
+and adds a blocked-road exercise note for the LP-3 checkpoint.
+
+10
+00:01:08,500 --> 00:01:20,000
+That local constraint becomes visible to me—
+and available to every later tool call.
+
+11
+00:01:20,000 --> 00:01:30,000
+Next, a sixty-minute northeast wind shift redraws
+the deterministic attention area on the same map.
+
+12
+00:01:30,000 --> 00:01:40,000
+This is not a forecast; it is a bounded what-if
+that a person and an agent can inspect together.
+
+13
+00:01:40,000 --> 00:01:49,000
+PyroScan compares two reversible response options
+against setup time, coverage, resource use,
+
+14
+00:01:49,000 --> 00:01:58,000
+and the new access constraint. The ranking lives
+on screen—not buried in a chat transcript.
+
+15
+00:01:58,000 --> 00:02:09,000
+Before staging, ChatGPT reads the exact board version.
+If the evidence changed, a stale plan is rejected.
+
+16
+00:02:09,000 --> 00:02:20,000
+The new draft carries the LP-3 constraint into its access action,
+proving that human knowledge changed the downstream artifact.
+
+17
+00:02:20,000 --> 00:02:27,000
+The agent can explore.
+It cannot approve.
+
+18
+00:02:27,000 --> 00:02:34,000
+Final approval is deliberately absent from the WebMCP tools
+and remains with the exercise director.
+
+19
+00:02:34,000 --> 00:02:40,500
+Synthetic. Deterministic. Browser-only. Open source.
+No live feed, dispatch, or hidden backend.
+
+20
+00:02:40,500 --> 00:02:48,000
+The ambition: rehearse trade-offs before a crisis makes them irreversible.
+PyroScan. Wildfire readiness, rehearsed together.

@@ -1,0 +1,75 @@
+<template>
+  <style>
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); font-weight: 500; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); font-weight: 700; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; color: #eff3ef; }
+    .f02-disconnected-context-bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 18%, rgba(109,230,173,.09), transparent 34%), #111412; }
+    .f02-disconnected-context-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(198,215,202,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(198,215,202,.045) 1px, transparent 1px); background-size: 72px 72px; }
+    .f02-disconnected-context-content { position: absolute; inset: 0; overflow: hidden; }
+    .f02-disconnected-context-eyebrow { font-size: 15px; letter-spacing: .18em; color: #d7f85d; font-weight: 600; text-transform: uppercase; }
+    .f02-disconnected-context-mono { font-size: 13px; letter-spacing: .14em; color: #8e9991; font-weight: 500; text-transform: uppercase; }
+    .f02-disconnected-context-chrome { position: absolute; left: 74px; right: 74px; top: 54px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(198,215,202,.18); }
+    .f02-disconnected-context-screen { border: 1px solid rgba(215,248,93,.28); border-radius: 18px; background: #0b0e0c; box-shadow: 0 34px 80px rgba(0,0,0,.48); overflow: hidden; }
+    .f02-disconnected-context-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    
+      .f02-disconnected-context-world { position:absolute; left:120px; top:190px; width:2380px; height:540px; }
+      .f02-disconnected-context-station { position:absolute; top:0; width:430px; height:500px; padding:42px; border:1px solid rgba(198,215,202,.18); background:rgba(10,13,11,.92); }
+      .f02-disconnected-context-station>span { color:#d7f85d; font-size:13px; letter-spacing:.16em; }
+      .f02-disconnected-context-station>b { display:block; margin-top:34px; font-size:68px; line-height:.92; letter-spacing:-.045em; }
+      .f02-disconnected-context-human { left:0; } .f02-disconnected-context-map { left:920px; } .f02-disconnected-context-ai { left:1840px; }
+      .f02-disconnected-context-note { margin-top:76px; padding:22px; border-left:3px solid #71b7ef; color:#eff3ef; font-size:22px; line-height:1.4; background:rgba(113,183,239,.08); }
+      .f02-disconnected-context-note small { color:#8e9991; }
+      .f02-disconnected-context-map svg { position:absolute; width:220px; right:38px; bottom:28px; fill:rgba(109,230,173,.035); stroke:#6de6ad; stroke-width:2; }
+      .f02-disconnected-context-prompt { position:absolute; left:40px; right:40px; bottom:46px; min-height:96px; padding:26px; border:1px solid rgba(215,248,93,.24); color:#d7f85d; font-size:20px; }
+      .f02-disconnected-context-prompt i { margin-right:10px; } .f02-disconnected-context-prompt em { font-style:normal; color:#eff3ef; }
+      .f02-disconnected-context-prompt u { display:inline-block; width:9px; height:24px; margin-left:5px; background:#d7f85d; text-decoration:none; }
+      .f02-disconnected-context-links { position:absolute; inset:40px 0 0; width:2380px; height:380px; fill:none; stroke:#d7f85d; stroke-width:2; stroke-dasharray:10 12; }
+      .f02-disconnected-context-loss { position:absolute; left:116px; top:786px; font-size:46px; letter-spacing:-.03em; color:#8e9991; }
+      .f02-disconnected-context-loss strong { color:#ffb75c; }
+    
+  </style>
+  <div data-hf-id="hf-c9il" id="root" data-composition-id="02-disconnected-context" data-width="1920" data-height="1080" data-duration="14.5">
+    <div data-hf-id="hf-e7o1" id="f02-disconnected-context-background" class="clip f02-disconnected-context-bg" data-start="0" data-duration="14.5" data-track-index="0"></div>
+    <div data-hf-id="hf-gyyt" id="f02-disconnected-context-content-layer" class="clip f02-disconnected-context-content" data-start="0" data-duration="14.5" data-track-index="1">
+      
+      <div data-hf-id="hf-9hcd" class="f02-disconnected-context-chrome"><span data-hf-id="hf-aaqv" class="f02-disconnected-context-eyebrow">THE OLD HANDOFF</span><span data-hf-id="hf-z0bz" class="f02-disconnected-context-mono">CONTEXT LOSS</span></div>
+      <div data-hf-id="hf-hr8t" class="f02-disconnected-context-world">
+        <section data-hf-id="hf-zd6l" class="f02-disconnected-context-station f02-disconnected-context-human"><span data-hf-id="hf-p81i">01</span><b data-hf-id="hf-21sc">LOCAL<br data-hf-id="hf-x5px">KNOWLEDGE</b><div data-hf-id="hf-c8mm" class="f02-disconnected-context-note">LP-3 access constraint<br data-hf-id="hf-rsrt"><small data-hf-id="hf-rcfs">known by the team</small></div></section>
+        <section data-hf-id="hf-spps" class="f02-disconnected-context-station f02-disconnected-context-map"><span data-hf-id="hf-pmcj">02</span><b data-hf-id="hf-cwvk">MAP<br data-hf-id="hf-szow">EVIDENCE</b><svg data-hf-id="hf-vxk6" viewBox="0 0 260 300"><path data-hf-id="hf-xhbg" d="M130 12 C175 25 208 72 198 114 C228 150 206 203 180 235 C161 259 143 287 126 292 C110 278 98 249 79 225 C51 191 38 148 59 111 C51 71 86 27 130 12Z" /><path data-hf-id="hf-gqvb" d="M76 171 C108 136 151 129 198 166" /><path data-hf-id="hf-7zng" d="M72 201 C112 168 160 165 204 196" /></svg></section>
+        <section data-hf-id="hf-po04" class="f02-disconnected-context-station f02-disconnected-context-ai"><span data-hf-id="hf-q0nk">03</span><b data-hf-id="hf-9qox">AI<br data-hf-id="hf-sldv">CHAT</b><div data-hf-id="hf-90yd" class="f02-disconnected-context-prompt"><i data-hf-id="hf-d4vm">›</i><em data-hf-id="hf-ncn9" id="f02-disconnected-context-typed"></em><u data-hf-id="hf-w5wo"></u></div></section>
+        <svg data-hf-id="hf-2f6k" class="f02-disconnected-context-links" viewBox="0 0 2380 380"><path data-hf-id="hf-gibt" id="f02-disconnected-context-link-a" d="M380 190 C610 190 650 190 845 190" /><path data-hf-id="hf-95a7" id="f02-disconnected-context-link-b" d="M1385 190 C1570 190 1645 190 1905 190" /></svg>
+      </div>
+      <div data-hf-id="hf-y1hj" class="f02-disconnected-context-loss">every handoff <strong data-hf-id="hf-2973">loses context.</strong></div>
+    
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const tl = gsap.timeline({paused: true});
+      
+      const world = document.querySelector('.f02-disconnected-context-world');
+      const pA = document.getElementById('f02-disconnected-context-link-a');
+      const pB = document.getElementById('f02-disconnected-context-link-b');
+      [pA,pB].forEach(p=>{const l=p.getTotalLength();gsap.set(p,{strokeDasharray:l,strokeDashoffset:l});});
+      gsap.set(['.f02-disconnected-context-map','.f02-disconnected-context-ai','.f02-disconnected-context-loss'],{opacity:0});
+      tl.fromTo('.f02-disconnected-context-human',{x:-90,opacity:0},{x:0,opacity:1,duration:1,ease:'power3.out'},.1);
+      tl.to(pA,{strokeDashoffset:0,duration:1.7,ease:'power2.inOut'},1.3);
+      tl.to(world,{x:-690,duration:1.8,ease:'power3.inOut'},3.0);
+      tl.set('.f02-disconnected-context-map',{autoAlpha:1},3.0);
+      tl.fromTo('.f02-disconnected-context-map',{scale:.94,opacity:0},{scale:1,opacity:1,duration:.9,ease:'power3.out'},3.15);
+      tl.to(world,{x:-1440,duration:1.8,ease:'power3.inOut'},6.4);
+      tl.set('.f02-disconnected-context-ai',{autoAlpha:1},6.35);
+      tl.fromTo('.f02-disconnected-context-ai',{scale:.94,opacity:0},{scale:1,opacity:1,duration:.9,ease:'power3.out'},6.55);
+      const typed=document.getElementById('f02-disconnected-context-typed'); const copy='reason about the incident'; const proxy={n:0};
+      tl.to(proxy,{n:copy.length,duration:2.1,ease:'none',onUpdate:()=>typed.textContent=copy.slice(0,Math.floor(proxy.n))},7.2);
+      tl.to(pB,{strokeDashoffset:0,duration:1.6,ease:'power2.inOut'},8.0);
+      tl.to([pA,pB],{strokeDashoffset:120,duration:.45,ease:'power2.in'},9.85);
+      tl.fromTo('.f02-disconnected-context-loss',{y:35,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out'},10.0);
+    
+      window.__timelines["02-disconnected-context"] = tl;
+    })();
+  </script>
+</template>

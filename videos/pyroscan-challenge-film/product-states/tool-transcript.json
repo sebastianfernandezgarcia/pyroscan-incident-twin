@@ -1,0 +1,236 @@
+[
+  {
+    "tool": "inspect_zone",
+    "input": {
+      "zoneId": "el-paso"
+    },
+    "result": {
+      "ok": true,
+      "boardVersion": 12,
+      "zone": {
+        "id": "el-paso",
+        "label": "El Paso corridor",
+        "sector": "C-03",
+        "terrain": "Road corridor / urban edge",
+        "exposure": "elevated",
+        "inAttentionArea": true,
+        "annotations": []
+      },
+      "evidenceFixtures": [
+        "ridge-camera",
+        "wind-observation",
+        "access-graph"
+      ],
+      "visibleChange": "El Paso corridor is focused in the evidence desk and on the map."
+    }
+  },
+  {
+    "tool": "add_board_annotation",
+    "input": {
+      "type": "blocked-road",
+      "zoneId": "el-paso",
+      "note": "LP-3 checkpoint closed in this exercise; validate the western access route before staging."
+    },
+    "result": {
+      "ok": true,
+      "boardVersion": 13,
+      "annotation": {
+        "id": "annotation-1",
+        "type": "blocked-road",
+        "zoneId": "el-paso",
+        "note": "LP-3 checkpoint closed in this exercise; validate the western access route before staging."
+      },
+      "visibleChange": "blocked road pinned to El Paso corridor.",
+      "planStatus": null
+    }
+  },
+  {
+    "tool": "simulate_spread",
+    "input": {
+      "horizonMinutes": 60,
+      "windPreset": "northeast-shift"
+    },
+    "result": {
+      "ok": true,
+      "boardVersion": 14,
+      "scenario": {
+        "id": "northeast-shift-60",
+        "horizonMinutes": 60,
+        "wind": "NE shift 26 km/h \u00b7 what-if",
+        "riskScore": 76,
+        "affectedZones": [
+          "caldera",
+          "el-paso"
+        ],
+        "watchZones": [
+          "tijarafe"
+        ],
+        "summary": "2 exercise sectors in the attention area; 1 on watch.",
+        "synthetic": true
+      },
+      "visibleChange": "60 min \u00b7 What-if wind is now drawn on the map; prior unapproved drafts were cleared.",
+      "safety": "Modeled attention area, not an observed perimeter or forecast."
+    }
+  },
+  {
+    "tool": "compare_response_options",
+    "input": {
+      "optionIds": [
+        "ridge-hold",
+        "dual-protection"
+      ]
+    },
+    "result": {
+      "ok": true,
+      "boardVersion": 15,
+      "scenarioId": "northeast-shift-60",
+      "options": [
+        {
+          "id": "ridge-hold",
+          "label": "Hold the ridge",
+          "score": 70,
+          "setupMinutes": 18,
+          "resourceUnits": 4,
+          "tradeoff": "Leaves the western interface under observation rather than direct cover.",
+          "recommended": false
+        },
+        {
+          "id": "dual-protection",
+          "label": "Protect both interfaces",
+          "score": 71,
+          "setupMinutes": 26,
+          "resourceUnits": 7,
+          "tradeoff": "Consumes every reserve unit in this synthetic exercise.",
+          "recommended": true
+        }
+      ],
+      "rationale": "Protect both interfaces has the strongest coverage-to-readiness score in this synthetic exercise. Human review is still required.",
+      "visibleChange": "The ranked option cards are open in the decision workbench."
+    }
+  },
+  {
+    "tool": "read_incident_board",
+    "input": {},
+    "result": {
+      "ok": true,
+      "exercise": {
+        "incidentId": "LP-EX-042",
+        "name": "Ridge Wind Shift / La Palma",
+        "mode": "synthetic_rehearsal",
+        "boardVersion": 15,
+        "observedAt": "2026-08-31T18:42:00.000Z"
+      },
+      "activeScenario": {
+        "id": "northeast-shift-60",
+        "horizonMinutes": 60,
+        "wind": "NE shift 26 km/h \u00b7 what-if",
+        "riskScore": 76,
+        "affectedZones": [
+          "caldera",
+          "el-paso"
+        ],
+        "watchZones": [
+          "tijarafe"
+        ],
+        "summary": "2 exercise sectors in the attention area; 1 on watch.",
+        "synthetic": true
+      },
+      "zones": [
+        {
+          "id": "caldera",
+          "label": "Caldera edge",
+          "exposure": "watch",
+          "inAttentionArea": true,
+          "onWatch": false,
+          "annotationCount": 0
+        },
+        {
+          "id": "tijarafe",
+          "label": "Tijarafe interface",
+          "exposure": "elevated",
+          "inAttentionArea": false,
+          "onWatch": true,
+          "annotationCount": 0
+        },
+        {
+          "id": "el-paso",
+          "label": "El Paso corridor",
+          "exposure": "elevated",
+          "inAttentionArea": true,
+          "onWatch": false,
+          "annotationCount": 1
+        },
+        {
+          "id": "cumbre-vieja",
+          "label": "Cumbre Vieja south",
+          "exposure": "guarded",
+          "inAttentionArea": false,
+          "onWatch": false,
+          "annotationCount": 0
+        }
+      ],
+      "annotations": [
+        {
+          "id": "annotation-1",
+          "type": "blocked-road",
+          "zoneId": "el-paso",
+          "note": "LP-3 checkpoint closed in this exercise; validate the western access route before staging.",
+          "source": "agent"
+        }
+      ],
+      "plan": null,
+      "safety": "Exercise only. No live data or dispatch. Final approval is human-only."
+    }
+  },
+  {
+    "tool": "stage_response_plan",
+    "input": {
+      "boardVersion": 15,
+      "scenarioId": "northeast-shift-60",
+      "optionId": "dual-protection",
+      "rationale": "Broad reversible coverage while the exercise director validates the recorded LP-3 access constraint."
+    },
+    "result": {
+      "ok": true,
+      "boardVersion": 16,
+      "plan": {
+        "id": "plan-northeast-shift-60-dual-protection",
+        "status": "staged",
+        "option": "Protect both interfaces",
+        "scenarioId": "northeast-shift-60",
+        "actions": [
+          {
+            "id": "brief",
+            "time": "T+00",
+            "title": "Brief the exercise team",
+            "detail": "Confirm NE shift 26 km/h \u00b7 what-if.",
+            "owner": "Coordination"
+          },
+          {
+            "id": "access",
+            "time": "T+08",
+            "title": "Validate access",
+            "detail": "Resolve the recorded route constraint in El Paso corridor.",
+            "owner": "Mobility lead"
+          },
+          {
+            "id": "position",
+            "time": "T+26",
+            "title": "Protect both interfaces",
+            "detail": "Stage 7 exercise units; no real dispatch.",
+            "owner": "Field lead"
+          },
+          {
+            "id": "review",
+            "time": "T+60",
+            "title": "Human decision gate",
+            "detail": "Review evidence, annotations and changed assumptions.",
+            "owner": "Exercise director"
+          }
+        ]
+      },
+      "visibleChange": "The draft plan is open for human review. Final approval remains in the human interface.",
+      "reversible": true
+    }
+  }
+]

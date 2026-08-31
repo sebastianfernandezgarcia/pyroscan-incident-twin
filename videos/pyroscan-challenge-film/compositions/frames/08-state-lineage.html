@@ -1,0 +1,64 @@
+<template>
+  <style>
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); font-weight: 500; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); font-weight: 700; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; color: #eff3ef; }
+    .f08-state-lineage-bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 18%, rgba(109,230,173,.09), transparent 34%), #111412; }
+    .f08-state-lineage-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(198,215,202,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(198,215,202,.045) 1px, transparent 1px); background-size: 72px 72px; }
+    .f08-state-lineage-content { position: absolute; inset: 0; overflow: hidden; }
+    .f08-state-lineage-eyebrow { font-size: 15px; letter-spacing: .18em; color: #d7f85d; font-weight: 600; text-transform: uppercase; }
+    .f08-state-lineage-mono { font-size: 13px; letter-spacing: .14em; color: #8e9991; font-weight: 500; text-transform: uppercase; }
+    .f08-state-lineage-chrome { position: absolute; left: 74px; right: 74px; top: 54px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(198,215,202,.18); }
+    .f08-state-lineage-screen { border: 1px solid rgba(215,248,93,.28); border-radius: 18px; background: #0b0e0c; box-shadow: 0 34px 80px rgba(0,0,0,.48); overflow: hidden; }
+    .f08-state-lineage-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    
+      .f08-state-lineage-lineage { position:absolute; left:340px; right:340px; top:160px; height:100px; display:flex; align-items:center; justify-content:center; gap:24px; }
+      .f08-state-lineage-node { width:250px; height:72px; display:grid; place-items:center; border:1px solid rgba(198,215,202,.22); font-size:14px; letter-spacing:.13em; }
+      .f08-state-lineage-lineage>i { width:90px; height:2px; background:#d7f85d; }
+      .f08-state-lineage-version { width:100px; height:100px; display:grid; place-items:center; border-radius:50%; border:2px solid #d7f85d; font-size:34px; font-weight:700; }
+      .f08-state-lineage-stale { position:absolute; left:420px; top:288px; display:flex; gap:18px; align-items:center; padding:16px 20px; border:1px solid rgba(255,183,92,.28); color:#ffb75c; background:rgba(255,183,92,.05); }
+      .f08-state-lineage-stale span { font-size:28px; font-weight:700; } .f08-state-lineage-stale b { font-size:14px; letter-spacing:.13em; }
+      .f08-state-lineage-app { position:absolute; left:90px; top:360px; width:1740px; height:520px; }
+      .f08-state-lineage-source,.f08-state-lineage-target { position:absolute; z-index:4; padding:10px 14px; background:rgba(9,11,10,.9); border:2px solid #ffb75c; color:#ffb75c; font-size:13px; letter-spacing:.12em; }
+      .f08-state-lineage-source { left:138px; top:680px; } .f08-state-lineage-target { right:138px; top:485px; }
+      .f08-state-lineage-causal { position:absolute; z-index:3; inset:0; width:1920px; height:1080px; fill:none; stroke:#d7f85d; stroke-width:4; }
+      .f08-state-lineage-payoff { position:absolute; left:520px; top:905px; display:flex; gap:20px; align-items:center; font-size:15px; letter-spacing:.15em; } .f08-state-lineage-payoff i { width:130px; height:2px; background:#d7f85d; }
+    
+  </style>
+  <div data-hf-id="hf-ocqu" id="root" data-composition-id="08-state-lineage" data-width="1920" data-height="1080" data-duration="22.5">
+    <div data-hf-id="hf-h24y" id="f08-state-lineage-background" class="clip f08-state-lineage-bg" data-start="0" data-duration="22.5" data-track-index="0"></div>
+    <div data-hf-id="hf-rd2i" id="f08-state-lineage-content-layer" class="clip f08-state-lineage-content" data-start="0" data-duration="22.5" data-track-index="1">
+      
+      <div data-hf-id="hf-wxrl" class="f08-state-lineage-chrome"><span data-hf-id="hf-wuy5" class="f08-state-lineage-eyebrow">STATE LINEAGE</span><span data-hf-id="hf-iifm" class="f08-state-lineage-mono">READ → VERIFY → STAGE</span></div>
+      <div data-hf-id="hf-qviq" class="f08-state-lineage-lineage"><div data-hf-id="hf-nilj" class="f08-state-lineage-node">READ BOARD</div><i data-hf-id="hf-wt6k"></i><div data-hf-id="hf-9obt" class="f08-state-lineage-version">v<span data-hf-id="hf-rzzx" id="f08-state-lineage-version-number">15</span></div><i data-hf-id="hf-zeb8"></i><div data-hf-id="hf-9mta" class="f08-state-lineage-node">STAGE PLAN</div></div>
+      <div data-hf-id="hf-w5yq" class="f08-state-lineage-stale"><span data-hf-id="hf-3hrc">v14</span><b data-hf-id="hf-osrf">STALE BOARD · REJECTED</b></div>
+      <div data-hf-id="hf-ukuv" class="f08-state-lineage-app f08-state-lineage-screen"><img data-hf-id="hf-g9g7" src="assets/06-staged-plan.png" alt="Real reversible plan carrying the LP-3 access constraint"></div>
+      <div data-hf-id="hf-dpjw" class="f08-state-lineage-source">LP-3 NOTE</div><div data-hf-id="hf-hk70" class="f08-state-lineage-target">VALIDATE ACCESS</div><svg data-hf-id="hf-tppv" class="f08-state-lineage-causal" viewBox="0 0 1920 1080"><path data-hf-id="hf-me78" id="f08-state-lineage-causal-path" d="M245 650 C610 720 1160 620 1600 520" /></svg>
+      <div data-hf-id="hf-7uxr" class="f08-state-lineage-payoff">HUMAN INPUT <i data-hf-id="hf-y7e5"></i> DOWNSTREAM ARTIFACT</div>
+    
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const tl = gsap.timeline({paused: true});
+      
+      const causal=document.getElementById('f08-state-lineage-causal-path'); const cl=causal.getTotalLength(); gsap.set(causal,{strokeDasharray:cl,strokeDashoffset:cl});
+      gsap.set(['.f08-state-lineage-lineage>*','.f08-state-lineage-stale','.f08-state-lineage-app','.f08-state-lineage-source','.f08-state-lineage-target','.f08-state-lineage-payoff'],{opacity:0});
+      tl.fromTo('.f08-state-lineage-lineage>*',{x:-28,opacity:0},{x:0,opacity:1,duration:.6,stagger:.62,ease:'power3.out'},.1);
+      const digits=['?','1','5']; const vd={i:0}; const ve=document.getElementById('f08-state-lineage-version-number');
+      tl.to(vd,{i:digits.length-1,duration:1.2,ease:'steps(2)',onUpdate:()=>ve.textContent=digits[Math.round(vd.i)]},2.0);
+      tl.fromTo('.f08-state-lineage-stale',{x:-35,opacity:0},{x:0,opacity:1,duration:.8,ease:'power3.out'},5.0);
+      tl.to('.f08-state-lineage-stale',{x:-160,opacity:.28,duration:.6,ease:'power2.in'},8.5);
+      tl.fromTo('.f08-state-lineage-app',{scale:1.08,opacity:0},{scale:1,opacity:1,duration:1.1,ease:'power3.out'},9.3);
+      tl.fromTo('.f08-state-lineage-target',{scale:.84,opacity:0},{scale:1,opacity:1,duration:.7,ease:'power3.out'},11.7);
+      tl.fromTo('.f08-state-lineage-source',{scale:.84,opacity:0},{scale:1,opacity:1,duration:.7,ease:'power3.out'},15.2);
+      tl.to(causal,{strokeDashoffset:0,duration:2.0,ease:'power2.inOut'},15.6);
+      tl.fromTo('.f08-state-lineage-payoff',{y:22,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out'},18.8);
+    
+      window.__timelines["08-state-lineage"] = tl;
+    })();
+  </script>
+</template>

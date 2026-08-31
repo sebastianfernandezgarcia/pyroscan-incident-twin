@@ -1,0 +1,13 @@
+.hf-catalog-*.json
+check-*.json
+/.media/
+/.thumbnails/
+/AGENTS.md
+/CLAUDE.md
+/capture/
+product-states/*.png
+product-states/*.jpg
+snapshots/
+renders/
+.hyperframes/frame-packets/
+scripts/__pycache__/

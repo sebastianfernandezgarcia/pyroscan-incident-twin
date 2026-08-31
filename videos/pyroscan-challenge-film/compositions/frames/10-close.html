@@ -1,0 +1,58 @@
+<template>
+  <style>
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); font-weight: 500; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); font-weight: 700; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; color: #eff3ef; }
+    .f10-close-bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 18%, rgba(109,230,173,.09), transparent 34%), #111412; }
+    .f10-close-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(198,215,202,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(198,215,202,.045) 1px, transparent 1px); background-size: 72px 72px; }
+    .f10-close-content { position: absolute; inset: 0; overflow: hidden; }
+    .f10-close-eyebrow { font-size: 15px; letter-spacing: .18em; color: #d7f85d; font-weight: 600; text-transform: uppercase; }
+    .f10-close-mono { font-size: 13px; letter-spacing: .14em; color: #8e9991; font-weight: 500; text-transform: uppercase; }
+    .f10-close-chrome { position: absolute; left: 74px; right: 74px; top: 54px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(198,215,202,.18); }
+    .f10-close-screen { border: 1px solid rgba(215,248,93,.28); border-radius: 18px; background: #0b0e0c; box-shadow: 0 34px 80px rgba(0,0,0,.48); overflow: hidden; }
+    .f10-close-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    
+      .f10-close-app { position:absolute; inset:0; opacity:.2; } .f10-close-app::after { content:''; position:absolute; inset:0; background:rgba(9,11,10,.55); } .f10-close-app img { width:100%; height:100%; object-fit:cover; }
+      .f10-close-proof { position:absolute; left:130px; top:205px; width:1500px; height:190px; }
+      .f10-close-proof span { position:absolute; inset:0; font-size:150px; line-height:1; font-weight:700; letter-spacing:-.06em; }
+      .f10-close-boundaries { position:absolute; left:145px; top:520px; display:grid; gap:24px; }
+      .f10-close-boundaries span { display:block; padding-bottom:13px; width:620px; border-bottom:1px solid rgba(255,183,92,.4); color:#ffb75c; font-size:26px; letter-spacing:.12em; }
+      .f10-close-claim { position:absolute; inset:0; padding:160px 125px; background:#d7f85d; color:#111412; font-size:118px; line-height:1.2; letter-spacing:-.06em; font-weight:700; opacity:0; visibility:hidden; }
+      .f10-close-claim span { display:block; }
+      .f10-close-lockup { position:absolute; inset:0; display:grid; place-content:center; text-align:center; background:#111412; }
+      .f10-close-lockup>img { width:96px; height:96px; margin:0 auto 28px; } .f10-close-lockup div { display:flex; align-items:baseline; gap:14px; justify-content:center; } .f10-close-lockup b { font-size:28px; letter-spacing:.12em; } .f10-close-lockup strong { font-size:28px; font-weight:500; color:#8e9991; }
+      .f10-close-lockup p { margin:28px 0 0; font-size:52px; letter-spacing:-.04em; } .f10-close-lockup a { margin-top:22px; color:#d7f85d; font-size:14px; letter-spacing:.08em; }
+    
+  </style>
+  <div data-hf-id="hf-482m" id="root" data-composition-id="10-close" data-width="1920" data-height="1080" data-duration="14">
+    <div data-hf-id="hf-8soy" id="f10-close-background" class="clip f10-close-bg" data-start="0" data-duration="14" data-track-index="0"></div>
+    <div data-hf-id="hf-ot42" id="f10-close-content-layer" class="clip f10-close-content" data-start="0" data-duration="14" data-track-index="1">
+      
+      <div data-hf-id="hf-9ug0" class="f10-close-app"><img data-hf-id="hf-zvjz" src="assets/01-how-it-works.png" alt="PyroScan shared incident surface"></div>
+      <div data-hf-id="hf-095r" class="f10-close-proof"><span data-hf-id="hf-jv9o">SYNTHETIC</span><span data-hf-id="hf-50l5">DETERMINISTIC</span><span data-hf-id="hf-j5c4">BROWSER-ONLY</span><span data-hf-id="hf-rs3m">OPEN SOURCE</span></div>
+      <div data-hf-id="hf-1sh5" class="f10-close-boundaries"><span data-hf-id="hf-9wes">NO LIVE FEED</span><span data-hf-id="hf-f88c">NO DISPATCH</span><span data-hf-id="hf-s9aa">NO HIDDEN BACKEND</span></div>
+      <div data-hf-id="hf-u5g9" class="f10-close-claim"><span data-hf-id="hf-6b9r">rehearse trade-offs</span><span data-hf-id="hf-lay1">before they become</span><span data-hf-id="hf-mu0p">irreversible.</span></div>
+      <div data-hf-id="hf-i2bt" class="f10-close-lockup"><img data-hf-id="hf-x9uj" src="assets/pyroscan-mark.svg" alt="PyroScan mark"><div data-hf-id="hf-yeow"><b data-hf-id="hf-3izk">PYROSCAN</b><strong data-hf-id="hf-15jy">Incident Twin</strong></div><p data-hf-id="hf-g29e">wildfire readiness, rehearsed together.</p><a data-hf-id="hf-f8ob">sebastianfernandezgarcia.github.io/pyroscan-incident-twin</a></div>
+    
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const tl = gsap.timeline({paused: true});
+      
+      const proof=gsap.utils.toArray('.f10-close-proof span'); gsap.set(proof,{opacity:0}); gsap.set(['.f10-close-boundaries span','.f10-close-claim','.f10-close-claim span','.f10-close-lockup'],{opacity:0});
+      proof.forEach((el,i)=>{tl.set(el,{autoAlpha:1},.15+i*.8); if(i<proof.length-1) tl.set(el,{autoAlpha:0},.85+i*.8);});
+      tl.set(proof[3],{autoAlpha:0},3.35);
+      tl.fromTo('.f10-close-boundaries span',{x:-40,opacity:0},{x:0,opacity:1,duration:.55,stagger:.8,ease:'power3.out'},4.0);
+      tl.set('.f10-close-boundaries',{autoAlpha:0},7.15); tl.set('.f10-close-claim',{autoAlpha:1},7.15);
+      tl.fromTo('.f10-close-claim span',{y:70,opacity:0},{y:0,opacity:1,duration:.65,stagger:.55,ease:'power3.out'},7.2);
+      tl.to('.f10-close-claim',{scale:.82,opacity:0,duration:.7,ease:'power2.in'},10.45);
+      tl.fromTo('.f10-close-lockup',{scale:.92,opacity:0},{scale:1,opacity:1,duration:1.0,ease:'power3.out'},10.6);
+    
+      window.__timelines["10-close"] = tl;
+    })();
+  </script>
+</template>

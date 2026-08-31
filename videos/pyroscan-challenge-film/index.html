@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #111412;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-9675" id="root" data-composition-id="main" data-start="0" data-duration="168" data-width="1920" data-height="1080">
+      <div data-hf-id="hf-izt8" id="el-01-before-the-fire" class="scene" data-composition-id="01-before-the-fire" data-composition-src="compositions/frames/01-before-the-fire.html" data-start="0" data-duration="10" data-track-index="0"></div>
+
+      <div data-hf-id="hf-2b5f" id="el-02-disconnected-context" class="scene" data-composition-id="02-disconnected-context" data-composition-src="compositions/frames/02-disconnected-context.html" data-start="10" data-duration="14.5" data-track-index="1"></div>
+
+      <div data-hf-id="hf-dv7z" id="el-03-one-shared-twin" class="scene" data-composition-id="03-one-shared-twin" data-composition-src="compositions/frames/03-one-shared-twin.html" data-start="24" data-duration="16" data-track-index="0"></div>
+
+      <div data-hf-id="hf-ih9u" id="el-04-webmcp-protocol" class="scene" data-composition-id="04-webmcp-protocol" data-composition-src="compositions/frames/04-webmcp-protocol.html" data-start="40" data-duration="18.5" data-track-index="1"></div>
+
+      <div data-hf-id="hf-06pe" id="el-05-local-knowledge" class="scene" data-composition-id="05-local-knowledge" data-composition-src="compositions/frames/05-local-knowledge.html" data-start="58" data-duration="22" data-track-index="0"></div>
+
+      <div data-hf-id="hf-b9sg" id="el-06-bounded-what-if" class="scene" data-composition-id="06-bounded-what-if" data-composition-src="compositions/frames/06-bounded-what-if.html" data-start="80" data-duration="20.5" data-track-index="1"></div>
+
+      <div data-hf-id="hf-vbj1" id="el-07-compare-tradeoffs" class="scene" data-composition-id="07-compare-tradeoffs" data-composition-src="compositions/frames/07-compare-tradeoffs.html" data-start="100" data-duration="18" data-track-index="0"></div>
+
+      <div data-hf-id="hf-c4w7" id="el-08-state-lineage" class="scene" data-composition-id="08-state-lineage" data-composition-src="compositions/frames/08-state-lineage.html" data-start="118" data-duration="22.5" data-track-index="1"></div>
+
+      <div data-hf-id="hf-xen0" id="el-09-human-gate" class="scene" data-composition-id="09-human-gate" data-composition-src="compositions/frames/09-human-gate.html" data-start="140" data-duration="14" data-track-index="0"></div>
+
+      <div data-hf-id="hf-4ooz" id="el-10-close" class="scene" data-composition-id="10-close" data-composition-src="compositions/frames/10-close.html" data-start="154" data-duration="14" data-track-index="1"></div>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-02-disconnected-context", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 24);
+        tl.fromTo("#el-03-one-shared-twin", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 24);
+        tl.to("#el-04-webmcp-protocol", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 58);
+        tl.fromTo("#el-05-local-knowledge", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 58);
+        tl.to("#el-06-bounded-what-if", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 100);
+        tl.fromTo("#el-07-compare-tradeoffs", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 100);
+        tl.to("#el-08-state-lineage", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 140);
+        tl.fromTo("#el-09-human-gate", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 140);
+        tl.to({}, { duration: 168 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
+    </script>
+  </body>
+</html>

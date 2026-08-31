@@ -1,0 +1,61 @@
+<template>
+  <style>
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); font-weight: 500; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; }
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); font-weight: 700; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: 'Inter', sans-serif; color: #eff3ef; }
+    .f04-webmcp-protocol-bg { position: absolute; inset: 0; background: radial-gradient(circle at 72% 18%, rgba(109,230,173,.09), transparent 34%), #111412; }
+    .f04-webmcp-protocol-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(198,215,202,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(198,215,202,.045) 1px, transparent 1px); background-size: 72px 72px; }
+    .f04-webmcp-protocol-content { position: absolute; inset: 0; overflow: hidden; }
+    .f04-webmcp-protocol-eyebrow { font-size: 15px; letter-spacing: .18em; color: #d7f85d; font-weight: 600; text-transform: uppercase; }
+    .f04-webmcp-protocol-mono { font-size: 13px; letter-spacing: .14em; color: #8e9991; font-weight: 500; text-transform: uppercase; }
+    .f04-webmcp-protocol-chrome { position: absolute; left: 74px; right: 74px; top: 54px; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid rgba(198,215,202,.18); }
+    .f04-webmcp-protocol-screen { border: 1px solid rgba(215,248,93,.28); border-radius: 18px; background: #0b0e0c; box-shadow: 0 34px 80px rgba(0,0,0,.48); overflow: hidden; }
+    .f04-webmcp-protocol-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    
+      .f04-webmcp-protocol-person { position:absolute; top:400px; width:260px; text-align:center; }
+      .f04-webmcp-protocol-person b,.f04-webmcp-protocol-person span { display:block; } .f04-webmcp-protocol-person b { font-size:30px; } .f04-webmcp-protocol-person span { margin-top:8px; color:#8e9991; font-size:15px; }
+      .f04-webmcp-protocol-human { left:80px; } .f04-webmcp-protocol-agent { right:80px; }
+      .f04-webmcp-protocol-hub { position:absolute; left:760px; top:286px; width:400px; height:260px; display:grid; place-items:center; text-align:center; border:1px solid rgba(215,248,93,.42); background:radial-gradient(circle,rgba(215,248,93,.09),transparent 72%),#0b0e0c; }
+      .f04-webmcp-protocol-hub img { width:62px; height:62px; } .f04-webmcp-protocol-hub b { margin-top:-10px; font-size:54px; line-height:.86; letter-spacing:-.045em; } .f04-webmcp-protocol-hub span { margin-top:-18px; color:#8e9991; font-size:13px; letter-spacing:.12em; }
+      .f04-webmcp-protocol-lines { position:absolute; inset:100px 0 0; width:1920px; height:720px; fill:none; stroke:rgba(215,248,93,.55); stroke-width:2; }
+      .f04-webmcp-protocol-tool { position:absolute; min-width:190px; height:54px; display:grid; place-items:center; border:1px solid rgba(198,215,202,.18); background:#111412; font-size:14px; letter-spacing:.15em; color:#d7f85d; }
+      .f04-webmcp-protocol-t1 { left:865px; top:170px; } .f04-webmcp-protocol-t2 { left:440px; top:214px; } .f04-webmcp-protocol-t3 { right:440px; top:214px; } .f04-webmcp-protocol-t4 { left:430px; top:650px; } .f04-webmcp-protocol-t5 { right:430px; top:650px; } .f04-webmcp-protocol-t6 { left:865px; top:716px; }
+      .f04-webmcp-protocol-proof { position:absolute; left:575px; right:575px; top:820px; display:flex; justify-content:center; align-items:center; gap:24px; color:#8e9991; font-size:13px; letter-spacing:.13em; }
+      .f04-webmcp-protocol-proof i { width:8px; height:8px; border-radius:50%; background:#d7f85d; }
+    
+  </style>
+  <div data-hf-id="hf-euu7" id="root" data-composition-id="04-webmcp-protocol" data-width="1920" data-height="1080" data-duration="18.5">
+    <div data-hf-id="hf-erk5" id="f04-webmcp-protocol-background" class="clip f04-webmcp-protocol-bg" data-start="0" data-duration="18.5" data-track-index="0"></div>
+    <div data-hf-id="hf-dta3" id="f04-webmcp-protocol-content-layer" class="clip f04-webmcp-protocol-content" data-start="0" data-duration="18.5" data-track-index="1">
+      
+      <div data-hf-id="hf-q0pl" class="f04-webmcp-protocol-chrome"><span data-hf-id="hf-q86w" class="f04-webmcp-protocol-eyebrow">WEBMCP · INTENT LEVEL</span><span data-hf-id="hf-wzo1" class="f04-webmcp-protocol-mono">PAGE → TOOLS → SHARED STATE</span></div>
+      <div data-hf-id="hf-zo7i" class="f04-webmcp-protocol-person f04-webmcp-protocol-human"><b data-hf-id="hf-6gsa">HUMAN</b><span data-hf-id="hf-idof">local context</span></div>
+      <div data-hf-id="hf-sz8i" class="f04-webmcp-protocol-person f04-webmcp-protocol-agent"><b data-hf-id="hf-ueag">CHATGPT</b><span data-hf-id="hf-l1ib">bounded exploration</span></div>
+      <div data-hf-id="hf-t4as" class="f04-webmcp-protocol-hub"><img data-hf-id="hf-x9uj" src="assets/pyroscan-mark.svg" alt="PyroScan mark"><b data-hf-id="hf-6fd9">LIVE<br data-hf-id="hf-x5px">BOARD</b><span data-hf-id="hf-golm">same page · same state</span></div>
+      <svg data-hf-id="hf-e8ig" class="f04-webmcp-protocol-lines" viewBox="0 0 1920 720" aria-hidden="true"><g data-hf-id="hf-fr38" id="f04-webmcp-protocol-line-group"><path data-hf-id="hf-mbld" d="M270 360 C480 360 520 360 700 360" /><path data-hf-id="hf-3nmh" d="M1650 360 C1440 360 1400 360 1220 360" /><path data-hf-id="hf-56hf" d="M960 300 L960 160" /><path data-hf-id="hf-vmnr" d="M960 420 L960 570" /><path data-hf-id="hf-oesl" d="M860 330 L660 190" /><path data-hf-id="hf-7df9" d="M1060 330 L1260 190" /><path data-hf-id="hf-yy7n" d="M860 390 L660 550" /><path data-hf-id="hf-6lk3" d="M1060 390 L1260 550" /></g></svg>
+      <div data-hf-id="hf-7fel" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t1">READ</div><div data-hf-id="hf-7x5e" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t2">INSPECT</div><div data-hf-id="hf-x8cf" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t3">ANNOTATE</div><div data-hf-id="hf-2vii" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t4">SIMULATE</div><div data-hf-id="hf-jvtk" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t5">COMPARE</div><div data-hf-id="hf-qpic" class="f04-webmcp-protocol-tool f04-webmcp-protocol-t6">STAGE</div>
+      <div data-hf-id="hf-e61v" class="f04-webmcp-protocol-proof"><span data-hf-id="hf-4t39">NO SERVER TO INSTALL</span><i data-hf-id="hf-wt6k"></i><span data-hf-id="hf-4to9">NO BRITTLE CLICK SCRIPT</span></div>
+    
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (() => {
+      const tl = gsap.timeline({paused: true});
+      
+      const tools=gsap.utils.toArray('.f04-webmcp-protocol-tool'); const lines=gsap.utils.toArray('#f04-webmcp-protocol-line-group path');
+      gsap.set([tools,'.f04-webmcp-protocol-person','.f04-webmcp-protocol-proof'],{opacity:0});
+      lines.forEach(p=>{const l=p.getTotalLength();gsap.set(p,{strokeDasharray:l,strokeDashoffset:l});});
+      tl.fromTo('.f04-webmcp-protocol-hub',{scale:.86,opacity:0},{scale:1,opacity:1,duration:1,ease:'power3.out'},.1);
+      tl.fromTo('.f04-webmcp-protocol-person',{y:32,opacity:0},{y:0,opacity:1,duration:.8,stagger:.35,ease:'power3.out'},1.8);
+      tools.forEach((el,i)=>tl.fromTo(el,{scale:.82,opacity:0},{scale:1,opacity:1,duration:.55,ease:'power3.out'},3.0+i*1.35));
+      lines.forEach((p,i)=>tl.to(p,{strokeDashoffset:0,duration:.9,ease:'power2.inOut'},3.45+i*.85));
+      tl.fromTo('.f04-webmcp-protocol-hub',{boxShadow:'0 0 0 rgba(215,248,93,0)'},{boxShadow:'0 0 70px rgba(215,248,93,.22)',duration:1.1,ease:'power2.out'},11.8);
+      tl.fromTo('.f04-webmcp-protocol-proof',{y:22,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out'},14.7);
+    
+      window.__timelines["04-webmcp-protocol"] = tl;
+    })();
+  </script>
+</template>
