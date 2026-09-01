@@ -19,7 +19,7 @@
 - [x] Add the live URL to README and Devpost copy.
 - [x] Verify a clean browser load with no console errors.
 - [x] Verify all six Site Tools on both deployed origins.
-- [x] Invoke all six production WebMCP callbacks against the GitHub Pages origin and inspect/simulate against Netlify.
+- [x] Invoke all six production WebMCP callbacks against both GitHub Pages and Netlify.
 
 ## Visual QA
 
