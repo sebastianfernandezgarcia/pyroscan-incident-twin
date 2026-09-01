@@ -1,8 +1,9 @@
 # WebMCP Challenge submission audit
 
-**Verdict:** PyroScan is technically eligible and the runnable product is ready. The only hard blockers are the public narrated video and the final Devpost entry. Netlify is optional because the verified GitHub Pages URL already satisfies the hosting rule.
+**Verdict:** PyroScan is technically eligible and the runnable product is ready on two public origins. The only hard blockers are the recorded narration, the public YouTube upload and the final Devpost entry.
 
-Audit date: **31 August 2026**  
+Audit date: **1 September 2026**
+
 Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 
 ## Required submission items
@@ -10,7 +11,7 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | Official requirement | Status | Evidence / next action |
 | --- | --- | --- |
 | WebMCP-powered web app | **PASS** | Six imperative tools share the same Zustand store as the visible UI. See [`src/webmcp/registerIncidentTools.ts`](../src/webmcp/registerIncidentTools.ts). |
-| Working live URL | **PASS** | [GitHub Pages deployment](https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/) loads without authentication. |
+| Working live URL | **PASS** | [Primary Netlify deployment](https://pyroscan-incident-twin.netlify.app/) and [GitHub Pages mirror](https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/) load without authentication. |
 | Runs in a supported judge environment | **PASS** | Verified in the ChatGPT/Codex built-in browser with GPT-5.6 Sol; all six Site Tools were discovered and invoked. |
 | Complete, coherent product | **PASS** | Responsive three-pane workbench, shared state, deterministic simulator, comparison, reversible plan, activity log, undo and reset. |
 | English description covers fit, UX, collaboration and implementation | **PASS** | Final copy is in [`DEVPOST_SUBMISSION.md`](DEVPOST_SUBMISSION.md). |
@@ -18,7 +19,7 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | All code, assets and instructions included | **PASS** | Clean clone requires only `npm install`, `npm test`, and `npm run build`; no backend, API key or private dataset. |
 | Open-source license visible | **PASS** | MIT license at repository root and detected in the GitHub About area. |
 | Pre-existing work documented | **PASS** | [`CHALLENGE_WORK.md`](../CHALLENGE_WORK.md) separates prior private PyroScan research from the new competition implementation and commit history. |
-| Video under three minutes, with audio and clear WebMCP demo | **BLOCKED** | The checked 2:48 motion-design visual master, timed human-voice script and captions are ready. Approve/render it, add the recorded English narration, upload publicly to YouTube, and paste its URL. |
+| Video under three minutes, with audio and clear WebMCP demo | **BLOCKED** | The verified 2:48 1080p visual master, timed human-voice script, captions and deterministic mix helper are ready. Record the ten English takes, mix them, upload publicly to YouTube and paste its URL. |
 | Submission materials in English | **PASS** | App, repository, description, testing instructions, captions and narration are English. |
 | No unauthorized marks, music or media | **PASS** | Original interface and animation; no commercial music. OpenStreetMap coastline attribution is visible in-app and documented. |
 | Devpost form completed before deadline | **BLOCKED** | Create and save a separate PyroScan draft, add the final YouTube URL, review, and submit. Do not alter the Roque Nights draft. |

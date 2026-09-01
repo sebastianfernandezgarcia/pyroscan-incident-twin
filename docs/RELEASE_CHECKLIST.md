@@ -15,10 +15,11 @@
 ## Hosting
 
 - [x] Deploy the static build to GitHub Pages (a sponsor host can replace it later).
+- [x] Deploy the verified root-base build to Netlify and make it public at `pyroscan-incident-twin.netlify.app`.
 - [x] Add the live URL to README and Devpost copy.
 - [x] Verify a clean browser load with no console errors.
-- [x] Verify all six Site Tools on the deployed origin.
-- [x] Run the full judge prompt locally and verify the same tool set on the deployed app.
+- [x] Verify all six Site Tools on both deployed origins.
+- [x] Invoke all six production WebMCP callbacks against the GitHub Pages origin and inspect/simulate against Netlify.
 
 ## Visual QA
 
@@ -38,10 +39,10 @@
 - [x] Inspect frame midpoints and every transition boundary.
 - [x] Prepare ten timed voice takes, pronunciation notes, SRT captions and the deterministic mix helper.
 - [ ] Record the ten lines in `docs/VOICEOVER_RECORDING_GUIDE.md`.
-- [ ] Approve and render the silent visual master.
+- [x] Approve and render the silent visual master at 1920×1080, 30 fps, 2:48.
 - [ ] Mix the human narration and verify the final runtime remains below three minutes.
 - [ ] Include audible English narration.
-- [ ] Show the Site Tools list and visible state changes.
+- [x] Show the six Site Tools and visible state changes in the visual master.
 - [ ] Upload publicly to YouTube.
 - [ ] Add the YouTube URL to Devpost copy.
 

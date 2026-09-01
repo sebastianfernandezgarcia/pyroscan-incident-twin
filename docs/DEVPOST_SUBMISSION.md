@@ -78,7 +78,8 @@ The competition build intentionally stays synthetic and browser-only. A future r
 
 ## Links
 
-- Live app: `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
+- Live app (primary): `https://pyroscan-incident-twin.netlify.app/`
+- Live app (GitHub Pages mirror): `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
 - Public repository: `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin`
 - YouTube demo (<3 minutes): `TODO`
 
@@ -91,7 +92,7 @@ The competition build intentionally stays synthetic and browser-only. A future r
 | Organization | Leave blank |
 | App status | **Existing** |
 | Significant WebMCP extension | **PyroScan previously existed as a broader private research concept. During the challenge period I created this separate, public browser-only product: a deterministic synthetic exercise engine, a shared human/agent incident board, six imperative WebMCP tools, exact state-lineage safeguards, a real La Palma coastline visualization, automated tests and complete open-source documentation. CHALLENGE_WORK.md and the public commit history distinguish all new competition work.** |
-| Live URL | `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/` |
+| Live URL | `https://pyroscan-incident-twin.netlify.app/` |
 | Public repo | `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin` |
 | Agent/client tested | **ChatGPT/Codex built-in browser with GPT-5.6 Sol; automated registration and integration tests.** |
 | AI tools leveraged | **OpenAI Codex desktop app, GPT-5.6 Sol, ChatGPT Site Tools / WebMCP.** |
