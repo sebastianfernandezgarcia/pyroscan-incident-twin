@@ -21,7 +21,7 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | Pre-existing work documented | **PASS** | [`CHALLENGE_WORK.md`](../CHALLENGE_WORK.md) separates prior private PyroScan research from the new competition implementation and commit history. |
 | Video under three minutes, with audio and clear WebMCP demo | **BLOCKED** | The verified 2:48 1080p visual master, timed human-voice script, captions and deterministic mix helper are ready. Record the ten English takes, mix them, upload publicly to YouTube and paste its URL. |
 | Submission materials in English | **PASS** | App, repository, description, testing instructions, captions and narration are English. |
-| No unauthorized marks, music or media | **PASS** | Original interface and animation; no commercial music. OpenStreetMap coastline attribution is visible in-app and documented. |
+| No unauthorized marks, music or media | **PASS** | Original interface and animation; no commercial music. OpenStreetMap, Copernicus EMSR671 and SITCAN/GRAFCAN public-data attributions are visible/source-linked and documented. |
 | Devpost form completed before deadline | **BLOCKED** | Create and save a separate PyroScan draft, add the final YouTube URL, review, and submit. Do not alter the Roque Nights draft. |
 
 Official source of truth: [WebMCP Challenge rules](https://webmcp.devpost.com/rules).
@@ -31,7 +31,7 @@ Official source of truth: [WebMCP Challenge rules](https://webmcp.devpost.com/ru
 | Criterion | What the judge should see in the first 90 seconds |
 | --- | --- |
 | **WebMCP Leverage** | Intent-level tools, not click wrappers; human annotations affect later agent analysis; all effects appear on the same live map; exact `boardVersion` rejects stale proposals. |
-| **Execution** | A polished responsive product, real La Palma coastline, deterministic offline demo, six working tools, tests, visible activity lineage, reversible draft and human-only approval. |
+| **Execution** | A polished responsive product, real La Palma coastline, public 25 m terrain, an observed 2023 Copernicus burn-scar reference, deterministic offline demo, six working tools, tests, visible activity lineage, reversible draft and human-only approval. |
 | **Potential Impact** | A credible rehearsal workflow for exercise facilitators, local operators and civil-protection training teams who must test trade-offs before a live crisis. |
 | **Creativity & Ambition** | A browser becomes a shared incident twin where agent exploration and human judgment complement each other instead of replacing one another. |
 
@@ -41,7 +41,8 @@ Use these phrases:
 
 - **wildfire readiness and rehearsal**;
 - **synthetic, deterministic exercise scenario**;
-- **designed around La Palma's terrain and constrained access**;
+- **grounded in public La Palma terrain and historical Copernicus evidence**;
+- **public context is historical/geographic and does not drive the simulator**;
 - **explores decision trade-offs before a live incident**;
 - **working, open-source WebMCP prototype**.
 

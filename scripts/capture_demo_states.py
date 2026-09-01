@@ -9,15 +9,17 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 from pathlib import Path
 
 from playwright.async_api import async_playwright
+from PIL import Image, ImageDraw
 
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "videos" / "pyroscan-challenge-film" / "product-states"
 CHROME = Path.home() / "Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
-URL = "http://127.0.0.1:4174/"
+URL = os.environ.get("PYROSCAN_CAPTURE_URL", "http://127.0.0.1:4174/")
 
 POLYFILL = """
 window.__pyroTools = {};
@@ -45,6 +47,19 @@ async def invoke(page, name: str, arguments: dict) -> dict:
 
 async def shot(page, filename: str) -> None:
     await page.screenshot(path=OUTPUT / filename, animations="disabled")
+
+
+def build_contact_sheet() -> None:
+    files = sorted(OUTPUT.glob("0*.png"))
+    sheet = Image.new("RGB", (1200, 1290), "#090b0a")
+    for index, path in enumerate(files):
+        image = Image.open(path).convert("RGB")
+        image.thumbnail((600, 400), Image.Resampling.LANCZOS)
+        tile = Image.new("RGB", (600, 430), "#0b0e0c")
+        tile.paste(image, ((600 - image.width) // 2, 0))
+        ImageDraw.Draw(tile).text((14, 405), path.name, fill="#d7f85d")
+        sheet.paste(tile, ((index % 2) * 600, (index // 2) * 430))
+    sheet.save(OUTPUT / "contact-sheet.jpg", quality=90, optimize=True)
 
 
 async def main() -> None:
@@ -103,6 +118,7 @@ async def main() -> None:
 
         (OUTPUT / "tool-transcript.json").write_text(json.dumps(transcript, indent=2), encoding="utf-8")
         await browser.close()
+    build_contact_sheet()
 
 
 if __name__ == "__main__":

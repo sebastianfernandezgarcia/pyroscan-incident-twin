@@ -8,7 +8,7 @@ The challenge film is a cinematic HyperFrames composition rather than an unedite
 | --- | --- | --- |
 | 0:00–0:10 | Before the fire | Outcome-first prevention hook. |
 | 0:10–0:24 | Context breaks | Human knowledge, spatial evidence and AI separated. |
-| 0:24–0:40 | One shared twin | Real PyroScan surface and La Palma geography. |
+| 0:24–0:40 | One shared twin | Real PyroScan surface, public 25 m terrain and Copernicus 2023 historical burn scar. |
 | 0:40–0:58 | WebMCP protocol | Six intent-level verbs converge on the live board. |
 | 0:58–1:20 | Local knowledge | `inspect_zone` and `add_board_annotation` visibly change state. |
 | 1:20–1:40 | Bounded what-if | `simulate_spread` updates the same map; **not a forecast** stays explicit. |
@@ -31,7 +31,7 @@ The challenge film is a cinematic HyperFrames composition rather than an unedite
 - Audible English human narration and checked English captions.
 - No copyrighted music.
 - Browser header or architecture frame makes all six tools legible.
+- The product reveal distinguishes public historical/geographic context from the orange synthetic what-if.
 - The real inspect → annotate → simulate → compare → read → stage journey is visible.
 - Safety boundaries remain on screen: synthetic exercise, bounded what-if, not a forecast, no dispatch, human-only approval.
 - Upload as a public YouTube video and add the URL to Devpost.
-

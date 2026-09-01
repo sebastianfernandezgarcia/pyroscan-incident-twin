@@ -18,15 +18,15 @@ PyroScan lets a human exercise director and ChatGPT inspect evidence, run synthe
 
 Wildfire readiness needs a rehearsal space before the crisis. Exercises combine sensor evidence, local knowledge, changing assumptions and high-consequence decisions. Traditional dashboards are built for human clicks, while chat assistants reason in a separate window and quickly lose the state visible on the map. We wanted a safer collaboration model: an agent can help inspect and compare, but the human keeps context, authority and the final decision.
 
-La Palma is the visual setting because its steep terrain, interfaces and limited access make the value of a shared spatial artifact immediately understandable. The submitted scenario is entirely synthetic.
+La Palma is the visual setting because its steep terrain, interfaces and limited access make the value of a shared spatial artifact immediately understandable. The product is grounded in public terrain and a historical observed burn scar, while the active incident, wind, spread, risk and response scenario remain explicitly synthetic.
 
 ## What it does
 
-PyroScan Incident Twin opens a deterministic wildfire exercise board with evidence fixtures, four sectors, the real outline of La Palma, animated fire/smoke/spread cues, modeled attention contours, local annotations, response options and an activity record.
+PyroScan Incident Twin opens a deterministic wildfire exercise board with four sectors, the real outline of La Palma, a public 25 m SITCAN/GRAFCAN terrain hillshade, the corrected Copernicus EMSR671 burn scar from the July 2023 wildfire, animated synthetic fire/smoke/spread cues, modeled attention contours, local annotations, response options and an activity record.
 
 Through six WebMCP site tools, ChatGPT can:
 
-- read the compact current board;
+- read the compact current board with separately labeled public-data provenance;
 - focus one exercise sector;
 - run a 30, 60 or 90-minute bounded wind what-if;
 - compare two or three predefined reversible response options;
@@ -37,7 +37,9 @@ Every agent action changes the same interface the human sees. Human annotations 
 
 ## How we built it
 
-The app is a static React 19, TypeScript and Vite application with no backend or API key. A Zustand vanilla store is the shared source of truth for React controls and WebMCP execute callbacks. The incident map is custom SVG with a locally embedded, simplified OpenStreetMap coastline of La Palma, so the critical demo has no tile or network dependency. A motion system renders fire, smoke, embers, wind vectors, scan passes and animated attention contours. The scenario engine is deterministic and uses a small set of synthetic fixtures.
+The app is a static React 19, TypeScript and Vite application with no backend or API key. A Zustand vanilla store is the shared source of truth for React controls and WebMCP execute callbacks. The incident map is custom SVG with three locally bundled public layers: a simplified OpenStreetMap coastline, a hillshade derived from the SITCAN/GRAFCAN 25 m terrain model, and a projected Copernicus EMSR671 corrected burn-scar geometry. The critical demo therefore has no runtime tile or network dependency. A motion system renders synthetic fire, smoke, embers, wind vectors, scan passes and animated attention contours. The scenario engine is deterministic and uses a small set of synthetic fixtures.
+
+Public context is a first-class part of the WebMCP contract: `read_incident_board` returns each source, observation date and role with `drivesSimulation: false`. The interface uses a separate blue historical layer, while the active what-if remains orange and explicitly synthetic. Exact source products, hashes, update dates and derivation steps are committed in `docs/PUBLIC_DATA_PROVENANCE.md`.
 
 The six tools are registered imperatively with `document.modelContext.registerTool` in the top-level page. Inputs use strict JSON Schemas with `additionalProperties: false`, plus independent runtime validation. Read-only and untrusted-content hints describe behavior. One AbortController owns the registration lifecycle. Tests verify registration, shared-state mutations, stale-state rejection, human-only approval and compatibility with current browser callback behavior.
 
@@ -53,6 +55,7 @@ This creates a loop that was previously awkward: the person adds local knowledge
 - Keeping every agent-driven state change synchronized with all human controls.
 - Preventing a plausible proposal from silently surviving after the human changes evidence.
 - Making synthetic provenance impossible to miss while still delivering a visually compelling demo.
+- Integrating authentic public evidence without implying that historical observations are live inputs or forecasts.
 - Supporting an experimental browser API whose runtime callback behavior is slightly looser than its current TypeScript definitions.
 
 ## Accomplishments
@@ -62,7 +65,7 @@ This creates a loop that was previously awkward: the person adds local knowledge
 - Runtime-tested Site Tools discovered and invoked in the ChatGPT/Codex built-in browser.
 - Monotonic state lineage, reversible drafts, undo and human-only approval.
 - A polished responsive workbench and open-source test suite.
-- A geographically recognizable La Palma surface with cinematic but restrained operational motion.
+- A geographically authentic La Palma surface with 25 m public terrain, a real historical Copernicus burn scar and cinematic but restrained exercise motion.
 
 ## What we learned
 
@@ -70,7 +73,7 @@ The strongest WebMCP tools are not wrappers around buttons. They expose a produc
 
 ## What's next
 
-The competition build intentionally stays synthetic and browser-only. A future research version could connect authorized exercise datasets, introduce facilitator-authored scenarios, compare team decisions across rehearsals and export after-action reports — while keeping the same human authority, provenance and stale-state safeguards.
+The competition build intentionally keeps the active scenario synthetic and browser-only. A future research version could connect authorized live or exercise datasets, introduce facilitator-authored scenarios, compare team decisions across rehearsals and export after-action reports — while keeping the same human authority, provenance and stale-state safeguards.
 
 ## Built with
 
@@ -91,7 +94,7 @@ The competition build intentionally stays synthetic and browser-only. A future r
 | Country | **Spain** |
 | Organization | Leave blank |
 | App status | **Existing** |
-| Significant WebMCP extension | **PyroScan previously existed as a broader private research concept. During the challenge period I created this separate, public browser-only product: a deterministic synthetic exercise engine, a shared human/agent incident board, six imperative WebMCP tools, exact state-lineage safeguards, a real La Palma coastline visualization, automated tests and complete open-source documentation. CHALLENGE_WORK.md and the public commit history distinguish all new competition work.** |
+| Significant WebMCP extension | **PyroScan previously existed as a broader private research concept. During the challenge period I created this separate, public browser-only product: a deterministic synthetic exercise engine, a shared human/agent incident board, six imperative WebMCP tools, exact state-lineage safeguards, locally derived public La Palma terrain and Copernicus historical wildfire context, automated tests and complete open-source documentation. CHALLENGE_WORK.md and the public commit history distinguish all new competition work.** |
 | Live URL | `https://pyroscan-incident-twin.netlify.app/` |
 | Public repo | `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin` |
 | Agent/client tested | **ChatGPT/Codex built-in browser with GPT-5.6 Sol; automated registration and integration tests.** |
@@ -113,7 +116,7 @@ If Site Tools are unavailable, confirm the current client/model supports WebMCP.
 
 ## Gallery captions
 
-1. [`docs/assets/gallery/01-shared-rehearsal-3x2.jpg`](assets/gallery/01-shared-rehearsal-3x2.jpg) — **One shared incident surface** — A real La Palma coastline, synthetic exercise evidence, modeled attention areas and decision controls remain visible to both the human and the agent.
+1. [`docs/assets/gallery/01-shared-rehearsal-3x2.jpg`](assets/gallery/01-shared-rehearsal-3x2.jpg) — **One shared incident surface** — Public 25 m La Palma terrain and the Copernicus 2023 historical burn scar sit beside the clearly separate synthetic what-if and decision controls visible to both the human and the agent.
 2. [`docs/assets/gallery/02-local-knowledge-3x2.jpg`](assets/gallery/02-local-knowledge-3x2.jpg) — **Local knowledge changes the result** — A route constraint added through WebMCP becomes visible on the board and affects later analysis.
 3. [`docs/assets/gallery/03-webmcp-comparison-3x2.jpg`](assets/gallery/03-webmcp-comparison-3x2.jpg) — **Intent-level Site Tools** — Six WebMCP tools expose the domain verbs of the product instead of brittle sequences of clicks.
 4. [`docs/assets/gallery/04-human-review-3x2.jpg`](assets/gallery/04-human-review-3x2.jpg) — **Human authority by design** — The agent can inspect, simulate, compare, annotate and stage; only the exercise director can approve.

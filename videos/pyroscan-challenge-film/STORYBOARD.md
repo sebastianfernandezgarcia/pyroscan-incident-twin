@@ -70,11 +70,11 @@ Scene 5 (12.0–14.0s): Hold the three disconnected stations and broken line as 
 - poster: 12.5s
 - transition_in: crossfade
 - scene: The real PyroScan interface pulls out from a La Palma close-up into one shared board.
-- voiceover: "PyroScan Incident Twin turns the browser into one shared rehearsal table, designed around La Palma's real geography and constrained access."
+- voiceover: "PyroScan Incident Twin turns the browser into one shared rehearsal table, grounded in La Palma's public terrain and a Copernicus-observed 2023 burn scar."
 - type: product_intro
 - persuasion: Product reveal
 - beat: one shared surface
-- asset_candidates: assets/screens/01-how-it-works.png — real board with collaboration guide and six WebMCP tools live; assets/pyroscan-mark.svg — original PyroScan mark
+- asset_candidates: assets/screens/01-how-it-works.png — real board with public terrain, Copernicus historical evidence, collaboration guide and six WebMCP tools live; assets/pyroscan-mark.svg — original PyroScan mark
 - blueprint: zoom-out-workspace-reveal (Adapt)
 - focal: assets/screens/01-how-it-works.png
 - roles: 01-how-it-works = background; pyroscan-mark = supporting

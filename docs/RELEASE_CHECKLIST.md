@@ -25,6 +25,9 @@
 
 - [x] Desktop three-pane layout verified.
 - [x] Real La Palma coastline geometry replaces the placeholder silhouette.
+- [x] Add the official SITCAN/GRAFCAN 25 m terrain hillshade with attribution and source date.
+- [x] Add the corrected Copernicus EMSR671 historical burn scar with a visible toggle and provenance.
+- [x] Expose public context to WebMCP with `drivesSimulation: false` and test the separation boundary.
 - [x] Fire, smoke, embers, scan and spread motion respect reduced-motion preferences.
 - [x] Agent scenario updates the matching human controls.
 - [x] Local annotation appears in the downstream plan.

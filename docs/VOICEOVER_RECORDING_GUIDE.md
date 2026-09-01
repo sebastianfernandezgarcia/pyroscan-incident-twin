@@ -35,7 +35,7 @@ Use three measured statements, then a firmer conclusion.
 
 ### 03 · 00:24–00:40 · Product reveal
 
-> PyroScan Incident Twin turns the browser into one shared rehearsal table, designed around La Palma's real geography and constrained access.
+> PyroScan Incident Twin turns the browser into one shared rehearsal table, grounded in La Palma's public terrain and a Copernicus-observed 2023 burn scar.
 
 Warm confidence; let **one shared rehearsal table** land.
 
@@ -84,4 +84,3 @@ Build from factual to hopeful. Pause before **PyroScan**. Finish warmly, not lou
 ## Final mix target
 
 After recording, the assembly script places the ten takes at their exact cue points, filters rumble, normalizes the combined narration to approximately **−16 LUFS / −1.5 dBTP**, and muxes it into the approved visual master. The provisional subtitle file is `videos/pyroscan-challenge-film/voiceover/PyroScan_VO_EN.srt`; its timings should be checked once the real voice is available.
-

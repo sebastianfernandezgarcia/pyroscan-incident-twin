@@ -36,8 +36,8 @@ Create a cinematic but evidence-led product film for the OpenAI WebMCP Challenge
 
 ## Notes
 
-- Synthetic exercise only. Never imply a live fire, forecast, dispatch capability, government deployment, real-world prevention outcome, or live data feed.
-- No unauthorized trademarks or copyrighted music. Use only original interface visuals, attributed OpenStreetMap-derived coastline, and original/procedural audio if any.
+- Synthetic what-if only. Public terrain and the 2023 Copernicus burn scar are historical/geographic context and never imply a live fire, forecast, dispatch capability, government deployment, real-world prevention outcome, or live data feed.
+- No unauthorized trademarks or copyrighted music. Use only original interface visuals, attributed OpenStreetMap/SITCAN/Copernicus public data, and original/procedural audio if any.
 - Target 2:40 and never exceed 2:55 after the final human voiceover.
 - The final film must visibly demonstrate the working WebMCP product, not only present motion graphics.
 - Autonomous design choice: the Broadside preset was remixed onto PyroScan's dark, acid-green visual system because its declarative typography adds urgency without competing with the product screens.

@@ -16,11 +16,25 @@
         "inAttentionArea": true,
         "annotations": []
       },
-      "evidenceFixtures": [
-        "ridge-camera",
-        "wind-observation",
-        "access-graph"
-      ],
+      "evidence": {
+        "publicContext": [
+          {
+            "id": "EMSR671",
+            "role": "historical_reference",
+            "drivesSimulation": false
+          },
+          {
+            "id": "SITCAN-MDT25-LP",
+            "role": "terrain_context",
+            "drivesSimulation": false
+          }
+        ],
+        "syntheticFixtures": [
+          "ridge-camera",
+          "wind-observation",
+          "access-graph"
+        ]
+      },
       "visibleChange": "El Paso corridor is focused in the evidence desk and on the map."
     }
   },
@@ -135,6 +149,34 @@
         "summary": "2 exercise sectors in the attention area; 1 on watch.",
         "synthetic": true
       },
+      "publicContext": {
+        "status": "public_historical_and_geographic_context",
+        "historicalEvent": {
+          "id": "EMSR671",
+          "label": "La Palma wildfire \u00b7 July 2023",
+          "areaName": "Puntagorda",
+          "observedAt": "2023-07-16T11:46:00.000Z",
+          "product": "EMSR671_AOI01_DEL_PRODUCT v2",
+          "areaHectares": 2117.126,
+          "method": "Pleiades photo-interpretation",
+          "source": "Copernicus Emergency Management Service (\u00a9 2023 European Union), EMSR671",
+          "sourceUrl": "https://mapping.emergency.copernicus.eu/activations/EMSR671/"
+        },
+        "terrain": {
+          "id": "SITCAN-MDT25-LP",
+          "resolutionMeters": 25,
+          "sourceUpdatedAt": "2021-02-04",
+          "source": "GRAFCAN / Gobierno de Canarias \u00b7 MDT 25 m La Palma",
+          "sourceUrl": "https://opendata.sitcan.es/dataset/modelo-digital-de-terreno-mdt-de-25x25-metros/resource/90d97840-9bc9-4e31-a470-3cb631806fd5"
+        },
+        "coastline": {
+          "id": "OSM-relation-11775386",
+          "source": "\u00a9 OpenStreetMap contributors",
+          "sourceUrl": "https://www.openstreetmap.org/copyright"
+        },
+        "drivesSimulation": false,
+        "separationRule": "Public layers are historical/geographic context. Active ignition, wind, spread, risk and response outputs are synthetic rehearsal fixtures."
+      },
       "zones": [
         {
           "id": "caldera",
@@ -179,7 +221,7 @@
         }
       ],
       "plan": null,
-      "safety": "Exercise only. No live data or dispatch. Final approval is human-only."
+      "safety": "Exercise only. Public layers are historical/geographic context, not live incident feeds. No dispatch. Final approval is human-only."
     }
   },
   {

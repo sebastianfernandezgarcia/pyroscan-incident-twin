@@ -155,7 +155,7 @@ FRAMES["03-one-shared-twin"] = frame(
     """
       <div class="03-one-shared-twin-chrome"><span class="03-one-shared-twin-eyebrow">PYROSCAN // INCIDENT TWIN</span><span class="03-one-shared-twin-mono">ONE SHARED SURFACE</span></div>
       <div class="03-one-shared-twin-viewport 03-one-shared-twin-screen"><img src="assets/01-how-it-works.png" alt="PyroScan shared incident surface" /></div>
-      <div class="03-one-shared-twin-label"><b>LA PALMA</b><span>SYNTHETIC EXERCISE</span></div>
+      <div class="03-one-shared-twin-label"><b>LA PALMA</b><span>PUBLIC CONTEXT · SYNTHETIC WHAT-IF</span></div>
       <div class="03-one-shared-twin-roles"><span>HUMAN GROUNDS</span><i></i><span>AGENT REHEARSES</span><i></i><span>HUMAN DECIDES</span></div>
     """,
     """
