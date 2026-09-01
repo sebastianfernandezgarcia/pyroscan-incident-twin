@@ -38,13 +38,14 @@ This makes collaboration bidirectional:
 
 - Empty, strict object input.
 - Returns a compact board snapshot, not the full UI state.
+- Returns separately labeled `publicContext` for EMSR671, SITCAN terrain and the OSM coastline, including source URLs and `drivesSimulation: false`.
 - Includes the exact `boardVersion` needed for staging.
 - `readOnlyHint: true` and `untrustedContentHint: true` because human notes may be present.
 
 ### `inspect_zone`
 
 - `zoneId`: one of four explicit exercise sectors.
-- Focuses that sector visibly and returns bounded evidence.
+- Focuses that sector visibly and returns bounded evidence split into public context and synthetic fixtures.
 - Treated as read-only because it changes only visual selection.
 
 ### `simulate_spread`
@@ -76,6 +77,17 @@ This makes collaboration bidirectional:
 
 Every schema uses `additionalProperties: false`, and the execute callback repeats strict runtime validation rather than trusting schema enforcement alone.
 
+## Public context boundary
+
+The shared store exposes public-data provenance to both people and agents without conflating it with the active model:
+
+- Copernicus EMSR671: historical 2023 observed burn-scar reference;
+- SITCAN/GRAFCAN: 25 m terrain context;
+- OpenStreetMap: La Palma coastline;
+- synthetic fixtures: ignition, wind, access graph, attention contours, risk and response scores.
+
+`read_incident_board` returns `drivesSimulation: false` and a plain-language separation rule with every public context bundle. Full hashes and derivation details are in [`PUBLIC_DATA_PROVENANCE.md`](PUBLIC_DATA_PROVENANCE.md).
+
 ## State lineage
 
 `boardVersion` is monotonic. Simulations, comparisons, annotations, staging, approval and undo all create a new version. Undo restores content but never restores the old version number; otherwise an earlier stale proposal could accidentally become valid again.
@@ -94,5 +106,6 @@ Plan approval is a React action and is not registered with WebMCP. This is visib
 - agent calls mutate the same visual state;
 - stale staging is rejected;
 - callback options remain compatible with current hosts.
+- public context remains explicitly non-live and separate from the synthetic active scenario.
 
 The full journey has also been executed through the ChatGPT/Codex in-app browser's WebMCP capability, not only by direct unit calls.

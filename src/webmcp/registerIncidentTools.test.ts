@@ -73,4 +73,21 @@ describe('PyroScan WebMCP registration', () => {
 
     await expect(read.execute({}, {} as WebMCP.ToolExecuteCallbackOptions)).resolves.toMatchObject({ ok: true })
   })
+
+  it('exposes sourced public context without presenting it as a live or modeled input', async () => {
+    const store = createIncidentStore()
+    const registration = startIncidentTools(store)
+    await registration.ready
+    const read = registered.find((tool) => tool.name === 'read_incident_board')!
+
+    const result = await read.execute({}, { signal: new AbortController().signal })
+    expect(result).toMatchObject({
+      publicContext: {
+        historicalEvent: { id: 'EMSR671', areaHectares: 2117.126 },
+        terrain: { id: 'SITCAN-MDT25-LP', resolutionMeters: 25 },
+        drivesSimulation: false,
+      },
+      activeScenario: { synthetic: true },
+    })
+  })
 })

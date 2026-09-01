@@ -72,7 +72,7 @@ const initialActivity: ActivityEvent[] = [
     at: '18:42',
     actor: 'system',
     title: 'Exercise board ready',
-    detail: 'Synthetic fixtures loaded locally. No live emergency data.',
+    detail: 'Public context and synthetic fixtures loaded locally. No live emergency feed.',
   },
   {
     id: 'event-3',

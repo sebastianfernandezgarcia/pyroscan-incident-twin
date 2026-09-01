@@ -1,4 +1,5 @@
 import { ZONES } from '../domain/fixtures'
+import { PUBLIC_REFERENCE } from '../domain/publicReference'
 import type { AnnotationType, HorizonMinutes, ResponseOptionId, WindPreset, ZoneId } from '../domain/types'
 import { IncidentActionError, incidentStore, type IncidentStore } from '../store/incidentStore'
 
@@ -72,11 +73,42 @@ function compactScenario(store: IncidentStore) {
   } : null
 }
 
+function compactPublicContext() {
+  return {
+    status: 'public_historical_and_geographic_context',
+    historicalEvent: {
+      id: PUBLIC_REFERENCE.historicalEvent.id,
+      label: PUBLIC_REFERENCE.historicalEvent.label,
+      areaName: PUBLIC_REFERENCE.historicalEvent.areaName,
+      observedAt: PUBLIC_REFERENCE.historicalEvent.observedAt,
+      product: PUBLIC_REFERENCE.historicalEvent.product,
+      areaHectares: PUBLIC_REFERENCE.historicalEvent.areaHectares,
+      method: PUBLIC_REFERENCE.historicalEvent.method,
+      source: PUBLIC_REFERENCE.historicalEvent.sourceLabel,
+      sourceUrl: PUBLIC_REFERENCE.historicalEvent.sourceUrl,
+    },
+    terrain: {
+      id: PUBLIC_REFERENCE.terrain.id,
+      resolutionMeters: PUBLIC_REFERENCE.terrain.resolutionMeters,
+      sourceUpdatedAt: PUBLIC_REFERENCE.terrain.sourceUpdatedAt,
+      source: PUBLIC_REFERENCE.terrain.sourceLabel,
+      sourceUrl: PUBLIC_REFERENCE.terrain.sourceUrl,
+    },
+    coastline: {
+      id: PUBLIC_REFERENCE.boundary.id,
+      source: PUBLIC_REFERENCE.boundary.sourceLabel,
+      sourceUrl: PUBLIC_REFERENCE.boundary.sourceUrl,
+    },
+    drivesSimulation: false,
+    separationRule: PUBLIC_REFERENCE.separationRule,
+  }
+}
+
 async function registerTools(store: IncidentStore, signal: AbortSignal) {
   await document.modelContext!.registerTool({
     name: 'read_incident_board',
     title: 'Read incident board',
-    description: 'Read the current PyroScan synthetic exercise board before analysis or planning. Returns the current boardVersion required by stage_response_plan. This does not change the board.',
+    description: 'Read the current PyroScan exercise board before analysis or planning. Returns labeled public historical/geographic context, the synthetic active scenario, and the boardVersion required by stage_response_plan. This does not change the board.',
     inputSchema: {
       type: 'object',
       properties: {},
@@ -98,6 +130,7 @@ async function registerTools(store: IncidentStore, signal: AbortSignal) {
             observedAt: state.observedAt,
           },
           activeScenario: compactScenario(store),
+          publicContext: compactPublicContext(),
           zones: state.zones.map((zone) => ({
             id: zone.id,
             label: zone.label,
@@ -114,7 +147,7 @@ async function registerTools(store: IncidentStore, signal: AbortSignal) {
             scenarioId: state.plan.scenarioId,
             basedOnVersion: state.plan.basedOnVersion,
           } : null,
-          safety: 'Exercise only. No live data or dispatch. Final approval is human-only.',
+          safety: 'Exercise only. Public layers are historical/geographic context, not live incident feeds. No dispatch. Final approval is human-only.',
         }
       } catch (error) { return asToolError(error) }
     },
@@ -123,7 +156,7 @@ async function registerTools(store: IncidentStore, signal: AbortSignal) {
   await document.modelContext!.registerTool({
     name: 'inspect_zone',
     title: 'Inspect an exercise zone',
-    description: 'Focus one named sector on the shared map and return its terrain, evidence fixtures, exposure and human annotations. Use before proposing actions for that sector. Changes only the visible selection, not operational state.',
+    description: 'Focus one named sector on the shared map and return its terrain, labeled public context, synthetic evidence fixtures, exposure and human annotations. Use before proposing actions for that sector. Changes only the visible selection, not operational state.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -155,7 +188,13 @@ async function registerTools(store: IncidentStore, signal: AbortSignal) {
             annotations: state.annotations.filter((annotation) => annotation.zoneId === zoneId)
               .map(({ type, note, source }) => ({ type, note, source })),
           },
-          evidenceFixtures: ['ridge-camera', 'wind-observation', 'access-graph'],
+          evidence: {
+            publicContext: [
+              { id: PUBLIC_REFERENCE.historicalEvent.id, role: 'historical_reference', drivesSimulation: false },
+              { id: PUBLIC_REFERENCE.terrain.id, role: 'terrain_context', drivesSimulation: false },
+            ],
+            syntheticFixtures: ['ridge-camera', 'wind-observation', 'access-graph'],
+          },
           visibleChange: `${zone.label} is focused in the evidence desk and on the map.`,
         }
       } catch (error) { return asToolError(error) }

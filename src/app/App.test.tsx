@@ -7,11 +7,14 @@ describe('incident twin app', () => {
   beforeEach(() => incidentStore.getState().resetExercise())
   afterEach(cleanup)
 
-  it('presents synthetic provenance and keeps final approval in the human UI', () => {
+  it('separates public context from the synthetic scenario and keeps final approval in the human UI', () => {
     render(<App />)
 
-    expect(screen.getAllByText('SYNTHETIC EXERCISE').length).toBeGreaterThan(0)
-    expect(screen.getByRole('img', { name: /synthetic exercise map/i })).toBeInTheDocument()
+    expect(screen.getAllByText('SYNTHETIC WHAT-IF').length).toBeGreaterThan(0)
+    expect(screen.getByText('Copernicus EMSR671')).toBeInTheDocument()
+    expect(screen.getByText('SITCAN terrain')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /public terrain and historical wildfire evidence/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /2023 evidence/i })).toHaveAttribute('aria-pressed', 'true')
 
     const stageButtons = screen.getAllByRole('button', { name: /stage for review/i })
     fireEvent.click(stageButtons.at(-1)!)

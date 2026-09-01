@@ -75,9 +75,9 @@ export function App() {
       </header>
 
       <div className="safety-ribbon" role="note">
-        <span><AlertTriangle size={14} /> SYNTHETIC EXERCISE</span>
-        <p>No live incident data. No dispatch or emergency decisions. Every proposal requires human review.</p>
-        <span className="safety-ribbon__right">LOCAL-FIRST · DETERMINISTIC</span>
+        <span><AlertTriangle size={14} /> SYNTHETIC WHAT-IF</span>
+        <p>Public historical context is labeled. Active fire, wind and spread remain synthetic. No dispatch; human review required.</p>
+        <span className="safety-ribbon__right">PUBLIC CONTEXT · LOCAL-FIRST</span>
       </div>
 
       {showBrief ? (

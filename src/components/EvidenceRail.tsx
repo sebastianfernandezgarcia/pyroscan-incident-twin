@@ -1,13 +1,34 @@
 import { useState, type FormEvent } from 'react'
-import { AlertOctagon, Camera, ChevronRight, CloudSun, MapPin, Plus, Radio, Route, X } from 'lucide-react'
+import { AlertOctagon, ChevronRight, CloudSun, History, MapPin, Mountain, Plus, Radio, X } from 'lucide-react'
 import { useStore } from 'zustand'
 import type { AnnotationType, ZoneId } from '../domain/types'
 import { incidentStore } from '../store/incidentStore'
 
 const SOURCE_ROWS = [
-  { icon: Camera, label: 'Ridge camera', value: '3 frames', tone: 'amber' },
-  { icon: CloudSun, label: 'Wind fixture', value: 'ENE 18', tone: 'mint' },
-  { icon: Route, label: 'Access graph', value: '6 routes', tone: 'blue' },
+  {
+    icon: History,
+    label: 'Copernicus EMSR671',
+    value: '2,117 ha',
+    provenance: 'observed burn scar · 2023',
+    tone: 'blue',
+    href: 'https://mapping.emergency.copernicus.eu/activations/EMSR671/',
+  },
+  {
+    icon: Mountain,
+    label: 'SITCAN terrain',
+    value: '25 m',
+    provenance: 'public MDT · updated 2021',
+    tone: 'mint',
+    href: 'https://opendata.sitcan.es/dataset/modelo-digital-de-terreno-mdt-de-25x25-metros/resource/90d97840-9bc9-4e31-a470-3cb631806fd5',
+  },
+  {
+    icon: CloudSun,
+    label: 'Exercise inputs',
+    value: 'ENE 18',
+    provenance: 'synthetic fixture',
+    tone: 'amber',
+    href: null,
+  },
 ] as const
 
 const TYPE_LABELS: Record<AnnotationType, string> = {
@@ -43,15 +64,22 @@ export function EvidenceRail() {
         <span className="live-dot"><Radio size={12} /> 18:42Z</span>
       </div>
 
-      <section className="source-stack" aria-label="Synthetic evidence sources">
-        {SOURCE_ROWS.map(({ icon: Icon, label, value, tone }) => (
+      <section className="source-stack" aria-label="Public context and synthetic exercise sources">
+        {SOURCE_ROWS.map(({ icon: Icon, label, value, provenance, tone, href }) => (
           <article className="source-row" key={label}>
             <span className={`source-icon source-icon--${tone}`}><Icon size={15} /></span>
-            <div><strong>{label}</strong><small>synthetic fixture</small></div>
+            <div>
+              {href ? <a href={href} target="_blank" rel="noreferrer"><strong>{label}</strong></a> : <strong>{label}</strong>}
+              <small>{provenance}</small>
+            </div>
             <span>{value}</span>
           </article>
         ))}
       </section>
+      <p className="public-data-note">
+        Public layers provide historical and terrain context only. They do not drive the active what-if.{' '}
+        <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Coastline © OpenStreetMap contributors.</a>
+      </p>
 
       <section className="rail-section">
         <div className="rail-section__title">

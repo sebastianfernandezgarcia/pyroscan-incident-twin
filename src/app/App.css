@@ -185,15 +185,20 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 .live-dot, .agent-chip { gap: 5px; color: var(--mint); font: 8px ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(109,230,173,.17); background: rgba(109,230,173,.055); border-radius: 99px; padding: 5px 7px; }
 .agent-chip { color: var(--acid); border-color: rgba(215,248,93,.17); background: rgba(215,248,93,.055); }
 
-.source-stack { margin: 18px 0 20px; display: grid; gap: 6px; }
+.source-stack { margin: 18px 0 8px; display: grid; gap: 6px; }
 .source-row { display: grid; grid-template-columns: 31px 1fr auto; gap: 8px; align-items: center; padding: 9px; border: 1px solid var(--line); background: rgba(255,255,255,.015); border-radius: 8px; }
 .source-row strong { display: block; font-size: 10px; font-weight: 620; }
+.source-row a { color: inherit; text-decoration: none; }
+.source-row a:hover strong { color: var(--blue); }
 .source-row small { display: block; margin-top: 2px; font: 8px ui-monospace, monospace; color: var(--quiet); }
 .source-row > span:last-child { font: 9px ui-monospace, monospace; color: #aeb8b0; }
 .source-icon { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 6px; }
 .source-icon--amber { color: var(--amber); background: rgba(255,183,92,.08); }
 .source-icon--mint { color: var(--mint); background: rgba(109,230,173,.08); }
 .source-icon--blue { color: var(--blue); background: rgba(113,183,239,.08); }
+.public-data-note { margin: 0 0 16px; padding: 0 3px; color: #66736a; font-size: 8px; line-height: 1.45; }
+.public-data-note a { color: #71847a; text-decoration: none; }
+.public-data-note a:hover { color: #a7c0b1; }
 
 .rail-section { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
 .rail-section__title { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 9px; }
@@ -213,7 +218,7 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 
 .local-knowledge { margin-top: 16px; }
 .empty-copy { margin: 0 0 12px; color: var(--quiet); font-size: 9px; line-height: 1.5; }
-.add-knowledge, .primary-button, .simulate-button, .approve-button, .generate-comparison {
+.add-knowledge, .primary-button, .simulate-button, .approve-button, .generate-comparison, .reference-toggle {
   border: 0;
   cursor: pointer;
   display: inline-flex;
@@ -254,6 +259,8 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 .segmented-control button.active { background: rgba(255,255,255,.07); color: var(--ink); }
 .simulate-button { height: 31px; padding: 0 12px; background: var(--acid); color: #11140d; font-size: 9px; font-weight: 700; }
 .simulate-button:hover, .primary-button:hover { filter: brightness(1.08); }
+.reference-toggle { height: 31px; padding: 0 9px; border: 1px solid var(--line); background: rgba(113,183,239,.035); color: #77857b; font-size: 8px; white-space: nowrap; }
+.reference-toggle:hover, .reference-toggle--active { border-color: rgba(113,183,239,.35); background: rgba(113,183,239,.1); color: #b6d8f2; }
 
 .map-stage { position: relative; flex: 1; min-height: 0; overflow: hidden; background: #0b0e0c; isolation: isolate; }
 .map-stage::after {
@@ -287,6 +294,7 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 .ocean-depth path { fill: none; stroke: #86a293; stroke-opacity: .045; stroke-width: 1; stroke-dasharray: 2 9; }
 .island-shadow { fill: #000; opacity: .66; filter: url(#islandShadow); transform: translateY(8px); }
 .island-shape { stroke: rgba(167,190,174,.34); stroke-width: 2.2; stroke-linejoin: round; }
+.public-terrain { opacity: .56; mix-blend-mode: luminosity; }
 .island-coastline { fill: none; stroke: rgba(189,215,197,.47); stroke-width: 1.25; stroke-linejoin: round; }
 .ridge-spine { fill: none; stroke: rgba(203,220,206,.2); stroke-width: 24; stroke-linecap: round; filter: blur(11px); }
 .ridge-shadow { fill: none; stroke: rgba(3,6,4,.32); stroke-width: 30; stroke-linecap: round; filter: blur(12px); }
@@ -298,6 +306,14 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 .map-place-labels text { fill: #7b897f; font: 6.5px ui-monospace, monospace; letter-spacing: .14em; paint-order: stroke; stroke: #1c221e; stroke-width: 2.5px; }
 .map-place-labels .map-place-labels__sub { fill: #5b675f; font-size: 5.5px; }
 .summit-label path { fill: var(--blue); opacity: .72; }
+
+.historical-reference { opacity: 0; pointer-events: none; transition: opacity .24s ease-out; }
+.historical-reference--visible { opacity: 1; }
+.historical-reference__scar { fill: rgba(113,183,239,.115); stroke: none; }
+.historical-reference__outline { stroke: rgba(137,204,255,.7); stroke-width: 1.2; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.historical-reference__label rect { fill: rgba(10,14,12,.84); stroke: rgba(113,183,239,.24); }
+.historical-reference__label text { fill: #9fc7e4; font: 6px ui-monospace, monospace; letter-spacing: .07em; }
+.historical-reference__label text:last-child { fill: #718a9d; font-size: 5.5px; }
 
 .spread-ring {
   fill: rgba(255,112,72,.05);
@@ -374,6 +390,8 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 .map-legend a:hover { color: #89968d; }
 .map-legend i { display: inline-block; }
 .legend-fire { width: 7px; height: 7px; background: var(--orange); border-radius: 50%; box-shadow: 0 0 5px var(--orange); }
+.legend-terrain { width: 10px; height: 8px; background: linear-gradient(135deg, #233128, #829488); clip-path: polygon(0 100%, 42% 20%, 63% 62%, 78% 35%, 100% 100%); }
+.legend-history { width: 11px; height: 8px; border: 1px dashed var(--blue); background: rgba(113,183,239,.13); }
 .legend-contour { width: 16px; border-top: 1px dashed var(--orange); }
 .legend-zone { width: 8px; height: 8px; border: 1px solid #88958b; border-radius: 50%; }
 .map-legend__truth { margin-left: auto; color: var(--mint); }
@@ -457,6 +475,7 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 
 @media (max-width: 1450px) {
+  .select-control { display: none; }
   .map-legend { gap: 10px; }
   .map-legend a { margin-left: auto; }
   .map-legend__truth { display: none !important; }

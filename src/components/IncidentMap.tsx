@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Box, Check, ChevronDown, Compass, Layers3, Play, Wind } from 'lucide-react'
+import { Box, Check, ChevronDown, Compass, History, Layers3, Play, Wind } from 'lucide-react'
 import { useStore } from 'zustand'
+import terrainHillshade from '../assets/la-palma-hillshade.png'
 import { LA_PALMA_PATH } from '../domain/laPalmaGeometry'
+import { COPERNICUS_BURN_SCAR_PATH, PUBLIC_REFERENCE } from '../domain/publicReference'
 import type { HorizonMinutes, WindPreset, ZoneId } from '../domain/types'
 import { incidentStore } from '../store/incidentStore'
 
@@ -35,6 +37,7 @@ export function IncidentMap() {
   const runSimulation = useStore(incidentStore, (state) => state.runSimulation)
   const [wind, setWind] = useState<WindPreset>(scenario?.windPreset ?? 'observed')
   const [horizon, setHorizon] = useState<HorizonMinutes>(scenario?.horizonMinutes ?? 60)
+  const [showHistoricalReference, setShowHistoricalReference] = useState(true)
 
   useEffect(() => {
     if (!scenario) return
@@ -47,7 +50,7 @@ export function IncidentMap() {
       <header className="map-toolbar">
         <div className="map-toolbar__title">
           <span><Layers3 size={15} /></span>
-          <div><p className="eyebrow">SHARED INCIDENT SURFACE</p><strong>Live exercise map</strong></div>
+          <div><p className="eyebrow">SHARED INCIDENT SURFACE</p><strong>Shared exercise map</strong></div>
         </div>
         <div className="map-controls">
           <label className="select-control">
@@ -62,6 +65,15 @@ export function IncidentMap() {
               <button key={minutes} className={horizon === minutes ? 'active' : ''} onClick={() => setHorizon(minutes)}>{minutes}m</button>
             ))}
           </div>
+          <button
+            className={`reference-toggle ${showHistoricalReference ? 'reference-toggle--active' : ''}`}
+            type="button"
+            aria-pressed={showHistoricalReference}
+            onClick={() => setShowHistoricalReference((value) => !value)}
+            title="Toggle the public Copernicus EMSR671 historical burn scar"
+          >
+            <History size={13} /> 2023 evidence
+          </button>
           <button className="simulate-button" onClick={() => runSimulation({ horizonMinutes: horizon, windPreset: wind }, 'human')}>
             <Play size={13} fill="currentColor" /> Simulate
           </button>
@@ -79,7 +91,7 @@ export function IncidentMap() {
           <span><small>ATTENTION</small><strong>exercise index</strong></span>
         </div>
 
-        <svg className="incident-map" viewBox="0 0 800 700" role="img" aria-label="Geographically accurate synthetic exercise map of La Palma with animated fire spread and response sectors">
+        <svg className="incident-map" viewBox="0 0 800 700" role="img" aria-label="La Palma exercise map with public terrain and historical wildfire evidence plus a synthetic animated fire-spread scenario">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#121a17" />
@@ -127,6 +139,18 @@ export function IncidentMap() {
           <path className="island-shadow" d={LA_PALMA_PATH} />
           <path className="island-shape" d={LA_PALMA_PATH} fill="url(#island)" />
 
+          <image
+            href={terrainHillshade}
+            x="213.7"
+            y="45.3"
+            width="372.6"
+            height="606.9"
+            preserveAspectRatio="none"
+            clipPath="url(#islandClip)"
+            className="public-terrain"
+            aria-label="Hillshade derived from the public SITCAN 25 metre La Palma terrain model"
+          />
+
           <g clipPath="url(#islandClip)" className="island-terrain" aria-hidden="true">
             <ellipse cx="398" cy="210" rx="127" ry="109" fill="url(#caldera)" opacity=".72" />
             <path className="ridge-spine" d="M416 288 C403 331 414 372 411 417 C408 471 427 518 431 610" />
@@ -147,6 +171,19 @@ export function IncidentMap() {
           </g>
 
           <path className="island-coastline" d={LA_PALMA_PATH} />
+
+          <g
+            className={`historical-reference ${showHistoricalReference ? 'historical-reference--visible' : ''}`}
+            aria-label={`${PUBLIC_REFERENCE.historicalEvent.id} historical burned-area reference from July 2023`}
+          >
+            <path className="historical-reference__scar" d={COPERNICUS_BURN_SCAR_PATH} fillRule="evenodd" />
+            <path className="historical-reference__outline" d={COPERNICUS_BURN_SCAR_PATH} fill="none" />
+            <g className="historical-reference__label" transform="translate(266 157)">
+              <rect x="-6" y="-13" width="112" height="28" rx="5" />
+              <text x="2" y="-2">COPERNICUS EMSR671</text>
+              <text x="2" y="9">2023 BURN SCAR · 2,117 HA</text>
+            </g>
+          </g>
 
           <g className="contour-lines" aria-hidden="true">
             <path d="M292 133 C332 91 421 78 493 108 C547 130 563 176 533 216 C500 258 429 275 362 257 C303 241 270 189 292 133 Z" />
@@ -273,11 +310,11 @@ export function IncidentMap() {
         </svg>
 
         <div className="map-legend">
-          <span><i className="legend-fire" /> exercise origin</span>
-          <span><i className="legend-contour" /> modeled attention area</span>
+          <span><i className="legend-terrain" /> public 25 m terrain</span>
+          <span><i className="legend-history" /> 2023 observed burn scar</span>
+          <span><i className="legend-contour" /> synthetic what-if</span>
           <span><i className="legend-zone" /> sector</span>
-          <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors · coastline</a>
-          <span className="map-legend__truth"><Check size={12} /> all data is synthetic</span>
+          <span className="map-legend__truth"><Check size={12} /> public context ≠ live incident</span>
         </div>
         <div className="map-tools" aria-hidden="true"><button><Compass size={16} /></button><button><Layers3 size={16} /></button></div>
       </div>

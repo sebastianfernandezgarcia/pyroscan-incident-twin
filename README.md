@@ -4,6 +4,8 @@
 
 PyroScan Incident Twin is an agent-native, browser-only exercise environment built for the [OpenAI WebMCP Challenge](https://webmcp.devpost.com/). A human and an AI agent inspect the same evidence, explore deterministic what-if scenarios, compare response options, and prepare a reversible briefing on one shared map.
 
+The map is grounded in real public context: a 25 m SITCAN/GRAFCAN terrain model, the corrected Copernicus EMSR671 burn scar from La Palma's July 2023 wildfire, and an OpenStreetMap coastline. The active fire, wind, spread, risk and response scenario remain explicitly synthetic.
+
 **[Open the live WebMCP app on Netlify →](https://pyroscan-incident-twin.netlify.app/)**
 
 [GitHub Pages mirror](https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/)
@@ -28,8 +30,8 @@ This is not a chatbot layered over a dashboard. WebMCP calls the same domain act
 
 | Tool | Purpose | Board effect |
 | --- | --- | --- |
-| `read_incident_board` | Read the compact shared state and current `boardVersion` | None |
-| `inspect_zone` | Focus a sector and return its evidence and annotations | Visual focus only |
+| `read_incident_board` | Read public context, the synthetic shared state and current `boardVersion` | None |
+| `inspect_zone` | Focus a sector and return labeled public context, fixtures and annotations | Visual focus only |
 | `simulate_spread` | Draw a deterministic 30/60/90-minute what-if | Replaces active scenario |
 | `compare_response_options` | Score two or three bounded response options | Opens comparison |
 | `stage_response_plan` | Stage a reversible plan against an exact board version | Creates human-reviewable draft |
@@ -71,7 +73,7 @@ Open the app in a WebMCP-compatible browser and ask:
 
 Watch the same journey unfold on screen: El Paso focuses, a warning appears, contours move, option cards rerank, and a draft opens for human approval.
 
-The map uses a locally embedded, simplified outline of the real La Palma coastline derived from OpenStreetMap relation 11775386. Terrain shading, roads and the wildfire scenario remain deliberately illustrative/synthetic. Fire, smoke, ember, wind-vector and attention-contour motion make scenario changes immediately legible without depending on a remote tile service.
+The map uses a locally embedded, simplified outline of the real La Palma coastline derived from OpenStreetMap relation 11775386, a hillshade derived from the public SITCAN/GRAFCAN 25 m terrain model, and a toggleable historical burn scar from Copernicus EMSR671. Roads and the active wildfire scenario remain deliberately illustrative/synthetic. Fire, smoke, ember, wind-vector and attention-contour motion make scenario changes immediately legible without depending on a remote tile service.
 
 ## Run locally
 
@@ -114,23 +116,26 @@ Use a Chrome build with WebMCP enabled according to the current [Chrome WebMCP g
 
 The app still works as a complete visual exercise when `document.modelContext` is unavailable. The header then shows **browser preview** rather than **6 tools live**.
 
-## Safety and domain honesty
+## Public data, safety and domain honesty
 
-- Every fixture and projection is explicitly synthetic.
+- Public terrain, coastline and historical wildfire layers are visibly labeled, source-linked and locally bundled.
+- Every active incident input, projection, risk score and response output is explicitly synthetic.
 - The spread contours are deterministic exercise attention areas, not forecasts or observed perimeters.
-- The app has no live feeds, credentials, backend, dispatch integration or emergency-alert capability.
+- The app has no live feeds, credentials, backend, dispatch integration or emergency-alert capability; the historical layer does not drive the simulator.
 - Tool inputs are narrow, runtime-validated and bounded.
 - Human-authored annotations are marked as untrusted tool content.
 - Tool registration is tied to one `AbortController` and removed on page exit.
 - Plan staging requires exact current-state lineage via `boardVersion`.
 - Final approval stays human-only.
 
+Exact source products, timestamps, hashes, licenses and the deterministic derivation process are recorded in [Public data provenance](docs/PUBLIC_DATA_PROVENANCE.md).
+
 ## Architecture
 
 - React 19 + TypeScript + Vite
 - Zustand vanilla store shared by React and WebMCP
-- Custom SVG incident map with no tile/API dependency
-- Real La Palma coastline geometry with visible OpenStreetMap attribution
+- Custom SVG incident map with no runtime tile/API dependency
+- Real La Palma coastline, public 25 m terrain and Copernicus 2023 historical burn-scar reference
 - Motion system for fire, smoke, embers, scan sweep and modeled spread
 - Deterministic local scenario engine
 - Imperative `document.modelContext.registerTool` integration
@@ -147,6 +152,7 @@ See [CHALLENGE_WORK.md](CHALLENGE_WORK.md) for the exact scope.
 ## Documentation
 
 - [WebMCP implementation](docs/WEBMCP_IMPLEMENTATION.md)
+- [Public data provenance](docs/PUBLIC_DATA_PROVENANCE.md)
 - [Demo script under three minutes](docs/DEMO_SCRIPT.md)
 - [Devpost submission copy](docs/DEVPOST_SUBMISSION.md)
 - [Release checklist](docs/RELEASE_CHECKLIST.md)
@@ -156,8 +162,12 @@ See [CHALLENGE_WORK.md](CHALLENGE_WORK.md) for the exact scope.
 
 [MIT](LICENSE) © 2026 Sebastián Fernández García.
 
+See [Third-party data notices](THIRD_PARTY_NOTICES.md) for retained public-data terms and attribution.
+
 La Palma coastline geometry is derived from [OpenStreetMap](https://www.openstreetmap.org/copyright) data © OpenStreetMap contributors, available under the ODbL.
+
+Terrain context is derived from the [SITCAN/GRAFCAN La Palma 25 m MDT](https://opendata.sitcan.es/dataset/modelo-digital-de-terreno-mdt-de-25x25-metros/resource/90d97840-9bc9-4e31-a470-3cb631806fd5) with Gobierno de Canarias attribution. Historical wildfire geometry is derived from [Copernicus EMSR671](https://mapping.emergency.copernicus.eu/activations/EMSR671/) (© 2023 European Union).
 
 ---
 
-**Exercise only. No live incident data. No dispatch or emergency decisions.**
+**Exercise only. Public context is historical/geographic—not a live incident feed. No dispatch or emergency decisions.**
