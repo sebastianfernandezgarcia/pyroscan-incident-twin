@@ -41,10 +41,11 @@
 - [x] Build and audit the 2:48 HyperFrames visual master.
 - [x] Inspect frame midpoints and every transition boundary.
 - [x] Prepare ten timed voice takes, pronunciation notes, SRT captions and the deterministic mix helper.
-- [ ] Record the ten lines in `docs/VOICEOVER_RECORDING_GUIDE.md`.
+- [x] Record the narration and segment it into ten verified scene-aligned takes.
 - [x] Approve and render the silent visual master at 1920×1080, 30 fps, 2:48.
-- [ ] Mix the human narration and verify the final runtime remains below three minutes.
-- [ ] Include audible English narration.
+- [x] Mix the approved narration and verify the 2:54 final runtime remains below three minutes.
+- [x] Include audible English narration in the final master.
+- [x] Regenerate and validate the English SRT against the aligned recording.
 - [x] Show the six Site Tools and visible state changes in the visual master.
 - [ ] Upload publicly to YouTube.
 - [ ] Add the YouTube URL to Devpost copy.

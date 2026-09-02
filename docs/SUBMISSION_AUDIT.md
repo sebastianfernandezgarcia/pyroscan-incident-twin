@@ -1,6 +1,6 @@
 # WebMCP Challenge submission audit
 
-**Verdict:** PyroScan is technically eligible and the runnable product is ready on two public origins. The only hard blockers are the recorded narration, the public YouTube upload and the final Devpost entry.
+**Verdict:** PyroScan is technically eligible and the runnable product is ready on two public origins. The narrated 2:54 master is verified; the remaining blockers are public video publication and final Devpost submission.
 
 Audit date: **1 September 2026**
 
@@ -19,7 +19,7 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | All code, assets and instructions included | **PASS** | Clean clone requires only `npm install`, `npm test`, and `npm run build`; no backend, API key or private dataset. |
 | Open-source license visible | **PASS** | MIT license at repository root and detected in the GitHub About area. |
 | Pre-existing work documented | **PASS** | [`CHALLENGE_WORK.md`](../CHALLENGE_WORK.md) separates prior private PyroScan research from the new competition implementation and commit history. |
-| Video under three minutes, with audio and clear WebMCP demo | **BLOCKED** | The verified 2:48 1080p visual master, timed human-voice script, captions and deterministic mix helper are ready. Record the ten English takes, mix them, upload publicly to YouTube and paste its URL. |
+| Video under three minutes, with audio and clear WebMCP demo | **PASS — UPLOAD PENDING** | The final 2:54 1080p master contains audible English narration at −16.11 LUFS, checked captions and the complete WebMCP journey. See [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md). Publish it and paste its URL. |
 | Submission materials in English | **PASS** | App, repository, description, testing instructions, captions and narration are English. |
 | No unauthorized marks, music or media | **PASS** | Original interface and animation; no commercial music. OpenStreetMap, Copernicus EMSR671 and SITCAN/GRAFCAN public-data attributions are visible/source-linked and documented. |
 | Devpost form completed before deadline | **BLOCKED** | Create and save a separate PyroScan draft, add the final YouTube URL, review, and submit. Do not alter the Roque Nights draft. |

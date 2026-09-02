@@ -1,4 +1,4 @@
-# Demo film plan — 2:48
+# Demo film plan — 2:54
 
 The challenge film is a cinematic HyperFrames composition rather than an unedited screen recording. It combines restrained motion design with six deterministic screenshots produced by invoking the real registered WebMCP tool callbacks.
 
@@ -15,19 +15,20 @@ The challenge film is a cinematic HyperFrames composition rather than an unedite
 | 1:40–1:58 | Inspectable trade-offs | `compare_response_options` ranks reversible options on screen. |
 | 1:58–2:20 | State lineage | Exact `boardVersion`, stale-state rejection and downstream LP-3 action. |
 | 2:20–2:34 | Human gate | Agent verbs stop before approval; authority remains human. |
-| 2:34–2:48 | Truthful close | Synthetic, deterministic, browser-only, open-source boundaries and brand lockup. |
+| 2:34–2:54 | Truthful close | Synthetic, deterministic, browser-only, open-source boundaries and brand lockup. |
 
 ## Production sources
 
 - Storyboard: `videos/pyroscan-challenge-film/STORYBOARD.md`
 - Exact English narration: `videos/pyroscan-challenge-film/SCRIPT.md`
 - Human recording guide: [`VOICEOVER_RECORDING_GUIDE.md`](VOICEOVER_RECORDING_GUIDE.md)
+- Final render receipt: [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md)
 - Provisional English subtitles: `videos/pyroscan-challenge-film/voiceover/PyroScan_VO_EN.srt`
 - Deterministic tool transcript: `videos/pyroscan-challenge-film/product-states/tool-transcript.json`
 
 ## Final delivery checks
 
-- 16:9, 1920×1080, runtime 2:48.
+- 16:9, 1920×1080, runtime 2:54.
 - Audible English human narration and checked English captions.
 - No copyrighted music.
 - Browser header or architecture frame makes all six tools legible.

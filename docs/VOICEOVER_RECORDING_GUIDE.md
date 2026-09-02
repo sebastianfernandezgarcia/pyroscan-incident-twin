@@ -1,6 +1,6 @@
 # PyroScan challenge film — voiceover recording guide
 
-The visual master is **2:48 (168 seconds), 1920×1080, 30 fps**. Record the ten numbered lines as separate files so every sentence can be placed precisely without stretching your voice.
+The final visual master is **2:54 (174 seconds), 1920×1080, 30 fps**. The approved continuous recording is split at natural pauses into ten aligned takes so the voice is never time-stretched.
 
 ## Recording setup
 
@@ -35,7 +35,7 @@ Use three measured statements, then a firmer conclusion.
 
 ### 03 · 00:24–00:40 · Product reveal
 
-> PyroScan Incident Twin turns the browser into one shared rehearsal table, grounded in La Palma's public terrain and a Copernicus-observed 2023 burn scar.
+> PyroScan Incident Twin turns the browser into one shared rehearsal table, designed around La Palma's real geography and constrained access.
 
 Warm confidence; let **one shared rehearsal table** land.
 
@@ -75,7 +75,7 @@ Slightly slower; this is the technical credibility beat.
 
 Short, deliberate sentences. Emphasize **cannot approve** and **exercise director**.
 
-### 10 · 02:34–02:48 · Close
+### 10 · 02:34–02:54 · Close
 
 > Synthetic. Deterministic. Browser-only. Open source. No live feed, dispatch, or hidden backend. The ambition: rehearse trade-offs before a crisis makes them irreversible. PyroScan. Wildfire readiness, rehearsed together.
 
