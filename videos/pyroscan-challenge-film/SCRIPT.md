@@ -25,7 +25,7 @@
 **Time:** 24.0 – 40.0s
 **Delivery:** Warm confidence; pronounce La Palma naturally in Spanish.
 
-    PyroScan Incident Twin turns the browser into one shared rehearsal table, grounded in La Palma's public terrain and a Copernicus-observed 2023 burn scar.
+    PyroScan Incident Twin turns the browser into one shared rehearsal table, designed around La Palma's real geography and constrained access.
 
 ## Line 4 — The protocol (Frame 4)
 
@@ -71,7 +71,7 @@
 
 ## Line 10 — Close (Frame 10)
 
-**Time:** 154.0 – 168.0s
+**Time:** 154.0 – 174.0s
 **Delivery:** Build from factual to hopeful. Pause before “PyroScan.” Finish warmly, not loudly.
 
     Synthetic. Deterministic. Browser-only. Open source. No live feed, dispatch, or hidden backend. The ambition: rehearse trade-offs before a crisis makes them irreversible. PyroScan. Wildfire readiness, rehearsed together.

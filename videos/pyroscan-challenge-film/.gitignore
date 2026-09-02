@@ -11,3 +11,6 @@ snapshots/
 renders/
 .hyperframes/frame-packets/
 scripts/__pycache__/
+voiceover/takes/*.wav
+voiceover/takes/manifest.json
+voiceover/takes/transcript*.json

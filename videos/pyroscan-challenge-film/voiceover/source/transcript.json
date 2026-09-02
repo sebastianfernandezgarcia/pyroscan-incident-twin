@@ -1,0 +1,1337 @@
+[
+  {
+    "text": "Before",
+    "start": 0.18,
+    "end": 0.46
+  },
+  {
+    "text": "a",
+    "start": 0.46,
+    "end": 0.53
+  },
+  {
+    "text": "wildfire",
+    "start": 0.53,
+    "end": 1.14
+  },
+  {
+    "text": "becomes",
+    "start": 1.14,
+    "end": 1.69
+  },
+  {
+    "text": "a",
+    "start": 1.69,
+    "end": 1.76
+  },
+  {
+    "text": "live",
+    "start": 1.76,
+    "end": 2.07
+  },
+  {
+    "text": "emergency,",
+    "start": 2.07,
+    "end": 2.8
+  },
+  {
+    "text": "teams",
+    "start": 3.13,
+    "end": 3.23
+  },
+  {
+    "text": "need",
+    "start": 3.3,
+    "end": 3.44
+  },
+  {
+    "text": "somewhere",
+    "start": 3.44,
+    "end": 3.92
+  },
+  {
+    "text": "to",
+    "start": 3.92,
+    "end": 4.02
+  },
+  {
+    "text": "rehearse",
+    "start": 4.02,
+    "end": 4.48
+  },
+  {
+    "text": "the",
+    "start": 4.49,
+    "end": 4.62
+  },
+  {
+    "text": "decisions",
+    "start": 4.62,
+    "end": 5.04
+  },
+  {
+    "text": "that",
+    "start": 5.04,
+    "end": 5.24
+  },
+  {
+    "text": "come",
+    "start": 5.24,
+    "end": 5.44
+  },
+  {
+    "text": "first.",
+    "start": 5.44,
+    "end": 5.84
+  },
+  {
+    "text": "Local",
+    "start": 5.84,
+    "end": 7.13
+  },
+  {
+    "text": "knowledge",
+    "start": 7.13,
+    "end": 7.14
+  },
+  {
+    "text": "lives",
+    "start": 7.14,
+    "end": 7.6
+  },
+  {
+    "text": "in",
+    "start": 7.6,
+    "end": 7.77
+  },
+  {
+    "text": "people,",
+    "start": 7.78,
+    "end": 8.56
+  },
+  {
+    "text": "spatial",
+    "start": 8.56,
+    "end": 9.19
+  },
+  {
+    "text": "evidence",
+    "start": 9.19,
+    "end": 9.63
+  },
+  {
+    "text": "lives",
+    "start": 10.06,
+    "end": 10.36
+  },
+  {
+    "text": "on",
+    "start": 10.36,
+    "end": 10.56
+  },
+  {
+    "text": "maps,",
+    "start": 10.56,
+    "end": 10.96
+  },
+  {
+    "text": "and",
+    "start": 10.96,
+    "end": 11.287
+  },
+  {
+    "text": "an",
+    "start": 11.287,
+    "end": 11.613
+  },
+  {
+    "text": "AI",
+    "start": 11.613,
+    "end": 11.94
+  },
+  {
+    "text": "assistant",
+    "start": 11.94,
+    "end": 12.19
+  },
+  {
+    "text": "usually",
+    "start": 12.19,
+    "end": 12.73
+  },
+  {
+    "text": "reasons",
+    "start": 12.73,
+    "end": 13.27
+  },
+  {
+    "text": "somewhere",
+    "start": 13.27,
+    "end": 13.96
+  },
+  {
+    "text": "else.",
+    "start": 13.96,
+    "end": 14.44
+  },
+  {
+    "text": "Every",
+    "start": 14.44,
+    "end": 15.6
+  },
+  {
+    "text": "handoff",
+    "start": 15.6,
+    "end": 15.82
+  },
+  {
+    "text": "loses",
+    "start": 15.82,
+    "end": 16.35
+  },
+  {
+    "text": "context.",
+    "start": 16.35,
+    "end": 17.44
+  },
+  {
+    "text": "PyroScan",
+    "start": 17.44,
+    "end": 18.66
+  },
+  {
+    "text": "Incident",
+    "start": 18.66,
+    "end": 19.07
+  },
+  {
+    "text": "Twin",
+    "start": 19.08,
+    "end": 19.49
+  },
+  {
+    "text": "turns",
+    "start": 19.49,
+    "end": 20
+  },
+  {
+    "text": "the",
+    "start": 20,
+    "end": 20.3
+  },
+  {
+    "text": "browser",
+    "start": 20.3,
+    "end": 21.03
+  },
+  {
+    "text": "into",
+    "start": 21.03,
+    "end": 21.16
+  },
+  {
+    "text": "one",
+    "start": 21.58,
+    "end": 21.6
+  },
+  {
+    "text": "shared",
+    "start": 21.6,
+    "end": 21.92
+  },
+  {
+    "text": "rehearsal",
+    "start": 21.92,
+    "end": 22.4
+  },
+  {
+    "text": "table,",
+    "start": 22.4,
+    "end": 23.12
+  },
+  {
+    "text": "designed",
+    "start": 23.3,
+    "end": 23.56
+  },
+  {
+    "text": "around",
+    "start": 23.56,
+    "end": 23.89
+  },
+  {
+    "text": "La",
+    "start": 23.89,
+    "end": 23.94
+  },
+  {
+    "text": "Palma's",
+    "start": 24.06,
+    "end": 24.38
+  },
+  {
+    "text": "real",
+    "start": 24.38,
+    "end": 24.6
+  },
+  {
+    "text": "geography",
+    "start": 24.6,
+    "end": 25.1
+  },
+  {
+    "text": "and",
+    "start": 25.1,
+    "end": 25.26
+  },
+  {
+    "text": "constrained",
+    "start": 25.26,
+    "end": 25.78
+  },
+  {
+    "text": "access.",
+    "start": 26.2,
+    "end": 26.4
+  },
+  {
+    "text": "WebMCP",
+    "start": 27.77,
+    "end": 28.14
+  },
+  {
+    "text": "lets",
+    "start": 28.14,
+    "end": 28.42
+  },
+  {
+    "text": "the",
+    "start": 28.54,
+    "end": 28.76
+  },
+  {
+    "text": "page",
+    "start": 28.77,
+    "end": 29.12
+  },
+  {
+    "text": "expose",
+    "start": 29.13,
+    "end": 29.67
+  },
+  {
+    "text": "its",
+    "start": 29.67,
+    "end": 29.94
+  },
+  {
+    "text": "real",
+    "start": 29.94,
+    "end": 30.27
+  },
+  {
+    "text": "verbs",
+    "start": 30.7,
+    "end": 30.75
+  },
+  {
+    "text": "directly",
+    "start": 30.75,
+    "end": 31.47
+  },
+  {
+    "text": "to",
+    "start": 31.47,
+    "end": 31.64
+  },
+  {
+    "text": "ChatGPT.",
+    "start": 31.64,
+    "end": 32.32
+  },
+  {
+    "text": "Read,",
+    "start": 33.37,
+    "end": 33.92
+  },
+  {
+    "text": "inspect,",
+    "start": 33.92,
+    "end": 34.8
+  },
+  {
+    "text": "annotate,",
+    "start": 34.8,
+    "end": 35.77
+  },
+  {
+    "text": "simulate,",
+    "start": 35.77,
+    "end": 36.8
+  },
+  {
+    "text": "compare,",
+    "start": 36.8,
+    "end": 37.6
+  },
+  {
+    "text": "and",
+    "start": 37.6,
+    "end": 37.77
+  },
+  {
+    "text": "stage.",
+    "start": 37.77,
+    "end": 38.24
+  },
+  {
+    "text": "No",
+    "start": 38.24,
+    "end": 38.81
+  },
+  {
+    "text": "separate",
+    "start": 38.81,
+    "end": 39.38
+  },
+  {
+    "text": "server.",
+    "start": 39.38,
+    "end": 40.24
+  },
+  {
+    "text": "No",
+    "start": 40.24,
+    "end": 40.38
+  },
+  {
+    "text": "brittle",
+    "start": 40.41,
+    "end": 41.01
+  },
+  {
+    "text": "click",
+    "start": 41.01,
+    "end": 41.44
+  },
+  {
+    "text": "script.",
+    "start": 41.44,
+    "end": 42.24
+  },
+  {
+    "text": "I",
+    "start": 42.24,
+    "end": 42.505
+  },
+  {
+    "text": "ask",
+    "start": 42.505,
+    "end": 42.77
+  },
+  {
+    "text": "at",
+    "start": 42.77,
+    "end": 43.035
+  },
+  {
+    "text": "the",
+    "start": 43.035,
+    "end": 43.3
+  },
+  {
+    "text": "level",
+    "start": 43.3,
+    "end": 43.65
+  },
+  {
+    "text": "of",
+    "start": 43.65,
+    "end": 43.85
+  },
+  {
+    "text": "intent.",
+    "start": 43.85,
+    "end": 44.8
+  },
+  {
+    "text": "ChatGPT",
+    "start": 45.68,
+    "end": 45.85
+  },
+  {
+    "text": "focuses",
+    "start": 45.86,
+    "end": 46.91
+  },
+  {
+    "text": "El",
+    "start": 46.91,
+    "end": 47.2
+  },
+  {
+    "text": "Paso",
+    "start": 47.21,
+    "end": 47.84
+  },
+  {
+    "text": "and",
+    "start": 47.84,
+    "end": 48.02
+  },
+  {
+    "text": "adds",
+    "start": 48.03,
+    "end": 48.28
+  },
+  {
+    "text": "a",
+    "start": 48.28,
+    "end": 48.34
+  },
+  {
+    "text": "blocked",
+    "start": 48.34,
+    "end": 48.8
+  },
+  {
+    "text": "road",
+    "start": 48.8,
+    "end": 49.12
+  },
+  {
+    "text": "exercise",
+    "start": 49.12,
+    "end": 49.76
+  },
+  {
+    "text": "note",
+    "start": 49.76,
+    "end": 49.92
+  },
+  {
+    "text": "for",
+    "start": 49.92,
+    "end": 50.12
+  },
+  {
+    "text": "the",
+    "start": 50.12,
+    "end": 50.32
+  },
+  {
+    "text": "LP3",
+    "start": 50.32,
+    "end": 50.63
+  },
+  {
+    "text": "checkpoint.",
+    "start": 50.63,
+    "end": 51.51
+  },
+  {
+    "text": "That",
+    "start": 51.51,
+    "end": 52.085
+  },
+  {
+    "text": "local",
+    "start": 52.085,
+    "end": 52.66
+  },
+  {
+    "text": "constraint",
+    "start": 52.66,
+    "end": 53.31
+  },
+  {
+    "text": "becomes",
+    "start": 53.32,
+    "end": 53.98
+  },
+  {
+    "text": "visible",
+    "start": 53.98,
+    "end": 54.64
+  },
+  {
+    "text": "to",
+    "start": 54.64,
+    "end": 54.82
+  },
+  {
+    "text": "me,",
+    "start": 54.83,
+    "end": 55.15
+  },
+  {
+    "text": "and",
+    "start": 55.15,
+    "end": 55.17
+  },
+  {
+    "text": "available",
+    "start": 55.58,
+    "end": 55.89
+  },
+  {
+    "text": "to",
+    "start": 55.89,
+    "end": 56.01
+  },
+  {
+    "text": "every",
+    "start": 56.01,
+    "end": 56.31
+  },
+  {
+    "text": "later",
+    "start": 56.31,
+    "end": 56.61
+  },
+  {
+    "text": "tool",
+    "start": 56.61,
+    "end": 56.88
+  },
+  {
+    "text": "call.",
+    "start": 56.88,
+    "end": 57.12
+  },
+  {
+    "text": "Next,",
+    "start": 57.12,
+    "end": 57.68
+  },
+  {
+    "text": "a",
+    "start": 57.68,
+    "end": 58.24
+  },
+  {
+    "text": "60-minute",
+    "start": 58.24,
+    "end": 58.51
+  },
+  {
+    "text": "northeast",
+    "start": 58.58,
+    "end": 59.24
+  },
+  {
+    "text": "wind",
+    "start": 59.24,
+    "end": 59.51
+  },
+  {
+    "text": "shift",
+    "start": 59.54,
+    "end": 59.9
+  },
+  {
+    "text": "redraws",
+    "start": 59.9,
+    "end": 60.41
+  },
+  {
+    "text": "the",
+    "start": 60.41,
+    "end": 60.62
+  },
+  {
+    "text": "deterministic",
+    "start": 60.62,
+    "end": 61.59
+  },
+  {
+    "text": "attention",
+    "start": 61.59,
+    "end": 62.26
+  },
+  {
+    "text": "area",
+    "start": 62.26,
+    "end": 62.52
+  },
+  {
+    "text": "on",
+    "start": 62.56,
+    "end": 62.69
+  },
+  {
+    "text": "the",
+    "start": 62.69,
+    "end": 62.91
+  },
+  {
+    "text": "same",
+    "start": 62.91,
+    "end": 63.2
+  },
+  {
+    "text": "map.",
+    "start": 63.2,
+    "end": 63.73
+  },
+  {
+    "text": "This",
+    "start": 63.73,
+    "end": 64.003
+  },
+  {
+    "text": "is",
+    "start": 64.003,
+    "end": 64.275
+  },
+  {
+    "text": "not",
+    "start": 64.275,
+    "end": 64.548
+  },
+  {
+    "text": "a",
+    "start": 64.548,
+    "end": 64.82
+  },
+  {
+    "text": "forecast.",
+    "start": 64.82,
+    "end": 65.37
+  },
+  {
+    "text": "It",
+    "start": 65.37,
+    "end": 65.46
+  },
+  {
+    "text": "is",
+    "start": 65.58,
+    "end": 65.67
+  },
+  {
+    "text": "a",
+    "start": 65.67,
+    "end": 65.74
+  },
+  {
+    "text": "bounded",
+    "start": 65.74,
+    "end": 66.28
+  },
+  {
+    "text": "what-if",
+    "start": 66.28,
+    "end": 66.81
+  },
+  {
+    "text": "that",
+    "start": 66.81,
+    "end": 67.12
+  },
+  {
+    "text": "a",
+    "start": 67.12,
+    "end": 67.19
+  },
+  {
+    "text": "person",
+    "start": 67.19,
+    "end": 67.33
+  },
+  {
+    "text": "and",
+    "start": 67.74,
+    "end": 67.88
+  },
+  {
+    "text": "an",
+    "start": 67.88,
+    "end": 68.03
+  },
+  {
+    "text": "agent",
+    "start": 68.03,
+    "end": 68.42
+  },
+  {
+    "text": "can",
+    "start": 68.42,
+    "end": 68.65
+  },
+  {
+    "text": "inspect",
+    "start": 68.65,
+    "end": 69.09
+  },
+  {
+    "text": "together.",
+    "start": 69.2,
+    "end": 70.13
+  },
+  {
+    "text": "PyroScan",
+    "start": 70.13,
+    "end": 71.38
+  },
+  {
+    "text": "compares",
+    "start": 71.38,
+    "end": 71.47
+  },
+  {
+    "text": "two",
+    "start": 71.54,
+    "end": 71.77
+  },
+  {
+    "text": "reversible",
+    "start": 71.77,
+    "end": 72.62
+  },
+  {
+    "text": "response",
+    "start": 72.62,
+    "end": 73.3
+  },
+  {
+    "text": "options",
+    "start": 73.3,
+    "end": 73.84
+  },
+  {
+    "text": "against",
+    "start": 74.3,
+    "end": 74.48
+  },
+  {
+    "text": "setup",
+    "start": 74.48,
+    "end": 74.86
+  },
+  {
+    "text": "time,",
+    "start": 74.9,
+    "end": 75.44
+  },
+  {
+    "text": "coverage,",
+    "start": 75.62,
+    "end": 76.09
+  },
+  {
+    "text": "resource",
+    "start": 76.09,
+    "end": 76.6
+  },
+  {
+    "text": "use,",
+    "start": 76.61,
+    "end": 76.93
+  },
+  {
+    "text": "and",
+    "start": 76.93,
+    "end": 77.12
+  },
+  {
+    "text": "the",
+    "start": 77.12,
+    "end": 77.31
+  },
+  {
+    "text": "new",
+    "start": 77.31,
+    "end": 77.5
+  },
+  {
+    "text": "access",
+    "start": 77.5,
+    "end": 77.88
+  },
+  {
+    "text": "constraint.",
+    "start": 77.88,
+    "end": 78.8
+  },
+  {
+    "text": "The",
+    "start": 78.8,
+    "end": 79.405
+  },
+  {
+    "text": "ranking",
+    "start": 79.405,
+    "end": 80.01
+  },
+  {
+    "text": "lives",
+    "start": 80.01,
+    "end": 80.1
+  },
+  {
+    "text": "on",
+    "start": 80.1,
+    "end": 80.27
+  },
+  {
+    "text": "screen,",
+    "start": 80.27,
+    "end": 80.96
+  },
+  {
+    "text": "not",
+    "start": 80.96,
+    "end": 81.22
+  },
+  {
+    "text": "buried",
+    "start": 81.22,
+    "end": 81.73
+  },
+  {
+    "text": "in",
+    "start": 81.74,
+    "end": 81.91
+  },
+  {
+    "text": "a",
+    "start": 81.91,
+    "end": 81.99
+  },
+  {
+    "text": "chat",
+    "start": 81.99,
+    "end": 82.33
+  },
+  {
+    "text": "transcript.",
+    "start": 82.33,
+    "end": 83.5
+  },
+  {
+    "text": "Before",
+    "start": 84.66,
+    "end": 84.94
+  },
+  {
+    "text": "staging,",
+    "start": 84.94,
+    "end": 85.62
+  },
+  {
+    "text": "ChatGPT",
+    "start": 85.62,
+    "end": 86.14
+  },
+  {
+    "text": "reads",
+    "start": 86.14,
+    "end": 86.52
+  },
+  {
+    "text": "the",
+    "start": 86.52,
+    "end": 86.75
+  },
+  {
+    "text": "exact",
+    "start": 86.75,
+    "end": 87.12
+  },
+  {
+    "text": "board",
+    "start": 87.12,
+    "end": 87.17
+  },
+  {
+    "text": "version.",
+    "start": 87.58,
+    "end": 88.32
+  },
+  {
+    "text": "If",
+    "start": 88.32,
+    "end": 88.845
+  },
+  {
+    "text": "the",
+    "start": 88.845,
+    "end": 89.37
+  },
+  {
+    "text": "evidence",
+    "start": 89.37,
+    "end": 89.39
+  },
+  {
+    "text": "changed,",
+    "start": 89.39,
+    "end": 90.02
+  },
+  {
+    "text": "a",
+    "start": 90.14,
+    "end": 90.21
+  },
+  {
+    "text": "stale",
+    "start": 90.21,
+    "end": 90.62
+  },
+  {
+    "text": "plan",
+    "start": 90.62,
+    "end": 90.95
+  },
+  {
+    "text": "is",
+    "start": 90.95,
+    "end": 91.09
+  },
+  {
+    "text": "rejected.",
+    "start": 91.1,
+    "end": 91.89
+  },
+  {
+    "text": "The",
+    "start": 91.89,
+    "end": 92.333
+  },
+  {
+    "text": "new",
+    "start": 92.333,
+    "end": 92.777
+  },
+  {
+    "text": "draft",
+    "start": 92.777,
+    "end": 93.22
+  },
+  {
+    "text": "carries",
+    "start": 93.22,
+    "end": 93.63
+  },
+  {
+    "text": "the",
+    "start": 93.64,
+    "end": 93.86
+  },
+  {
+    "text": "LP3",
+    "start": 93.98,
+    "end": 94.31
+  },
+  {
+    "text": "constraint",
+    "start": 94.34,
+    "end": 95.2
+  },
+  {
+    "text": "into",
+    "start": 95.2,
+    "end": 95.54
+  },
+  {
+    "text": "its",
+    "start": 95.54,
+    "end": 95.72
+  },
+  {
+    "text": "access",
+    "start": 96.14,
+    "end": 96.32
+  },
+  {
+    "text": "action,",
+    "start": 96.32,
+    "end": 97.04
+  },
+  {
+    "text": "proving",
+    "start": 97.22,
+    "end": 97.41
+  },
+  {
+    "text": "that",
+    "start": 97.41,
+    "end": 97.62
+  },
+  {
+    "text": "human",
+    "start": 97.62,
+    "end": 97.86
+  },
+  {
+    "text": "knowledge",
+    "start": 97.88,
+    "end": 98.34
+  },
+  {
+    "text": "changed",
+    "start": 98.4,
+    "end": 98.72
+  },
+  {
+    "text": "the",
+    "start": 98.72,
+    "end": 98.87
+  },
+  {
+    "text": "downstream",
+    "start": 98.87,
+    "end": 99.38
+  },
+  {
+    "text": "artifact.",
+    "start": 99.39,
+    "end": 99.84
+  },
+  {
+    "text": "The",
+    "start": 99.84,
+    "end": 100.405
+  },
+  {
+    "text": "agent",
+    "start": 100.405,
+    "end": 100.97
+  },
+  {
+    "text": "can",
+    "start": 100.97,
+    "end": 101.03
+  },
+  {
+    "text": "explore.",
+    "start": 101.03,
+    "end": 101.98
+  },
+  {
+    "text": "It",
+    "start": 102.01,
+    "end": 102.18
+  },
+  {
+    "text": "cannot",
+    "start": 102.18,
+    "end": 102.74
+  },
+  {
+    "text": "approve.",
+    "start": 102.74,
+    "end": 103.49
+  },
+  {
+    "text": "Final",
+    "start": 103.49,
+    "end": 104.235
+  },
+  {
+    "text": "approval",
+    "start": 104.235,
+    "end": 104.98
+  },
+  {
+    "text": "is",
+    "start": 104.98,
+    "end": 105.07
+  },
+  {
+    "text": "deliberately",
+    "start": 105.14,
+    "end": 106.24
+  },
+  {
+    "text": "absent",
+    "start": 106.24,
+    "end": 106.81
+  },
+  {
+    "text": "from",
+    "start": 106.81,
+    "end": 107.18
+  },
+  {
+    "text": "the",
+    "start": 107.18,
+    "end": 107.47
+  },
+  {
+    "text": "WebMCP",
+    "start": 107.47,
+    "end": 108.08
+  },
+  {
+    "text": "tools",
+    "start": 108.08,
+    "end": 108.46
+  },
+  {
+    "text": "and",
+    "start": 108.57,
+    "end": 108.72
+  },
+  {
+    "text": "remains",
+    "start": 108.72,
+    "end": 109.07
+  },
+  {
+    "text": "with",
+    "start": 109.07,
+    "end": 109.26
+  },
+  {
+    "text": "the",
+    "start": 109.36,
+    "end": 109.45
+  },
+  {
+    "text": "exercise",
+    "start": 109.45,
+    "end": 109.9
+  },
+  {
+    "text": "director.",
+    "start": 109.95,
+    "end": 110.29
+  },
+  {
+    "text": "Synthetic,",
+    "start": 111.54,
+    "end": 112.18
+  },
+  {
+    "text": "deterministic,",
+    "start": 112.3,
+    "end": 113.4
+  },
+  {
+    "text": "browser-only,",
+    "start": 113.4,
+    "end": 114.56
+  },
+  {
+    "text": "open",
+    "start": 114.56,
+    "end": 115.08
+  },
+  {
+    "text": "source,",
+    "start": 115.1,
+    "end": 116.21
+  },
+  {
+    "text": "no",
+    "start": 116.21,
+    "end": 116.46
+  },
+  {
+    "text": "live",
+    "start": 116.51,
+    "end": 117.09
+  },
+  {
+    "text": "feed,",
+    "start": 117.09,
+    "end": 118
+  },
+  {
+    "text": "dispatch,",
+    "start": 118.45,
+    "end": 118.72
+  },
+  {
+    "text": "or",
+    "start": 118.72,
+    "end": 118.84
+  },
+  {
+    "text": "hidden",
+    "start": 118.84,
+    "end": 119.17
+  },
+  {
+    "text": "backend.",
+    "start": 119.21,
+    "end": 119.76
+  },
+  {
+    "text": "The",
+    "start": 119.76,
+    "end": 120.82
+  },
+  {
+    "text": "ambition.",
+    "start": 120.82,
+    "end": 121.36
+  },
+  {
+    "text": "Rehearse",
+    "start": 121.36,
+    "end": 122.08
+  },
+  {
+    "text": "tradeoffs",
+    "start": 122.08,
+    "end": 122.89
+  },
+  {
+    "text": "before",
+    "start": 122.89,
+    "end": 123.31
+  },
+  {
+    "text": "a",
+    "start": 123.43,
+    "end": 123.5
+  },
+  {
+    "text": "crisis",
+    "start": 123.74,
+    "end": 123.84
+  },
+  {
+    "text": "makes",
+    "start": 123.84,
+    "end": 124.08
+  },
+  {
+    "text": "them",
+    "start": 124.11,
+    "end": 124.3
+  },
+  {
+    "text": "irreversible.",
+    "start": 124.36,
+    "end": 125.1
+  },
+  {
+    "text": "PyroScan.",
+    "start": 126.08,
+    "end": 126.88
+  },
+  {
+    "text": "Wildfire",
+    "start": 126.88,
+    "end": 127.56
+  },
+  {
+    "text": "readiness",
+    "start": 127.56,
+    "end": 128.33
+  },
+  {
+    "text": "rehearsed",
+    "start": 128.33,
+    "end": 129.1
+  },
+  {
+    "text": "together.",
+    "start": 129.18,
+    "end": 130.08
+  }
+]

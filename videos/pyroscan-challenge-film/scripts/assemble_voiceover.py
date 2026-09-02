@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 STARTS = [0, 10, 24, 40, 58, 80, 100, 118, 140, 154]
-SLOTS = [10, 14, 16, 18, 22, 20, 18, 22, 14, 14]
+SLOTS = [10, 14, 16, 18, 22, 20, 18, 22, 14, 20]
 EXTENSIONS = {".wav", ".aiff", ".aif", ".m4a", ".mp3", ".aac", ".flac"}
 
 
@@ -106,6 +106,8 @@ def main() -> int:
             "copy",
             "-c:a",
             "aac",
+            "-ar",
+            "48000",
             "-b:a",
             "192k",
             "-t",
@@ -122,4 +124,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

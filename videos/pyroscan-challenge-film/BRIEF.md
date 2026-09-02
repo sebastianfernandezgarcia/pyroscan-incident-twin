@@ -7,7 +7,7 @@ destination: youtube
 aspect: 1920x1080
 language: en
 audience: "OpenAI WebMCP Challenge judges, agent builders, and public-safety innovation teams"
-length: 160s
+length: 174s
 angle: "Before the crisis: reveal the cost of disconnected tools, prove one complete human-agent rehearsal, then close on safety and credible impact."
 narration: yes
 vo_mode: restructured-human-recorded
@@ -38,6 +38,6 @@ Create a cinematic but evidence-led product film for the OpenAI WebMCP Challenge
 
 - Synthetic what-if only. Public terrain and the 2023 Copernicus burn scar are historical/geographic context and never imply a live fire, forecast, dispatch capability, government deployment, real-world prevention outcome, or live data feed.
 - No unauthorized trademarks or copyrighted music. Use only original interface visuals, attributed OpenStreetMap/SITCAN/Copernicus public data, and original/procedural audio if any.
-- Target 2:40 and never exceed 2:55 after the final human voiceover.
+- Final target 2:54 and never exceed 3:00 after the approved narration.
 - The final film must visibly demonstrate the working WebMCP product, not only present motion graphics.
 - Autonomous design choice: the Broadside preset was remixed onto PyroScan's dark, acid-green visual system because its declarative typography adds urgency without competing with the product screens.

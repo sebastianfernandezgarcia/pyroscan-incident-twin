@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 168s
+duration: 174s
 message: "WebMCP turns a wildfire exercise dashboard into a shared rehearsal surface where human local knowledge changes agent analysis and final authority remains human."
 arc: "Before → shared future → mechanism → end-to-end proof → trust → close"
 audience: "OpenAI WebMCP Challenge judges, agent builders, and public-safety innovation teams"
@@ -70,7 +70,7 @@ Scene 5 (12.0–14.0s): Hold the three disconnected stations and broken line as 
 - poster: 12.5s
 - transition_in: crossfade
 - scene: The real PyroScan interface pulls out from a La Palma close-up into one shared board.
-- voiceover: "PyroScan Incident Twin turns the browser into one shared rehearsal table, grounded in La Palma's public terrain and a Copernicus-observed 2023 burn scar."
+- voiceover: "PyroScan Incident Twin turns the browser into one shared rehearsal table, designed around La Palma's real geography and constrained access."
 - type: product_intro
 - persuasion: Product reveal
 - beat: one shared surface
@@ -236,8 +236,8 @@ Scene 4 (11.2–14.0s): Hold `EXPLORATION · AGENT` and `AUTHORITY · HUMAN` as 
 
 - status: animated
 - src: compositions/frames/10-close.html
-- duration: 14s
-- poster: 10.5s
+- duration: 20s
+- poster: 17s
 - transition_in: cut
 - scene: Product proof collapses into three truthful badges and the PyroScan lockup.
 - voiceover: "Synthetic. Deterministic. Browser-only. Open source. No live feed, dispatch, or hidden backend. The ambition: rehearse trade-offs before a crisis makes them irreversible. PyroScan. Wildfire readiness, rehearsed together."
@@ -254,4 +254,4 @@ Compose: proof words first, then one source-traceable brand resolve with severe 
 Scene 1 (0.0–4.2s): SYNTHETIC / DETERMINISTIC / BROWSER-ONLY / OPEN SOURCE hard-cut in one fixed slot (`discrete-text-sequence`) over a softly dimmed real app surface.
 Scene 2 (4.2–7.2s): NO LIVE FEED / NO DISPATCH / NO HIDDEN BACKEND arrive as three mono lines with sequential rule draws; the interface recedes completely.
 Scene 3 (7.2–10.6s): `rehearse trade-offs before they become irreversible.` builds per phrase on the acid register (`dynamic-content-sequencing`).
-Scene 4 (10.6–14.0s): Scale-swap (`scale-swap-transition`) to the PyroScan mark and wordmark; final line `wildfire readiness, rehearsed together.` holds dead still with the live URL beneath it.
+Scene 4 (10.6–20.0s): Scale-swap (`scale-swap-transition`) to the PyroScan mark and wordmark; final line `wildfire readiness, rehearsed together.` holds dead still with the live URL beneath it while the approved narration lands naturally.
