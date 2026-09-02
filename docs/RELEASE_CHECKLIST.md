@@ -47,15 +47,16 @@
 - [x] Include audible English narration in the final master.
 - [x] Regenerate and validate the English SRT against the aligned recording.
 - [x] Show the six Site Tools and visible state changes in the visual master.
-- [ ] Upload publicly to YouTube.
-- [ ] Add the YouTube URL to Devpost copy.
+- [x] Upload publicly to YouTube at `https://youtu.be/5LNXxK6tD9Q`.
+- [x] Add the YouTube URL to Devpost copy.
 
 ## Devpost
 
-- [ ] Create the PyroScan project draft.
-- [ ] Paste the English copy from `docs/DEVPOST_SUBMISSION.md`.
-- [ ] Upload hero image(s).
-- [ ] Add live app, public repo and public YouTube URLs.
-- [ ] Confirm the correct team members.
-- [ ] Submit before **3 September 2026, 1:00 PM PT / 9:00 PM Canary Islands**.
-- [ ] After submission, do not change the judged site or repository until results are announced.
+- [x] Create the PyroScan project draft.
+- [x] Paste the English copy from `docs/DEVPOST_SUBMISSION.md`.
+- [x] Upload the four-image 3:2 gallery and the 3:2 project thumbnail.
+- [x] Add live app, public repo and public YouTube URLs.
+- [x] Confirm Sebastián Fernández García as the individual submitter.
+- [x] Submit before **3 September 2026, 1:00 PM PT / 9:00 PM Canary Islands**.
+- [x] Verify the public page shows **Submitted to — The WebMCP Challenge**.
+- [x] Freeze the judged site, repository and submission after this final receipt until results are announced.

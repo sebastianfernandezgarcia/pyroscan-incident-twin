@@ -84,7 +84,7 @@ The competition build intentionally keeps the active scenario synthetic and brow
 - Live app (primary): `https://pyroscan-incident-twin.netlify.app/`
 - Live app (GitHub Pages mirror): `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
 - Public repository: `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin`
-- YouTube demo (<3 minutes): `TODO`
+- YouTube demo (<3 minutes): `https://youtu.be/5LNXxK6tD9Q`
 
 ## Additional information — exact answers
 
@@ -98,7 +98,7 @@ The competition build intentionally keeps the active scenario synthetic and brow
 | Live URL | `https://pyroscan-incident-twin.netlify.app/` |
 | Public repo | `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin` |
 | Agent/client tested | **ChatGPT/Codex built-in browser with GPT-5.6 Sol; automated registration and integration tests.** |
-| AI tools leveraged | **OpenAI Codex desktop app, GPT-5.6 Sol, ChatGPT Site Tools / WebMCP.** |
+| AI tools leveraged | **OpenAI Codex desktop app, GPT-5.6 Sol, ChatGPT Site Tools / WebMCP, HyperFrames, and ElevenLabs for the English voiceover.** |
 | Learning level | **Significant** |
 | Gained career AI value | **Yes** |
 

@@ -1,8 +1,8 @@
 # WebMCP Challenge submission audit
 
-**Verdict:** PyroScan is technically eligible and the runnable product is ready on two public origins. The narrated 2:54 master is verified; the remaining blockers are public video publication and final Devpost submission.
+**Verdict:** **SUBMITTED.** PyroScan is technically eligible, the runnable product is public on two origins, the narrated 2:54 demo is publicly embedded from YouTube, and Devpost confirms the project is submitted to The WebMCP Challenge.
 
-Audit date: **1 September 2026**
+Audit date: **3 September 2026**
 
 Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 
@@ -19,10 +19,10 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | All code, assets and instructions included | **PASS** | Clean clone requires only `npm install`, `npm test`, and `npm run build`; no backend, API key or private dataset. |
 | Open-source license visible | **PASS** | MIT license at repository root and detected in the GitHub About area. |
 | Pre-existing work documented | **PASS** | [`CHALLENGE_WORK.md`](../CHALLENGE_WORK.md) separates prior private PyroScan research from the new competition implementation and commit history. |
-| Video under three minutes, with audio and clear WebMCP demo | **PASS — UPLOAD PENDING** | The final 2:54 1080p master contains audible English narration at −16.11 LUFS, checked captions and the complete WebMCP journey. See [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md). Publish it and paste its URL. |
+| Video under three minutes, with audio and clear WebMCP demo | **PASS** | The [public YouTube demo](https://youtu.be/5LNXxK6tD9Q) is 2:54, 1080p, contains audible English narration at −16.11 LUFS and shows the complete WebMCP journey. See [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md). |
 | Submission materials in English | **PASS** | App, repository, description, testing instructions, captions and narration are English. |
 | No unauthorized marks, music or media | **PASS** | Original interface and animation; no commercial music. OpenStreetMap, Copernicus EMSR671 and SITCAN/GRAFCAN public-data attributions are visible/source-linked and documented. |
-| Devpost form completed before deadline | **BLOCKED** | Create and save a separate PyroScan draft, add the final YouTube URL, review, and submit. Do not alter the Roque Nights draft. |
+| Devpost form completed before deadline | **PASS** | Devpost showed **Project submitted!** and the public page shows **Submitted to — The WebMCP Challenge**: [PyroScan // Incident Twin](https://devpost.com/software/pyroscan-incident-twin). |
 
 Official source of truth: [WebMCP Challenge rules](https://webmcp.devpost.com/rules).
 
@@ -60,10 +60,12 @@ Those claims require public, verifiable evidence and capabilities that are inten
 
 After the submission period ends, do not change the judged website, repository or submission. Before the deadline:
 
-- [ ] Confirm the public YouTube video is under 3:00 and audible.
-- [ ] Run the exact judge prompt against the submitted live URL.
-- [ ] Confirm Site Tools shows six tools.
-- [ ] Open the repository in a signed-out browser and verify license visibility.
-- [ ] Review every Devpost field and link.
-- [ ] Submit before 9:00 PM Canary Islands, leaving a safety margin.
-- [ ] Preserve a local copy of the submitted text, images and video URL.
+- [x] Confirm the public YouTube video is under 3:00 and audible.
+- [x] Run the exact judge journey against the submitted live URL.
+- [x] Confirm Site Tools shows six tools.
+- [x] Open the repository without repository credentials and verify public access and MIT license visibility.
+- [x] Review every Devpost field, technology tag, gallery item, embedded video and link.
+- [x] Submit before 9:00 PM Canary Islands, leaving a safety margin.
+- [x] Preserve a local copy of the submitted text, images and video URL.
+
+See [`SUBMISSION_RECEIPT.md`](SUBMISSION_RECEIPT.md) for the final public links and validation signals.
