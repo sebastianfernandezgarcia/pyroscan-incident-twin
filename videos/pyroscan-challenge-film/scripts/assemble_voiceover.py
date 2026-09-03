@@ -54,6 +54,33 @@ def main() -> int:
     parser.add_argument("--video", type=Path, required=True, help="Approved silent visual master")
     parser.add_argument("--takes", type=Path, default=Path("voiceover/takes"))
     parser.add_argument("--music", type=Path, help="Optional music bed, ducked beneath narration")
+    parser.add_argument(
+        "--music-lufs",
+        type=float,
+        default=-26.0,
+        help="Music loudness target before ducking (default: -26 LUFS)",
+    )
+    parser.add_argument(
+        "--music-weight",
+        type=float,
+        default=0.8,
+        help="Linear music gain in the final amix stage (default: 0.8)",
+    )
+    parser.add_argument(
+        "--music-duck-ratio",
+        type=float,
+        default=8.0,
+        help="Narration sidechain compression ratio (default: 8)",
+    )
+    parser.add_argument(
+        "--music-tail",
+        choices=("loop", "crossfade"),
+        default="loop",
+        help=(
+            "How to extend a short music bed: loop it, or append its opening "
+            "with a four-second crossfade (default: loop)"
+        ),
+    )
     parser.add_argument("--output", type=Path, default=Path("renders/pyroscan-webmcp-final.mp4"))
     args = parser.parse_args()
 
@@ -64,6 +91,12 @@ def main() -> int:
         raise SystemExit(f"Visual master not found: {args.video}")
     if args.music is not None and not args.music.is_file():
         raise SystemExit(f"Music bed not found: {args.music}")
+    if args.music_lufs > -18 or args.music_lufs < -60:
+        raise SystemExit("--music-lufs must be between -60 and -18")
+    if not 0 < args.music_weight <= 1:
+        raise SystemExit("--music-weight must be greater than 0 and no more than 1")
+    if args.music_duck_ratio < 1:
+        raise SystemExit("--music-duck-ratio must be at least 1")
 
     takes = [find_take(args.takes, index) for index in range(1, 11)]
     for index, (take, slot) in enumerate(zip(takes, SLOTS, strict=True), start=1):
@@ -99,21 +132,56 @@ def main() -> int:
     if args.music is None:
         filters.append(voice_mix + "[voiceout]")
     else:
+        music_duration = duration(args.music)
         # Normalize the bed well below the narration, then use the narration as
         # a sidechain key so the music recedes further whenever speech is present.
         filters.append(voice_mix + ",asplit=2[voiceout][voicekey]")
+
+        music_input = "[11:a]aresample=48000,"
+        loop_music_input = True
+        if args.music_tail == "crossfade" and music_duration < visual_duration:
+            extension = visual_duration - music_duration
+            crossfade = min(4.0, music_duration / 4)
+            head_duration = extension + crossfade
+            if head_duration >= music_duration:
+                raise SystemExit(
+                    "Music is too short for --music-tail crossfade; use --music-tail loop"
+                )
+            filters.append(
+                f"{music_input}asplit=2[musicmain][musichead]"
+            )
+            filters.append(
+                f"[musicmain]atrim=duration={music_duration:.3f},"
+                "asetpts=PTS-STARTPTS[musicbody]"
+            )
+            filters.append(
+                f"[musichead]atrim=duration={head_duration:.3f},"
+                "asetpts=PTS-STARTPTS[musicopening]"
+            )
+            filters.append(
+                f"[musicbody][musicopening]acrossfade=d={crossfade:.3f}:"
+                "c1=tri:c2=tri[musicextended]"
+            )
+            music_input = "[musicextended]"
+            loop_music_input = False
+
+        fade_out_duration = min(5.0, visual_duration)
+        fade_out_start = visual_duration - fade_out_duration
         filters.append(
-            f"[11:a]aresample=48000,atrim=duration={visual_duration:.3f},"
-            "asetpts=N/SR/TB,afade=t=in:st=0:d=2,afade=t=out:st=169:d=5,"
-            "loudnorm=I=-26:TP=-8:LRA=5[musicbase]"
+            f"{music_input}atrim=duration={visual_duration:.3f},"
+            f"asetpts=N/SR/TB,afade=t=in:st=0:d=2,"
+            f"afade=t=out:st={fade_out_start:.3f}:d={fade_out_duration:.3f},"
+            f"loudnorm=I={args.music_lufs:g}:TP=-8:LRA=5[musicbase]"
         )
         filters.append(
             "[musicbase][voicekey]sidechaincompress="
-            "threshold=.02:ratio=8:attack=25:release=400:makeup=1[ducked]"
+            f"threshold=.02:ratio={args.music_duck_ratio:g}:"
+            "attack=25:release=400:makeup=1[ducked]"
         )
         filters.append(
             "[voiceout][ducked]amix=inputs=2:duration=longest:normalize=0:"
-            "weights='1 .8',alimiter=limit=.84:level=false,apad[finalout]"
+            f"weights='1 {args.music_weight:g}',"
+            "alimiter=limit=.84:level=false,apad[finalout]"
         )
         output_label = "finalout"
 
@@ -121,7 +189,9 @@ def main() -> int:
     for take in takes:
         command.extend(["-i", str(take)])
     if args.music is not None:
-        command.extend(["-stream_loop", "-1", "-i", str(args.music)])
+        if loop_music_input:
+            command.extend(["-stream_loop", "-1"])
+        command.extend(["-i", str(args.music)])
     command.extend(
         [
             "-filter_complex",
