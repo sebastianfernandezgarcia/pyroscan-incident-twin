@@ -45,10 +45,10 @@
 - [x] Approve and render the DPR2 visual master at 3840×2160, 30 fps, 2:54.
 - [x] Mix the approved narration and verify the 2:54 final runtime remains below three minutes.
 - [x] Include audible English narration in the final master.
-- [x] Generate, mix and duck an original sample-free technology bed beneath the narration.
+- [x] Generate, mix and duck an original sample-free 104 BPM animated technology score beneath the narration.
 - [x] Regenerate and validate the English SRT against the aligned recording.
 - [x] Show the six Site Tools and visible state changes in the visual master.
-- [x] Upload publicly to YouTube at `https://youtu.be/wIsJsnfs2EI` and verify 2160p 4K processing.
+- [x] Upload publicly to YouTube at `https://youtu.be/WFyf-ShWiUY` and verify 2160p 4K processing.
 - [x] Publish the manually checked English SRT and verify the public caption track.
 - [x] Add the YouTube URL to Devpost copy.
 

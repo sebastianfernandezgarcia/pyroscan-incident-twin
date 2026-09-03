@@ -5,7 +5,7 @@ message: "WebMCP turns a wildfire exercise dashboard into a shared rehearsal sur
 arc: "Before → shared future → mechanism → end-to-end proof → trust → close"
 audience: "OpenAI WebMCP Challenge judges, agent builders, and public-safety innovation teams"
 mode: autonomous
-music: original deterministic ambient technology bed, normalized to -26 LUFS and sidechain-ducked under narration
+music: original animated 104 BPM technology score, normalized to -26 LUFS and sidechain-ducked under narration
 captions: checked manual English track published on YouTube
 ---
 

@@ -12,7 +12,7 @@ PyroScan // Incident Twin was submitted on **3 September 2026 at approximately 0
 ## Public links
 
 - Challenge entry: <https://devpost.com/software/pyroscan-incident-twin>
-- Demo video: <https://youtu.be/wIsJsnfs2EI>
+- Demo video: <https://youtu.be/WFyf-ShWiUY>
 - Live application: <https://pyroscan-incident-twin.netlify.app/>
 - GitHub Pages mirror: <https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/>
 - Public repository: <https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin>
@@ -30,6 +30,6 @@ PyroScan // Incident Twin was submitted on **3 September 2026 at approximately 0
 | Video duration | 2:54 |
 | Video delivery | 3840×2160 / 2160p 4K, H.264, AAC stereo |
 | English captions | Manually uploaded, published and publicly retrievable |
-| Music | Original deterministic technology bed; no samples or third-party music |
+| Music | Original animated 104 BPM technology score; no samples or third-party music |
 
 The public app and submission describe the active incident, wind, spread, risk and response scenario as a **synthetic deterministic exercise**. Public SITCAN/GRAFCAN terrain and Copernicus EMSR671 history are provenance-labeled context and do not drive the simulator.

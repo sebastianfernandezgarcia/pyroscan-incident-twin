@@ -19,9 +19,9 @@ Deadline: **3 September 2026, 1:00 PM PDT / 9:00 PM Atlantic/Canary**
 | All code, assets and instructions included | **PASS** | Clean clone requires only `npm install`, `npm test`, and `npm run build`; no backend, API key or private dataset. |
 | Open-source license visible | **PASS** | MIT license at repository root and detected in the GitHub About area. |
 | Pre-existing work documented | **PASS** | [`CHALLENGE_WORK.md`](../CHALLENGE_WORK.md) separates prior private PyroScan research from the new competition implementation and commit history. |
-| Video under three minutes, with audio and clear WebMCP demo | **PASS** | The [public YouTube demo](https://youtu.be/wIsJsnfs2EI) is 2:54, processed at 2160p 4K, contains audible English narration and a quiet original bed at −16.3 LUFS / −1.5 dBTP, and shows the complete WebMCP journey. See [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md). |
+| Video under three minutes, with audio and clear WebMCP demo | **PASS** | The [public YouTube demo](https://youtu.be/WFyf-ShWiUY) is 2:54, processed at 2160p 4K, contains audible English narration and a quiet original animated score at −17.1 LUFS / −1.5 dBTP, and shows the complete WebMCP journey. See [`FINAL_VIDEO_RECEIPT.md`](FINAL_VIDEO_RECEIPT.md). |
 | Submission materials in English | **PASS** | App, repository, description, testing instructions, captions and narration are English. |
-| No unauthorized marks, music or media | **PASS** | Original interface and animation. The technology bed is generated from authored synthesis with no samples, vocals or third-party music. OpenStreetMap, Copernicus EMSR671 and SITCAN/GRAFCAN public-data attributions are visible/source-linked and documented. |
+| No unauthorized marks, music or media | **PASS** | Original interface and animation. The animated 104 BPM technology score is generated from authored synthesis with no samples, vocals or third-party music. OpenStreetMap, Copernicus EMSR671 and SITCAN/GRAFCAN public-data attributions are visible/source-linked and documented. |
 | Devpost form completed before deadline | **PASS** | Devpost showed **Project submitted!** and the public page shows **Submitted to — The WebMCP Challenge**: [PyroScan // Incident Twin](https://devpost.com/software/pyroscan-incident-twin). |
 
 Official source of truth: [WebMCP Challenge rules](https://webmcp.devpost.com/rules).
