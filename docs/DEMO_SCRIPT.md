@@ -28,9 +28,9 @@ The challenge film is a cinematic HyperFrames composition rather than an unedite
 
 ## Final delivery checks
 
-- 16:9, 1920×1080, runtime 2:54.
+- 16:9, 3840×2160 DPR2 delivery, runtime 2:54.
 - Audible English human narration and checked English captions.
-- No copyrighted music.
+- Quiet original technology bed generated from authored synthesis; no samples, vocals or third-party music.
 - Browser header or architecture frame makes all six tools legible.
 - The product reveal distinguishes public historical/geographic context from the orange synthetic what-if.
 - The real inspect → annotate → simulate → compare → read → stage journey is visible.

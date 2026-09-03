@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Place ten human voice takes on the PyroScan visual master and normalize them."""
+"""Place ten human voice takes and an optional ducked music bed on the master."""
 
 from __future__ import annotations
 
@@ -53,6 +53,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--video", type=Path, required=True, help="Approved silent visual master")
     parser.add_argument("--takes", type=Path, default=Path("voiceover/takes"))
+    parser.add_argument("--music", type=Path, help="Optional music bed, ducked beneath narration")
     parser.add_argument("--output", type=Path, default=Path("renders/pyroscan-webmcp-final.mp4"))
     args = parser.parse_args()
 
@@ -61,6 +62,8 @@ def main() -> int:
             raise SystemExit(f"{binary} is required but was not found on PATH")
     if not args.video.is_file():
         raise SystemExit(f"Visual master not found: {args.video}")
+    if args.music is not None and not args.music.is_file():
+        raise SystemExit(f"Music bed not found: {args.music}")
 
     takes = [find_take(args.takes, index) for index in range(1, 11)]
     for index, (take, slot) in enumerate(zip(takes, SLOTS, strict=True), start=1):
@@ -85,15 +88,40 @@ def main() -> int:
             f"adelay={delay_ms}|{delay_ms}[{label}]"
         )
         labels.append(f"[{label}]")
-    filters.append(
+    voice_mix = (
         "".join(labels)
         + "amix=inputs=10:duration=longest:normalize=0,"
-        + "loudnorm=I=-16:TP=-1.5:LRA=7,apad[voiceout]"
+        + "pan=stereo|c0=c0|c1=c0,"
+        + "loudnorm=I=-16:TP=-1.5:LRA=7,apad,"
+        + f"atrim=duration={visual_duration:.3f}"
     )
+    output_label = "voiceout"
+    if args.music is None:
+        filters.append(voice_mix + "[voiceout]")
+    else:
+        # Normalize the bed well below the narration, then use the narration as
+        # a sidechain key so the music recedes further whenever speech is present.
+        filters.append(voice_mix + ",asplit=2[voiceout][voicekey]")
+        filters.append(
+            f"[11:a]aresample=48000,atrim=duration={visual_duration:.3f},"
+            "asetpts=N/SR/TB,afade=t=in:st=0:d=2,afade=t=out:st=169:d=5,"
+            "loudnorm=I=-26:TP=-8:LRA=5[musicbase]"
+        )
+        filters.append(
+            "[musicbase][voicekey]sidechaincompress="
+            "threshold=.02:ratio=8:attack=25:release=400:makeup=1[ducked]"
+        )
+        filters.append(
+            "[voiceout][ducked]amix=inputs=2:duration=longest:normalize=0:"
+            "weights='1 .8',alimiter=limit=.84:level=false,apad[finalout]"
+        )
+        output_label = "finalout"
 
     command = ["ffmpeg", "-y", "-i", str(args.video)]
     for take in takes:
         command.extend(["-i", str(take)])
+    if args.music is not None:
+        command.extend(["-stream_loop", "-1", "-i", str(args.music)])
     command.extend(
         [
             "-filter_complex",
@@ -101,7 +129,7 @@ def main() -> int:
             "-map",
             "0:v:0",
             "-map",
-            "[voiceout]",
+            f"[{output_label}]",
             "-c:v",
             "copy",
             "-c:a",

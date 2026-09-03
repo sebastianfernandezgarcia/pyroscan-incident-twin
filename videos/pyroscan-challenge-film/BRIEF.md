@@ -4,7 +4,7 @@ flow: automation
 storyboard: no
 message: "WebMCP turns a wildfire exercise dashboard into a shared rehearsal surface where human local knowledge changes agent analysis and final authority remains human."
 destination: youtube
-aspect: 1920x1080
+aspect: 16:9; 3840x2160 delivery from a 1920x1080 CSS composition at DPR 2
 language: en
 audience: "OpenAI WebMCP Challenge judges, agent builders, and public-safety innovation teams"
 length: 174s

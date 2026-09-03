@@ -20,6 +20,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "videos" / "pyroscan-challenge-film" / "product-states"
 CHROME = Path.home() / "Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
 URL = os.environ.get("PYROSCAN_CAPTURE_URL", "http://127.0.0.1:4174/")
+CAPTURE_SCALE = int(os.environ.get("PYROSCAN_CAPTURE_SCALE", "2"))
+
+if CAPTURE_SCALE not in {1, 2, 3}:
+    raise SystemExit("PYROSCAN_CAPTURE_SCALE must be 1, 2, or 3")
 
 POLYFILL = """
 window.__pyroTools = {};
@@ -72,7 +76,12 @@ async def main() -> None:
             headless=True,
             args=["--font-render-hinting=none"],
         )
-        page = await browser.new_page(viewport={"width": 1800, "height": 1200}, device_scale_factor=1)
+        # Keep the CSS viewport identical to the judged product state while
+        # capturing extra physical pixels for legible video crops and 4K delivery.
+        page = await browser.new_page(
+            viewport={"width": 1800, "height": 1200},
+            device_scale_factor=CAPTURE_SCALE,
+        )
         await page.add_init_script(POLYFILL)
         await page.goto(URL, wait_until="networkidle")
         await page.wait_for_function("Object.keys(window.__pyroTools || {}).length === 6")

@@ -84,7 +84,7 @@ The competition build intentionally keeps the active scenario synthetic and brow
 - Live app (primary): `https://pyroscan-incident-twin.netlify.app/`
 - Live app (GitHub Pages mirror): `https://sebastianfernandezgarcia.github.io/pyroscan-incident-twin/`
 - Public repository: `https://github.com/sebastianfernandezgarcia/pyroscan-incident-twin`
-- YouTube demo (<3 minutes): `https://youtu.be/5LNXxK6tD9Q`
+- YouTube demo (<3 minutes, public 4K): `https://youtu.be/wIsJsnfs2EI`
 
 ## Additional information — exact answers
 

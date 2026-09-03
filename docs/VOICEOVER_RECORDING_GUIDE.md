@@ -1,6 +1,6 @@
 # PyroScan challenge film — voiceover recording guide
 
-The final visual master is **2:54 (174 seconds), 1920×1080, 30 fps**. The approved continuous recording is split at natural pauses into ten aligned takes so the voice is never time-stretched.
+The final visual master is **2:54 (174 seconds), 3840×2160, 30 fps**. The approved continuous recording is split at natural pauses into ten aligned takes so the voice is never time-stretched.
 
 ## Recording setup
 
@@ -83,4 +83,4 @@ Build from factual to hopeful. Pause before **PyroScan**. Finish warmly, not lou
 
 ## Final mix target
 
-After recording, the assembly script places the ten takes at their exact cue points, filters rumble, normalizes the combined narration to approximately **−16 LUFS / −1.5 dBTP**, and muxes it into the approved visual master. The provisional subtitle file is `videos/pyroscan-challenge-film/voiceover/PyroScan_VO_EN.srt`; its timings should be checked once the real voice is available.
+After recording, the assembly script places the ten takes at their exact cue points, filters rumble, converts the narration to stereo, mixes a sidechain-ducked original technology bed, normalizes the combined programme to approximately **−16 LUFS / −1.5 dBTP**, and muxes it into the approved visual master. The checked subtitle file is `videos/pyroscan-challenge-film/voiceover/PyroScan_VO_EN.srt` and was published as the manual English track on YouTube.

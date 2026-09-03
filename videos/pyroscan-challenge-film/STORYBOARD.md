@@ -1,12 +1,12 @@
 ---
-format: 1920x1080
+format: 3840x2160 delivery (1920x1080 CSS composition at DPR 2)
 duration: 174s
 message: "WebMCP turns a wildfire exercise dashboard into a shared rehearsal surface where human local knowledge changes agent analysis and final authority remains human."
 arc: "Before → shared future → mechanism → end-to-end proof → trust → close"
 audience: "OpenAI WebMCP Challenge judges, agent builders, and public-safety innovation teams"
 mode: autonomous
-music: none
-captions: pending-human-voice
+music: original deterministic ambient technology bed, normalized to -26 LUFS and sidechain-ducked under narration
+captions: checked manual English track published on YouTube
 ---
 
 ## Video direction
